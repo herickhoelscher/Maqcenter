@@ -1,0 +1,62 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos",
+  "old_key": "locacoes-de-equipamentos",
+  "type": "category",
+  "title": "Locações de Equipamentos",
+  "head_title": "Locações de Equipamentos",
+  "meta_description": "Locações de Equipamentos",
+  "canonical": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Locações de Equipamentos",
+      "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Locações de Equipamentos"
+    }
+  ],
+  "text": "Locações de Equipamentos Compactador de solo Cortadeira de piso Lavador de pressão Rompedor de concreto Serra Circular Vibrador de concreto",
+  "images": [],
+  "category": {
+    "subcategories": [
+      {
+        "name": "Compactador de solo",
+        "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/compactador-de-solo"
+      },
+      {
+        "name": "Cortadeira de piso",
+        "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/cortadeira-de-piso"
+      },
+      {
+        "name": "Lavador de pressão",
+        "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/lavador-de-pressao"
+      },
+      {
+        "name": "Rompedor de concreto",
+        "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/rompedor-de-concreto"
+      },
+      {
+        "name": "Serra Circular",
+        "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/serra-circular1"
+      },
+      {
+        "name": "Vibrador de concreto",
+        "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/vibrador-de-concreto"
+      }
+    ],
+    "products": [],
+    "empty": false,
+    "description": ""
+  },
+  "aliases": [],
+  "new_slug": "locacoes",
+  "file": "content/locacoes-de-equipamentos.json"
+}

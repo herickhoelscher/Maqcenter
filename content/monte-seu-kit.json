@@ -1,0 +1,31 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/monte-seu-kit",
+  "old_key": "monte-seu-kit",
+  "type": "information",
+  "title": "Monte seu KIT",
+  "head_title": "Monte seu KIT",
+  "meta_description": "",
+  "canonical": "",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Monte seu KIT",
+      "url": "https://www.maqcentercascavel.com.br/monte-seu-kit"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Monte seu KIT"
+    }
+  ],
+  "text": "Monte seu KIT Monte seu KIT",
+  "images": [],
+  "aliases": [],
+  "new_slug": "locacoes",
+  "file": "content/monte-seu-kit.json"
+}

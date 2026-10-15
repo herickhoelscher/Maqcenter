@@ -1,0 +1,41 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/compactador-de-solo",
+  "old_key": "locacoes-de-equipamentos/compactador-de-solo",
+  "type": "category",
+  "title": "Compactador de solo",
+  "head_title": "Compactador de solo",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/compactador-de-solo",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Locações de Equipamentos",
+      "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos"
+    },
+    {
+      "name": "Compactador de solo",
+      "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/compactador-de-solo"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Compactador de solo"
+    }
+  ],
+  "text": "Compactador de solo Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "aliases": [],
+  "new_slug": "locacoes/compactador-de-solo",
+  "file": "content/locacoes-de-equipamentos-compactador-de-solo.json"
+}

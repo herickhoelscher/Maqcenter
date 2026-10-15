@@ -1,0 +1,31 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/sobre-br",
+  "old_key": "sobre-br",
+  "type": "information",
+  "title": "Sobre a loja",
+  "head_title": "Sobre a loja",
+  "meta_description": "",
+  "canonical": "",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Sobre a loja",
+      "url": "https://www.maqcentercascavel.com.br/sobre-br"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Sobre a loja"
+    }
+  ],
+  "text": "Sobre a loja Sobre a loja",
+  "images": [],
+  "aliases": [],
+  "new_slug": "sobre",
+  "file": "content/sobre-br.json"
+}

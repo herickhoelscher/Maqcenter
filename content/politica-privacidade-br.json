@@ -1,0 +1,31 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/politica-privacidade-br",
+  "old_key": "politica-privacidade-br",
+  "type": "information",
+  "title": "Política de privacidade",
+  "head_title": "Política de privacidade",
+  "meta_description": "",
+  "canonical": "",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Política de privacidade",
+      "url": "https://www.maqcentercascavel.com.br/politica-privacidade-br"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Política de privacidade"
+    }
+  ],
+  "text": "Política de privacidade Política de privacidade",
+  "images": [],
+  "aliases": [],
+  "new_slug": "politica-de-privacidade",
+  "file": "content/politica-privacidade-br.json"
+}

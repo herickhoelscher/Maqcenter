@@ -1,0 +1,41 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/serra-circular1",
+  "old_key": "locacoes-de-equipamentos/serra-circular1",
+  "type": "category",
+  "title": "Serra Circular",
+  "head_title": "Serra Circular",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/serra-circular1",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Locações de Equipamentos",
+      "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos"
+    },
+    {
+      "name": "Serra Circular",
+      "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/serra-circular1"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Serra Circular"
+    }
+  ],
+  "text": "Serra Circular Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "aliases": [],
+  "new_slug": "locacoes/serra-circular",
+  "file": "content/locacoes-de-equipamentos-serra-circular1.json"
+}

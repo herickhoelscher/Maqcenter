@@ -1,0 +1,41 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/lavador-de-pressao",
+  "old_key": "locacoes-de-equipamentos/lavador-de-pressao",
+  "type": "category",
+  "title": "Lavador de pressão",
+  "head_title": "Lavador de pressão",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/lavador-de-pressao",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Locações de Equipamentos",
+      "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos"
+    },
+    {
+      "name": "Lavador de pressão",
+      "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos/lavador-de-pressao"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Lavador de pressão"
+    }
+  ],
+  "text": "Lavador de pressão Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "aliases": [],
+  "new_slug": "locacoes/lavador-de-pressao",
+  "file": "content/locacoes-de-equipamentos-lavador-de-pressao.json"
+}

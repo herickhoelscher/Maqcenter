@@ -1,0 +1,37 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/assistencia-tecnica",
+  "old_key": "assistencia-tecnica",
+  "type": "category",
+  "title": "Assistência Técnica",
+  "head_title": "Assistência Técnica",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/assistencia-tecnica",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Assistência Técnica",
+      "url": "https://www.maqcentercascavel.com.br/assistencia-tecnica"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Assistência Técnica"
+    }
+  ],
+  "text": "Assistência Técnica Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "aliases": [],
+  "new_slug": "assistencia-tecnica",
+  "file": "content/assistencia-tecnica.json"
+}

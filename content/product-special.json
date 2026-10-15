@@ -1,0 +1,31 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/index.php?route=product/special",
+  "old_key": "route:product/special",
+  "type": "other",
+  "title": "Produtos em promoção",
+  "head_title": "Produtos em promoção",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/index.php?route=product/special",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Produtos em promoção",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=product/special"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Produtos em promoção"
+    }
+  ],
+  "text": "Produtos em promoção Não há produtos em promoção.",
+  "images": [],
+  "aliases": [],
+  "new_slug": "locacoes",
+  "file": "content/product-special.json"
+}

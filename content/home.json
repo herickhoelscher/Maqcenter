@@ -1,0 +1,144 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/",
+  "old_key": "",
+  "type": "home",
+  "title": "MAQCENTER",
+  "head_title": "MAQCENTER",
+  "meta_description": "MAQCENTER",
+  "canonical": "",
+  "open_graph": {},
+  "breadcrumb": [],
+  "headings": [],
+  "text": "",
+  "images": [
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banners/bannersite1-1920x650.jpg",
+      "alt": "Slide2",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banners/banner3-1920x650.jpg",
+      "alt": "Slide4",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banner-jana1-1920x650.png",
+      "alt": "Slide1",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/mobile123123-767x1200.png",
+      "alt": "Slide1",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banners/banner2-1920x650.jpg",
+      "alt": "Slide3",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banners/feliz-natal-1920x650.jpeg",
+      "alt": "Ferias",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banners/feliz-natal-767x1200.jpeg",
+      "alt": "Ferias",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/milwaukee-tool-logo-130x100.png",
+      "alt": "Milwaukee",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/download-130x100.png",
+      "alt": "Mirka",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/dewalt-logo-2-130x100.png",
+      "alt": "DeWalt",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/bosch-logo-130x100.png",
+      "alt": "Bosch",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/black-decker-130x100.png",
+      "alt": "Black Decker",
+      "title": ""
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/makita-logo-6-130x100.png",
+      "alt": "Makita",
+      "title": ""
+    }
+  ],
+  "home": {
+    "banners": [
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banners/bannersite1-1920x650.jpg",
+        "alt": "Slide2",
+        "link": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos"
+      },
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banners/banner3-1920x650.jpg",
+        "alt": "Slide4",
+        "link": "https://www.maqcentercascavel.com.br/perfuracao-em-concreto"
+      },
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banner-jana1-1920x650.png",
+        "alt": "Slide1"
+      },
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/mobile123123-767x1200.png",
+        "alt": "Slide1"
+      },
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banners/banner2-1920x650.jpg",
+        "alt": "Slide3",
+        "link": "https://www.maqcentercascavel.com.br/assistencia-tecnica"
+      },
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banners/feliz-natal-1920x650.jpeg",
+        "alt": "Ferias"
+      },
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/banners/feliz-natal-767x1200.jpeg",
+        "alt": "Ferias"
+      }
+    ],
+    "brands": [
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/milwaukee-tool-logo-130x100.png",
+        "alt": "Milwaukee"
+      },
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/download-130x100.png",
+        "alt": "Mirka"
+      },
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/dewalt-logo-2-130x100.png",
+        "alt": "DeWalt"
+      },
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/bosch-logo-130x100.png",
+        "alt": "Bosch"
+      },
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/black-decker-130x100.png",
+        "alt": "Black Decker"
+      },
+      {
+        "url": "https://www.maqcentercascavel.com.br/image/cache/catalog/marcas/makita-logo-6-130x100.png",
+        "alt": "Makita"
+      }
+    ]
+  },
+  "aliases": [],
+  "new_slug": "",
+  "file": "content/home.json"
+}

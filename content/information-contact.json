@@ -1,0 +1,41 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/index.php?route=information/contact",
+  "old_key": "route:information/contact",
+  "type": "contact",
+  "title": "Entre em contato",
+  "head_title": "Entre em contato",
+  "meta_description": "",
+  "canonical": "",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Entre em contato",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/contact"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Entre em contato"
+    },
+    {
+      "level": "h3",
+      "text": "Nossa localização"
+    }
+  ],
+  "text": "Entre em contato Nossa localização MAQCENTER Rua Erechim 745 - Centro - Cascavel - PR Telefone (45) 9 9805-2928 Horário de funcionamento Das 7:42 às 12:00 e das 13:30 às 18:00 de segunda a sexta. Formulário de contato Seu nome Seu e-mail Mensagem Faça a validação do captcha",
+  "images": [],
+  "contact": {
+    "raw": "Entre em contato Nossa localização MAQCENTER Rua Erechim 745 - Centro - Cascavel - PR Telefone (45) 9 9805-2928 Horário de funcionamento Das 7:42 às 12:00 e das 13:30 às 18:00 de segunda a sexta. Formulário de contato Seu nome Seu e-mail Mensagem Faça a validação do captcha",
+    "opening_hours": "Das 7:42 às 12:00 e das 13:30 às 18:00 de segunda a sexta.",
+    "phone": "(45) 9 9805-2928",
+    "address": "MAQCENTER Rua Erechim 745 - Centro - Cascavel - PR"
+  },
+  "aliases": [],
+  "new_slug": "contato",
+  "file": "content/information-contact.json"
+}

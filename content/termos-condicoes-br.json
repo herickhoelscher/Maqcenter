@@ -1,0 +1,31 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/termos-condicoes-br",
+  "old_key": "termos-condicoes-br",
+  "type": "information",
+  "title": "Termos e condições",
+  "head_title": "Termos e condições",
+  "meta_description": "",
+  "canonical": "",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Termos e condições",
+      "url": "https://www.maqcentercascavel.com.br/termos-condicoes-br"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Termos e condições"
+    }
+  ],
+  "text": "Termos e condições Termos e condições",
+  "images": [],
+  "aliases": [],
+  "new_slug": "termos-e-condicoes",
+  "file": "content/termos-condicoes-br.json"
+}

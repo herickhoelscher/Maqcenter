@@ -1,0 +1,35 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/index.php?route=product/search",
+  "old_key": "route:product/search",
+  "type": "other",
+  "title": "Pesquisando por",
+  "head_title": "Pesquisando por",
+  "meta_description": "",
+  "canonical": "",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Pesquisando por",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=product/search"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Pesquisando por"
+    },
+    {
+      "level": "h2",
+      "text": "Produtos que satisfazem os critérios da pesquisa."
+    }
+  ],
+  "text": "Pesquisando por Critérios da pesquisa: Todos os departamentos Locações de Equipamentos Compactador de solo Cortadeira de piso Lavador de pressão Rompedor de concreto Serra Circular Vibrador de concreto Assistência Técnica Venda de Máquinas e Acessórios Perfuração em concreto Pesquisar nos subdepartamentos Pesquisar na descrição dos produtos Produtos que satisfazem os critérios da pesquisa. Não há produtos que correspondam aos critérios da pesquisa.",
+  "images": [],
+  "aliases": [],
+  "new_slug": "locacoes",
+  "file": "content/product-search.json"
+}

@@ -1,0 +1,31 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/politica-entrega-br",
+  "old_key": "politica-entrega-br",
+  "type": "information",
+  "title": "Política de entrega",
+  "head_title": "Política de entrega",
+  "meta_description": "",
+  "canonical": "",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Política de entrega",
+      "url": "https://www.maqcentercascavel.com.br/politica-entrega-br"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Política de entrega"
+    }
+  ],
+  "text": "Política de entrega Política de entrega",
+  "images": [],
+  "aliases": [],
+  "new_slug": "termos-e-condicoes",
+  "file": "content/politica-entrega-br.json"
+}

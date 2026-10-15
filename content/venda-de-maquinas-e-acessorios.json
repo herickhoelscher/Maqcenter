@@ -1,0 +1,37 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/venda-de-maquinas-e-acessorios",
+  "old_key": "venda-de-maquinas-e-acessorios",
+  "type": "category",
+  "title": "Venda de Máquinas e Acessórios",
+  "head_title": "Venda de Máquinas e Acessórios",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/venda-de-maquinas-e-acessorios",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Venda de Máquinas e Acessórios",
+      "url": "https://www.maqcentercascavel.com.br/venda-de-maquinas-e-acessorios"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Venda de Máquinas e Acessórios"
+    }
+  ],
+  "text": "Venda de Máquinas e Acessórios Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "aliases": [],
+  "new_slug": "venda-de-maquinas",
+  "file": "content/venda-de-maquinas-e-acessorios.json"
+}
