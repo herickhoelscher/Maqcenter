@@ -19,7 +19,7 @@ function legacyRedirects(): Redirect[] {
       return {
         source: pathname,
         destination: to,
-        permanent: true,
+        statusCode: 301 as const,
         ...(route && { has: [{ type: "query" as const, key: "route", value: route }] }),
       };
     });
