@@ -20,8 +20,9 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
     const { errors: localErrors } = validateContact(payload);
     setErrors(localErrors);
     if (Object.keys(localErrors).length > 0) {
-      const first = form.querySelector<HTMLElement>("[aria-invalid=true]");
-      first?.focus();
+      // Field order in the form, so focus lands on the first visible problem.
+      const first = (["name", "phone", "email", "service", "message"] as const).find((k) => localErrors[k]);
+      if (first) (form.elements.namedItem(first) as HTMLElement | null)?.focus();
       setStatus({ kind: "idle" });
       return;
     }
