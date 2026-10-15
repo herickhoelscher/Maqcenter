@@ -11,14 +11,14 @@
     {
       "src": "/images/equipamentos/rompedor-de-concreto.webp",
       "alt": "Rompedor de concreto elétrico verde-azulado com ponteira",
-      "width": 162,
-      "height": 164
+      "width": 152,
+      "height": 154
     }
   ],
   "description": null,
   "specs": [],
   "_todo": [
-    "images: foto melhor (a atual e um recorte de 162px do banner antigo; confirmar que e o equipamento alugado)",
+    "images: foto melhor (a atual e um recorte de 152px do banner antigo; confirmar que e o equipamento alugado)",
     "description: descricao do equipamento",
     "specs: modelo, potencia, peso, tensao etc."
   ]

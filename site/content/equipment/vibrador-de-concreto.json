@@ -11,14 +11,14 @@
     {
       "src": "/images/equipamentos/vibrador-de-concreto.webp",
       "alt": "Motor de vibrador de concreto azul com cabo e chave liga-desliga",
-      "width": 162,
-      "height": 164
+      "width": 152,
+      "height": 154
     }
   ],
   "description": null,
   "specs": [],
   "_todo": [
-    "images: foto melhor (a atual e um recorte de 162px do banner antigo; confirmar que e o equipamento alugado)",
+    "images: foto melhor (a atual e um recorte de 152px do banner antigo; confirmar que e o equipamento alugado)",
     "description: descricao do equipamento",
     "specs: modelo, potencia, peso, tensao etc."
   ]

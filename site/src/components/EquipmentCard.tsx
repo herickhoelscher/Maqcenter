@@ -8,7 +8,7 @@ export function EquipmentCard({ item, headingLevel = "h3" }: { item: Equipment; 
   const Heading = headingLevel;
   const photo = item.images[0];
   return (
-    <Plate as="article" label="Locação" aside="Cascavel-PR" className="group h-full">
+    <Plate as="article" label="Locação" className="group h-full">
       <div className="relative mt-1.5 grid aspect-[4/3] place-items-center overflow-hidden rounded-sm bg-white">
         {photo ? (
           <Image
@@ -21,7 +21,7 @@ export function EquipmentCard({ item, headingLevel = "h3" }: { item: Equipment; 
           />
         ) : (
           // No photo yet: the name stamped large, like an unlabelled plate.
-          <span aria-hidden className="font-display px-3 text-center text-3xl text-line sm:text-4xl">
+          <span aria-hidden className="font-display px-3 text-center text-3xl text-stamp sm:text-4xl">
             {item.name}
           </span>
         )}
@@ -33,7 +33,7 @@ export function EquipmentCard({ item, headingLevel = "h3" }: { item: Equipment; 
           </Link>
         </Heading>
         <span className="label-mono inline-flex items-center gap-2 text-blue">
-          Ver equipamento
+          Ver detalhes
           <ArrowIcon className="size-4 transition-transform group-hover:translate-x-1" />
         </span>
       </div>

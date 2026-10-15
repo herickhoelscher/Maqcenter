@@ -50,8 +50,8 @@ export default async function EquipmentPage({ params }: PageProps<"/locacoes/[sl
 
       <div className="container-site grid gap-10 py-12 md:py-16 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
         <div>
-          <Plate label={item.name} aside="Foto">
-            <div className="mt-1.5 grid aspect-square place-items-center rounded-sm bg-white">
+          <Plate label={item.name}>
+            <div className="mt-1.5 grid aspect-[4/3] place-items-center rounded-sm bg-white">
               {cover ? (
                 <Image
                   src={cover.src}
@@ -60,10 +60,10 @@ export default async function EquipmentPage({ params }: PageProps<"/locacoes/[sl
                   height={cover.height}
                   sizes="(min-width: 1024px) 28rem, 90vw"
                   priority
-                  className="h-auto max-h-[80%] w-auto max-w-[80%] object-contain"
+                  className="h-[75%] w-auto max-w-[85%] object-contain"
                 />
               ) : (
-                <span aria-hidden className="font-display px-6 text-center text-5xl text-line">
+                <span aria-hidden className="font-display px-6 text-center text-5xl text-stamp">
                   {item.name}
                 </span>
               )}

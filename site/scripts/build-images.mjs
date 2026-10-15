@@ -15,9 +15,9 @@ const banner = (name) => path.join(src, "cache", "catalog", "banners", name);
 // The banners have text baked in, so only photo areas are reused.
 const crops = [
   // Equipment tiles from the "Locacao de ferramentas" banner (about 190px each).
-  { file: banner("bannersite1-1920x650.jpg"), out: "equipamentos/compactador-de-solo.webp", box: [636, 136, 162, 164] },
-  { file: banner("bannersite1-1920x650.jpg"), out: "equipamentos/rompedor-de-concreto.webp", box: [869, 136, 162, 164] },
-  { file: banner("bannersite1-1920x650.jpg"), out: "equipamentos/vibrador-de-concreto.webp", box: [1101, 136, 162, 164] },
+  { file: banner("bannersite1-1920x650.jpg"), out: "equipamentos/compactador-de-solo.webp", box: [641, 141, 152, 154] },
+  { file: banner("bannersite1-1920x650.jpg"), out: "equipamentos/rompedor-de-concreto.webp", box: [874, 141, 152, 154] },
+  { file: banner("bannersite1-1920x650.jpg"), out: "equipamentos/vibrador-de-concreto.webp", box: [1106, 141, 152, 154] },
   // Photos behind the service banners.
   { file: banner("banner2-1920x650.jpg"), out: "servicos/assistencia-tecnica.webp", box: [610, 0, 470, 650] },
   { file: banner("banner3-1920x650.jpg"), out: "servicos/perfuracao-em-concreto.webp", box: [930, 0, 410, 650] },
@@ -40,7 +40,6 @@ async function main() {
     await sharp(path.join(src, "catalog", "marcas", `${b}.png`)).trim().resize({ width: 320, height: 120, fit: "inside", withoutEnlargement: true }).webp({ quality: 90 }).toFile(dest);
     console.log("brand", dest);
   }
-  await sharp(path.join(src, "catalog", "designsemnome.png")).webp({ quality: 95, lossless: true }).toFile(path.join(out, "logo-maqcenter.webp"));
   console.log("logo");
 
   // Square logo (1080x1080) from the old favicon: icon from the "M" mark,
@@ -62,6 +61,21 @@ async function main() {
     .png()
     .toFile(path.join(out, "og.png"));
   console.log("icons and og");
+
+  // Horizontal header logo. The old horizontal PNG is only 303x39 px of
+  // artwork, so it is rebuilt from the high resolution square logo:
+  // the "M" mark beside the MAQCENTER wordmark.
+  const mark = await sharp(avatar).extract({ left: 425, top: 337, width: 235, height: 235 }).resize(200, 200).toBuffer();
+  const word = await sharp(avatar).extract({ left: 222, top: 592, width: 640, height: 158 }).resize({ height: 150 }).toBuffer();
+  const wordMeta = await sharp(word).metadata();
+  await sharp({ create: { width: 200 + 28 + wordMeta.width, height: 200, channels: 3, background: "#ffffff" } })
+    .composite([
+      { input: mark, left: 0, top: 0 },
+      { input: word, left: 228, top: 28 },
+    ])
+    .webp({ quality: 92 })
+    .toFile(path.join(out, "logo-maqcenter.webp"));
+  console.log("header logo", 228 + wordMeta.width, "x 200");
 }
 
 main().catch((e) => {

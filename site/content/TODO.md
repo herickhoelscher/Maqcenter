@@ -16,7 +16,7 @@ Tudo abaixo precisa vir da MAQCENTER. Cada arquivo JSON tambem lista as pendenci
 ## Equipamentos (`equipment/*.json`)
 - Descricao e especificacoes dos 6 equipamentos
 - Fotos: cortadeira de piso, lavador de pressao e serra circular nao tem nenhuma
-- Compactador, rompedor e vibrador usam recortes de 162px do banner antigo. Trocar por fotos reais e confirmar os modelos
+- Compactador, rompedor e vibrador usam recortes de 152px do banner antigo. Trocar por fotos reais e confirmar os modelos
 - O banner antigo tambem mostrava furadeira de impacto, gerador e perfurador de solo para locacao. Confirmar se entram no catalogo
 
 ## Prova social (`testimonials.json`)
@@ -27,4 +27,4 @@ Tudo abaixo precisa vir da MAQCENTER. Cada arquivo JSON tambem lista as pendenci
 - Termos e condicoes: sem texto
 
 ## Identidade
-- Logo em SVG ou PNG em alta resolucao (o atual tem 441x83 px)
+- Logo em SVG. O logo horizontal do header foi remontado a partir do logo quadrado (avatar.jpg), porque o PNG horizontal antigo tem so 303x39 px de arte

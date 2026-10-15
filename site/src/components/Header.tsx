@@ -21,9 +21,10 @@ export function Header() {
         <Link href="/" className="shrink-0" aria-label="MAQCENTER, página inicial">
           <Image
             src="/images/logo-maqcenter.webp"
-            alt="MAQCENTER - Locação de máquinas e ferramentas elétricas"
-            width={441}
-            height={83}
+            alt="MAQCENTER Ferramentas Elétricas"
+            width={836}
+            height={200}
+            sizes="12rem"
             priority
             className="h-9 w-auto lg:h-10"
           />
