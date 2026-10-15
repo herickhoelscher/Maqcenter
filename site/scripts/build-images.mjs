@@ -1,0 +1,70 @@
+// Builds the WebP images used by the site from the files extracted from the
+// old site (../assets). Run with: npm run images
+import { mkdir } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import sharp from "sharp";
+
+const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const src = path.join(root, "..", "assets");
+const out = path.join(root, "public", "images");
+
+const banner = (name) => path.join(src, "cache", "catalog", "banners", name);
+
+// Crops of the old home banners. Coordinates are on the 1920x650 originals.
+// The banners have text baked in, so only photo areas are reused.
+const crops = [
+  // Equipment tiles from the "Locacao de ferramentas" banner (about 190px each).
+  { file: banner("bannersite1-1920x650.jpg"), out: "equipamentos/compactador-de-solo.webp", box: [636, 136, 162, 164] },
+  { file: banner("bannersite1-1920x650.jpg"), out: "equipamentos/rompedor-de-concreto.webp", box: [869, 136, 162, 164] },
+  { file: banner("bannersite1-1920x650.jpg"), out: "equipamentos/vibrador-de-concreto.webp", box: [1101, 136, 162, 164] },
+  // Photos behind the service banners.
+  { file: banner("banner2-1920x650.jpg"), out: "servicos/assistencia-tecnica.webp", box: [610, 0, 470, 650] },
+  { file: banner("banner3-1920x650.jpg"), out: "servicos/perfuracao-em-concreto.webp", box: [930, 0, 410, 650] },
+];
+
+const brands = ["bosch-logo", "black-decker", "dewalt-logo-2", "makita-logo-6", "milwaukee-tool-logo", "download"];
+const brandNames = { "download": "mirka", "bosch-logo": "bosch", "dewalt-logo-2": "dewalt", "makita-logo-6": "makita", "milwaukee-tool-logo": "milwaukee", "black-decker": "black-decker" };
+
+async function main() {
+  for (const c of crops) {
+    const dest = path.join(out, c.out);
+    await mkdir(path.dirname(dest), { recursive: true });
+    const [left, top, width, height] = c.box;
+    await sharp(c.file).extract({ left, top, width, height }).webp({ quality: 82 }).toFile(dest);
+    console.log("crop", c.out);
+  }
+  await mkdir(path.join(out, "marcas"), { recursive: true });
+  for (const b of brands) {
+    const dest = path.join(out, "marcas", `${brandNames[b]}.webp`);
+    await sharp(path.join(src, "catalog", "marcas", `${b}.png`)).trim().resize({ width: 320, height: 120, fit: "inside", withoutEnlargement: true }).webp({ quality: 90 }).toFile(dest);
+    console.log("brand", dest);
+  }
+  await sharp(path.join(src, "catalog", "designsemnome.png")).webp({ quality: 95, lossless: true }).toFile(path.join(out, "logo-maqcenter.webp"));
+  console.log("logo");
+
+  // Square logo (1080x1080) from the old favicon: icon from the "M" mark,
+  // Open Graph image from the full lockup.
+  const avatar = path.join(src, "catalog", "avatar.jpg");
+  const appDir = path.join(root, "src", "app");
+  await sharp(avatar)
+    .extract({ left: 400, top: 312, width: 285, height: 285 })
+    .resize(512, 512)
+    .png()
+    .toFile(path.join(appDir, "icon.png"));
+  await sharp(avatar).extract({ left: 400, top: 312, width: 285, height: 285 }).resize(180, 180).png().toFile(path.join(appDir, "apple-icon.png"));
+  const lockup = await sharp(avatar).extract({ left: 200, top: 320, width: 680, height: 440 }).resize({ height: 440 }).toBuffer();
+  await sharp({ create: { width: 1200, height: 630, channels: 3, background: "#ffffff" } })
+    .composite([
+      { input: lockup, left: 260, top: 80 },
+      { input: Buffer.from('<svg width="1200" height="40"><rect width="1200" height="40" fill="#12173b"/></svg>'), left: 0, top: 590 },
+    ])
+    .png()
+    .toFile(path.join(out, "og.png"));
+  console.log("icons and og");
+}
+
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});
