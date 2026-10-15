@@ -1,0 +1,36 @@
+{
+  "name": "MAQCENTER",
+  "tagline": "Locação de máquinas e ferramentas elétricas",
+  "legalName": null,
+  "cnpj": null,
+  "siteUrl": "https://www.maqcentercascavel.com.br",
+  "phone": {
+    "display": "(45) 99805-2928",
+    "e164": "+5545998052928"
+  },
+  "whatsapp": "5545998052928",
+  "email": "pedidos@maqcenter.com.br",
+  "address": {
+    "street": "Rua Erechim, 745",
+    "district": "Centro",
+    "city": "Cascavel",
+    "state": "PR",
+    "postalCode": null,
+    "country": "BR"
+  },
+  "geo": null,
+  "hours": [
+    { "days": "Segunda a sexta", "dayCodes": ["Mo", "Tu", "We", "Th", "Fr"], "ranges": [["07:30", "12:00"], ["13:30", "18:00"]] }
+  ],
+  "social": {
+    "instagram": { "handle": "@maqcentercascavel", "url": "https://www.instagram.com/maqcentercascavel/" },
+    "facebook": { "name": "Maqcenter Ferramentas Elétricas", "url": "https://www.facebook.com/Maqcenter-Ferramentas-El%C3%A9tricas-452112634950092" }
+  },
+  "about": null,
+  "_todo": [
+    "legalName e cnpj: razao social e CNPJ (usados no rodape e na politica de privacidade)",
+    "address.postalCode: CEP",
+    "geo: latitude e longitude para o JSON-LD",
+    "about: texto institucional (historia, tempo de mercado, diferenciais). O site antigo nao tinha."
+  ]
+}

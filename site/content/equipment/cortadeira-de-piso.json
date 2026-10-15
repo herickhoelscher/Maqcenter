@@ -1,0 +1,18 @@
+{
+  "slug": "cortadeira-de-piso",
+  "name": "Cortadeira de piso",
+  "order": 2,
+  "featured": false,
+  "oldUrls": [
+    "/locacoes-de-equipamentos/cortadeira-de-piso",
+    "/cortadeira-de-piso"
+  ],
+  "images": [],
+  "description": null,
+  "specs": [],
+  "_todo": [
+    "images: nenhuma foto no site antigo",
+    "description: descricao do equipamento",
+    "specs: modelo, potencia, peso, tensao etc."
+  ]
+}

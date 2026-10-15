@@ -1,0 +1,39 @@
+[
+  {
+    "slug": "locacoes",
+    "name": "Locação de equipamentos",
+    "summary": "Compactador de solo, cortadeira de piso, lavador de pressão, rompedor de concreto, serra circular e vibrador de concreto.",
+    "image": null,
+    "description": null,
+    "whatsappMessage": "Olá! Quero um orçamento de locação de equipamento.",
+    "_todo": ["description: texto sobre como funciona a locação (prazos, retirada/entrega, caução)"]
+  },
+  {
+    "slug": "assistencia-tecnica",
+    "name": "Assistência técnica",
+    "summary": "Conserto de ferramentas elétricas. Atendemos as melhores marcas do mercado.",
+    "image": { "src": "/images/servicos/assistencia-tecnica.webp", "alt": "Técnico consertando uma furadeira elétrica aberta na bancada", "width": 470, "height": 650 },
+    "description": null,
+    "brands": ["Bosch", "Black+Decker", "Skil", "DeWalt", "Makita", "Mirka", "Stanley", "Milwaukee"],
+    "whatsappMessage": "Olá! Preciso de assistência técnica para uma ferramenta.",
+    "_todo": ["description: tipos de reparo, garantia do servico, prazo medio, se e autorizada de alguma marca"]
+  },
+  {
+    "slug": "venda-de-maquinas",
+    "name": "Venda de máquinas e acessórios",
+    "summary": "Máquinas e acessórios das marcas Milwaukee, Mirka, DeWalt, Bosch, Black+Decker e Makita.",
+    "image": null,
+    "description": null,
+    "whatsappMessage": "Olá! Quero um orçamento de máquina ou acessório.",
+    "_todo": ["description: linhas de produto vendidas", "image: foto da loja ou dos produtos"]
+  },
+  {
+    "slug": "perfuracao-em-concreto",
+    "name": "Perfuração em concreto",
+    "summary": "Perfuração de concreto com perfuratriz diamantada.",
+    "image": { "src": "/images/servicos/perfuracao-em-concreto.webp", "alt": "Perfuratriz diamantada vermelha furando uma parede de concreto", "width": 410, "height": 650 },
+    "description": null,
+    "whatsappMessage": "Olá! Quero um orçamento de perfuração em concreto.",
+    "_todo": ["description: diametros e profundidades atendidos, se o servico e feito na obra, como e cobrado"]
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "slug": "rompedor-de-concreto",
+  "name": "Rompedor de concreto",
+  "order": 4,
+  "featured": true,
+  "oldUrls": [
+    "/locacoes-de-equipamentos/rompedor-de-concreto",
+    "/rompedor-de-concreto"
+  ],
+  "images": [
+    {
+      "src": "/images/equipamentos/rompedor-de-concreto.webp",
+      "alt": "Rompedor de concreto elétrico verde-azulado com ponteira",
+      "width": 162,
+      "height": 164
+    }
+  ],
+  "description": null,
+  "specs": [],
+  "_todo": [
+    "images: foto melhor (a atual e um recorte de 162px do banner antigo; confirmar que e o equipamento alugado)",
+    "description: descricao do equipamento",
+    "specs: modelo, potencia, peso, tensao etc."
+  ]
+}

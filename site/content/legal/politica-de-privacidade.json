@@ -1,0 +1,44 @@
+{
+  "title": "Política de privacidade",
+  "draft": true,
+  "sections": [
+    {
+      "heading": "Quais dados este site coleta",
+      "paragraphs": [
+        "Pelo formulário de contato: nome, telefone, e-mail, serviço de interesse e a mensagem que você escrever.",
+        "Ao tocar em um botão de WhatsApp, você sai deste site e a conversa acontece no WhatsApp, sujeita à política de privacidade do WhatsApp."
+      ]
+    },
+    {
+      "heading": "Para que os dados são usados",
+      "paragraphs": [
+        "Para responder ao seu pedido de orçamento ou contato. Os dados não são usados para publicidade."
+      ]
+    },
+    {
+      "heading": "Com quem os dados são compartilhados",
+      "paragraphs": [
+        "A mensagem do formulário é enviada por e-mail para a equipe da MAQCENTER usando o serviço de envio Resend."
+      ]
+    },
+    {
+      "heading": "Cookies",
+      "paragraphs": [
+        "Este site não usa cookies próprios de rastreamento nem de publicidade.",
+        "A página de contato exibe um mapa do Google Maps, que é carregado a partir dos servidores do Google e segue a política de privacidade do Google."
+      ]
+    },
+    {
+      "heading": "Seus direitos",
+      "paragraphs": [
+        "Você pode pedir acesso, correção ou exclusão dos seus dados pelo e-mail {email}."
+      ]
+    }
+  ],
+  "_todo": [
+    "Revisao juridica (LGPD) antes de publicar",
+    "Incluir razao social e CNPJ do controlador dos dados",
+    "Incluir prazo de retencao das mensagens",
+    "Se adicionar analytics, atualizar a secao de cookies"
+  ]
+}

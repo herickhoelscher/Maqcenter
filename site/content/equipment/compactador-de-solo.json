@@ -1,0 +1,25 @@
+{
+  "slug": "compactador-de-solo",
+  "name": "Compactador de solo",
+  "order": 1,
+  "featured": true,
+  "oldUrls": [
+    "/locacoes-de-equipamentos/compactador-de-solo",
+    "/compactador-de-solo"
+  ],
+  "images": [
+    {
+      "src": "/images/equipamentos/compactador-de-solo.webp",
+      "alt": "Compactador de solo tipo sapo, azul, com base metálica",
+      "width": 162,
+      "height": 164
+    }
+  ],
+  "description": null,
+  "specs": [],
+  "_todo": [
+    "images: foto melhor (a atual e um recorte de 162px do banner antigo; confirmar que e o equipamento alugado)",
+    "description: descricao do equipamento",
+    "specs: modelo, potencia, peso, tensao etc."
+  ]
+}

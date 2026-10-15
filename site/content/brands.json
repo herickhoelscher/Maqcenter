@@ -1,0 +1,8 @@
+[
+  { "name": "Milwaukee", "logo": "/images/marcas/milwaukee.webp" },
+  { "name": "Mirka", "logo": "/images/marcas/mirka.webp" },
+  { "name": "DeWalt", "logo": "/images/marcas/dewalt.webp" },
+  { "name": "Bosch", "logo": "/images/marcas/bosch.webp" },
+  { "name": "Black+Decker", "logo": "/images/marcas/black-decker.webp" },
+  { "name": "Makita", "logo": "/images/marcas/makita.webp" }
+]

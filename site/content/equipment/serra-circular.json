@@ -1,0 +1,18 @@
+{
+  "slug": "serra-circular",
+  "name": "Serra circular",
+  "order": 5,
+  "featured": false,
+  "oldUrls": [
+    "/locacoes-de-equipamentos/serra-circular1",
+    "/serra-circular1"
+  ],
+  "images": [],
+  "description": null,
+  "specs": [],
+  "_todo": [
+    "images: nenhuma foto no site antigo",
+    "description: descricao do equipamento",
+    "specs: modelo, potencia, peso, tensao etc."
+  ]
+}
