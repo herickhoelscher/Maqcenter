@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { formatAddress, type Company, type Equipment } from "./content";
 
-// The domain is configuration, not editable content.
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.maqcentercascavel.com.br").replace(/\/$/, "");
+// The domain is configuration, not editable content. On Vercel it defaults to
+// the project's production domain, which follows a custom domain once added.
+const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || vercelUrl || "https://www.maqcentercascavel.com.br").replace(/\/$/, "");
 
 export function pageMetadata({
   title,
