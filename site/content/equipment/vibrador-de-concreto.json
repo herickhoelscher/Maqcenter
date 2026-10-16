@@ -1,7 +1,7 @@
 {
   "slug": "vibrador-de-concreto",
   "name": "Vibrador de concreto",
-  "order": 6,
+  "order": 7,
   "featured": true,
   "oldUrls": [
     "/locacoes-de-equipamentos/vibrador-de-concreto",
@@ -15,11 +15,13 @@
       "height": 154
     }
   ],
-  "description": null,
+  "description": [
+    "O vibrador de concreto reduz bolhas e vazios durante a aplicação, deixando a mistura melhor distribuída dentro da forma.",
+    "Esse equipamento é indicado para concretagens que exigem mais cuidado estrutural e melhor preenchimento, como pilares, vigas, lajes e bases."
+  ],
   "specs": [],
   "_todo": [
     "images: foto melhor (a atual e um recorte de 152px do banner antigo; confirmar que e o equipamento alugado)",
-    "description: descricao do equipamento",
     "specs: modelo, potencia, peso, tensao etc."
   ]
 }

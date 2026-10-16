@@ -1,0 +1,25 @@
+{
+  "slug": "betoneira",
+  "name": "Betoneira",
+  "order": 1,
+  "featured": true,
+  "oldUrls": [],
+  "images": [
+    {
+      "src": "/images/equipamentos/betoneira.webp",
+      "alt": "Betoneira amarela com massa de concreto em uma obra",
+      "width": 400,
+      "height": 300,
+      "fit": "cover"
+    }
+  ],
+  "description": [
+    "Preparar massa na mão pode deixar o serviço mais lento e cada mistura com um ponto diferente.",
+    "A betoneira torna o preparo mais organizado, principalmente em obras que exigem volume, frequência e padronização durante o dia."
+  ],
+  "specs": [],
+  "_todo": [
+    "specs: capacidade (litros), motor, tensao",
+    "foto: a atual e de um post do Instagram com recorte; confirmar se e a betoneira alugada"
+  ]
+}

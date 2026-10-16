@@ -2,38 +2,105 @@
   {
     "slug": "locacoes",
     "name": "Locação de equipamentos",
-    "summary": "Compactador de solo, cortadeira de piso, lavador de pressão, rompedor de concreto, serra circular e vibrador de concreto.",
+    "summary": "Betoneira, compactador de solo, cortadeira de piso, lavador de pressão, rompedor de concreto, serra circular e vibrador de concreto.",
     "image": null,
     "description": null,
     "whatsappMessage": "Olá! Quero um orçamento de locação de equipamento.",
-    "_todo": ["description: texto sobre como funciona a locação (prazos, retirada/entrega, caução)"]
+    "_todo": [
+      "description: como funciona a locacao (periodo minimo, retirada/entrega, caucao)"
+    ]
   },
   {
     "slug": "assistencia-tecnica",
     "name": "Assistência técnica",
-    "summary": "Conserto de ferramentas elétricas. Atendemos as melhores marcas do mercado.",
-    "image": { "src": "/images/servicos/assistencia-tecnica.webp", "alt": "Técnico consertando uma furadeira elétrica aberta na bancada", "width": 470, "height": 650 },
-    "description": null,
-    "brands": ["Bosch", "Black+Decker", "Skil", "DeWalt", "Makita", "Mirka", "Stanley", "Milwaukee"],
+    "summary": "Conserto de ferramentas elétricas, com avaliação técnica e reparo. Atendemos as melhores marcas do mercado.",
+    "image": {
+      "src": "/images/servicos/assistencia-tecnica.webp",
+      "alt": "Técnico da MAQCENTER na oficina, com painel de ferramentas ao fundo",
+      "width": 640,
+      "height": 640
+    },
+    "description": [
+      "Na Maqcenter, você conta com uma assistência técnica que une agilidade, diagnóstico preciso e manutenção feita por profissionais especializados.",
+      "O equipamento passa por avaliação para identificar desgaste em componentes como cabo, chave, rolamentos, escovas ou parte elétrica, conforme o caso. A equipe analisa o problema e direciona o reparo indicado para a máquina voltar ao trabalho com mais segurança."
+    ],
+    "brands": [
+      "Bosch",
+      "Black+Decker",
+      "Skil",
+      "DeWalt",
+      "Makita",
+      "Mirka",
+      "Stanley",
+      "Milwaukee"
+    ],
     "whatsappMessage": "Olá! Preciso de assistência técnica para uma ferramenta.",
-    "_todo": ["description: tipos de reparo, garantia do servico, prazo medio, se e autorizada de alguma marca"]
+    "_todo": [
+      "garantia do servico e prazo medio de reparo",
+      "se e assistencia autorizada de alguma marca (o uniforme da equipe tem um selo de servico)"
+    ],
+    "symptoms": [
+      "Perdendo força",
+      "Aquecendo mais rápido",
+      "Vibrando demais ou diferente do normal",
+      "Fazendo ruído estranho",
+      "Exigindo mais esforço no uso"
+    ]
   },
   {
     "slug": "venda-de-maquinas",
     "name": "Venda de máquinas e acessórios",
-    "summary": "Máquinas e acessórios das marcas Milwaukee, Mirka, DeWalt, Bosch, Black+Decker e Makita.",
+    "summary": "Furadeiras, serras, esmerilhadeiras, parafusadeiras, rompedores e acessórios das marcas Milwaukee, Mirka, DeWalt, Bosch, Black+Decker e Makita.",
     "image": null,
     "description": null,
     "whatsappMessage": "Olá! Quero um orçamento de máquina ou acessório.",
-    "_todo": ["description: linhas de produto vendidas", "image: foto da loja ou dos produtos"]
+    "_todo": [
+      "foto da loja (o Instagram tem um video da parede de ferramentas, mas com texto por cima)"
+    ],
+    "productLines": [
+      {
+        "name": "Máquinas",
+        "items": [
+          "Furadeiras",
+          "Parafusadeiras",
+          "Esmerilhadeiras",
+          "Serra-mármore",
+          "Serra circular",
+          "Rompedores"
+        ]
+      },
+      {
+        "name": "Acessórios e peças",
+        "items": [
+          "Brocas",
+          "Discos diamantados",
+          "Discos de corte de madeira",
+          "Serra-copo diamantada",
+          "Baterias",
+          "Escovas de carvão"
+        ]
+      }
+    ]
   },
   {
     "slug": "perfuracao-em-concreto",
     "name": "Perfuração em concreto",
-    "summary": "Perfuração de concreto com perfuratriz diamantada.",
-    "image": { "src": "/images/servicos/perfuracao-em-concreto.webp", "alt": "Perfuratriz diamantada vermelha furando uma parede de concreto", "width": 410, "height": 650 },
-    "description": null,
+    "summary": "Perfuração de concreto com perfuratriz diamantada, executada no local da obra.",
+    "image": {
+      "src": "/images/servicos/perfuracao-em-concreto.webp",
+      "alt": "Perfuratriz diamantada vermelha furando uma parede de concreto",
+      "width": 410,
+      "height": 650
+    },
+    "description": [
+      "A Maqcenter realiza o serviço com perfuratriz diamantada, levando a estrutura e o profissional responsável pela execução até o local.",
+      "Esse tipo de perfuração é indicado para obras, reformas e instalações que exigem furos limpos, medidas certas e mais precisão durante o corte.",
+      "Tem uma perfuração específica para realizar? Envie as informações da demanda e consulte o atendimento."
+    ],
     "whatsappMessage": "Olá! Quero um orçamento de perfuração em concreto.",
-    "_todo": ["description: diametros e profundidades atendidos, se o servico e feito na obra, como e cobrado"]
+    "_todo": [
+      "diametros e profundidades atendidos",
+      "area de atendimento (so Cascavel ou regiao)"
+    ]
   }
 ]
