@@ -44,6 +44,8 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/webp"],
     qualities: [50, 75, 85],
+    // Images uploaded in the admin (Vercel Blob).
+    remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],
   },
   env: {
     BUILD_YEAR: String(new Date().getFullYear()),
