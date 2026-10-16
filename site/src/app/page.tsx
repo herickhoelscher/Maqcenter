@@ -7,6 +7,7 @@ import { CallButton, TextLink, WhatsAppButton } from "@/components/Buttons";
 import { ContactDetails } from "@/components/ContactDetails";
 import { CtaBand } from "@/components/CtaBand";
 import { EquipmentCard } from "@/components/EquipmentCard";
+import { InstagramGallery } from "@/components/InstagramGallery";
 import { ArrowIcon, DrillIcon, ListIcon, PinIcon, SearchIcon, VerifiedIcon, WrenchIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
 import { company, getEquipment, getFeaturedEquipment, getServices, getTestimonials, servicePaths } from "@/lib/content";
@@ -39,18 +40,18 @@ export default function Home() {
         <Backdrop src="/images/fundos/hero-canteiro.webp" priority position="center 60%" overlay="bg-gradient-to-r from-navy-deep via-navy-deep/85 to-navy-deep/40" />
         <div className="container-site relative grid gap-10 py-12 lg:grid-cols-12 lg:items-center lg:py-24">
           <div className="space-y-6 lg:col-span-7">
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="anim-rise flex flex-wrap items-center gap-2">
               <span className="badge bg-amber text-charcoal">
                 <PinIcon className="size-3.5" />
                 {company.address.city} - {company.address.state}
               </span>
               <span className="text-spec text-on-dark">Há mais de 35 anos ao lado de quem constrói</span>
             </div>
-            <h1 className="text-display-m md:text-display">Locação de máquinas e ferramentas elétricas</h1>
-            <p className="max-w-xl text-body-lg text-on-dark">
+            <h1 className="anim-rise text-display-m md:text-display">Locação de máquinas e ferramentas elétricas</h1>
+            <p className="anim-rise max-w-xl text-body-lg text-on-dark">
               Locação de equipamentos, assistência técnica, venda de máquinas e perfuração em concreto. Peça seu orçamento pelo WhatsApp.
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="anim-rise flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton />
               <CallButton tone="dark" />
             </div>
@@ -71,7 +72,7 @@ export default function Home() {
             </form>
           </div>
 
-          <aside aria-labelledby="lista-locacao" className="card overflow-hidden text-charcoal lg:col-span-5">
+          <aside aria-labelledby="lista-locacao" className="card anim-rise overflow-hidden text-charcoal lg:col-span-5">
             <div className="flex items-center justify-between border-b border-concrete-200 bg-concrete-50 px-5 py-3">
               <h2 id="lista-locacao" className="text-title text-navy">
                 Equipamentos para locação
@@ -97,7 +98,7 @@ export default function Home() {
 
       <section aria-labelledby="servicos" className="py-16">
         <div className="container-site">
-          <div className="mx-auto max-w-2xl space-y-3 text-center">
+          <div className="mx-auto max-w-2xl space-y-3 text-center" data-reveal>
             <span className="badge bg-blue-accent/10 text-blue-accent">Serviços</span>
             <h2 id="servicos" className="text-headline-m text-navy md:text-headline">
               O que a {company.name} faz
@@ -105,8 +106,8 @@ export default function Home() {
           </div>
           <ul className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {getServices().map((s, i) => (
-              <li key={s.slug}>
-                <Link href={servicePaths[s.slug]} className="card group flex h-full flex-col gap-4 p-6 transition-shadow hover:shadow-level2">
+              <li key={s.slug} data-reveal style={{ "--reveal-delay": `${i * 80}ms` } as React.CSSProperties}>
+                <Link href={servicePaths[s.slug]} className="card group flex h-full flex-col gap-4 p-6 transition duration-300 hover:-translate-y-1 hover:shadow-level2">
                   <span className={`grid size-12 place-items-center rounded-[var(--radius-card)] ${i % 2 ? "bg-amber text-charcoal" : "bg-navy text-amber"}`}>
                     {serviceIcons[s.slug]}
                   </span>
@@ -126,7 +127,7 @@ export default function Home() {
       {featured.length > 0 && (
         <section aria-labelledby="destaques" className="bg-surface-mid py-16">
           <div className="container-site">
-            <div className="flex flex-wrap items-end justify-between gap-4">
+            <div className="flex flex-wrap items-end justify-between gap-4" data-reveal>
               <div className="space-y-2">
                 <span className="badge bg-navy text-amber">Locação</span>
                 <h2 id="destaques" className="text-headline-m text-navy md:text-headline">
@@ -136,8 +137,8 @@ export default function Home() {
               <TextLink href="/locacoes">Ver catálogo completo</TextLink>
             </div>
             <ul className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
-              {featured.map((item) => (
-                <li key={item.slug}>
+              {featured.map((item, i) => (
+                <li key={item.slug} data-reveal style={{ "--reveal-delay": `${i * 80}ms` } as React.CSSProperties}>
                   <EquipmentCard item={item} />
                 </li>
               ))}
@@ -157,9 +158,10 @@ export default function Home() {
                 height={company.aboutImage.height}
                 sizes="(min-width: 1024px) 36rem, 92vw"
                 className="w-full rounded-[var(--radius-card)] border border-concrete-200 shadow-level1 lg:col-span-6"
+                data-reveal
               />
             )}
-            <div className="space-y-4 lg:col-span-6">
+            <div className="space-y-4 lg:col-span-6" data-reveal style={{ "--reveal-delay": `${120}ms` } as React.CSSProperties}>
               <span className="badge bg-blue-accent/10 text-blue-accent">{company.slogan}</span>
               <h2 id="sobre" className="text-headline-m text-navy md:text-headline">
                 {company.about[0]}
@@ -175,9 +177,11 @@ export default function Home() {
         </section>
       )}
 
-      <section aria-labelledby="marcas" className="bg-white py-16">
+      <InstagramGallery />
+
+      <section aria-labelledby="marcas" className="bg-surface py-16">
         <div className="container-site space-y-8">
-          <div className="mx-auto max-w-2xl space-y-3 text-center">
+          <div className="mx-auto max-w-2xl space-y-3 text-center" data-reveal>
             <span className="badge bg-blue-accent/10 text-blue-accent">Marcas</span>
             <h2 id="marcas" className="text-headline-m text-navy md:text-headline">
               Atendemos as melhores marcas do mercado
@@ -204,7 +208,7 @@ export default function Home() {
 
       <section aria-labelledby="onde" className="bg-surface-low py-16">
         <div className="container-site grid gap-8 lg:grid-cols-12 lg:items-start">
-          <div className="space-y-4 lg:col-span-5">
+          <div className="space-y-4 lg:col-span-5" data-reveal>
             <span className="badge bg-navy text-amber">Unidade {company.address.city}</span>
             <h2 id="onde" className="text-headline-m text-navy md:text-headline">
               Fale com a equipe

@@ -4,6 +4,7 @@ import { Advantages } from "@/components/Advantages";
 import { BrandGrid } from "@/components/BrandGrid";
 import { ContactDetails } from "@/components/ContactDetails";
 import { CtaBand } from "@/components/CtaBand";
+import { InstagramGallery } from "@/components/InstagramGallery";
 import { ArrowIcon } from "@/components/icons";
 import { PageHeader } from "@/components/PageHeader";
 import { company, getServices, servicePaths } from "@/lib/content";
@@ -52,7 +53,7 @@ export default function AboutPage() {
                 width={company.aboutImage.width}
                 height={company.aboutImage.height}
                 sizes="(min-width: 1024px) 44rem, 92vw"
-                priority
+                preload
                 className="w-full"
               />
               <figcaption className="px-5 py-3 text-body-sm text-outline">Equipe {company.name}</figcaption>
@@ -81,6 +82,8 @@ export default function AboutPage() {
       </div>
 
       <Advantages />
+
+      <InstagramGallery limit={5} />
 
       <section aria-labelledby="marcas" className="bg-white py-16">
         <div className="container-site space-y-6">
