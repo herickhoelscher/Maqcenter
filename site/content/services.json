@@ -67,12 +67,7 @@
     "slug": "perfuracao-em-concreto",
     "name": "Perfuração em concreto",
     "summary": "Perfuração de concreto com perfuratriz diamantada, executada no local da obra.",
-    "image": {
-      "src": "/images/servicos/perfuracao-em-concreto.webp",
-      "alt": "Perfuratriz diamantada vermelha furando uma parede de concreto",
-      "width": 410,
-      "height": 650
-    },
+    "image": null,
     "description": [
       "A Maqcenter realiza o serviço com perfuratriz diamantada, levando a estrutura e o profissional responsável pela execução até o local.",
       "Esse tipo de perfuração é indicado para obras, reformas e instalações que exigem furos limpos, medidas certas e mais precisão durante o corte.",

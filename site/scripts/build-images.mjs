@@ -31,7 +31,6 @@ const crops = [
   { file: instagram("DQ_jmGUE-0f"), out: "servicos/venda-de-maquinas.webp", box: [300, 1180, 780, 740] },
   { file: instagram("DdcLWyeD2SA"), out: "produtos/serra-circular-bosch.webp", box: [0, 0, 1080, 1000] },
   { file: instagram("DehstBYleNp"), out: "equipamentos/vibrador-de-concreto-obra.webp", box: [0, 150, 1080, 820] },
-  { file: banner("banner3-1920x650.jpg"), out: "servicos/perfuracao-em-concreto.webp", box: [930, 0, 410, 650] },
 ];
 
 const brands = ["bosch-logo", "black-decker", "dewalt-logo-2", "makita-logo-6", "milwaukee-tool-logo", "download"];

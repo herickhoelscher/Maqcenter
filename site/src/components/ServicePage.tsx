@@ -29,32 +29,35 @@ export function ServicePage({ service, children, wide }: { service: Service; chi
 
       {wide}
 
-      <div className="container-site grid gap-8 py-10 lg:grid-cols-12 lg:py-16">
-        <div className="space-y-8 lg:col-span-7">
-          {service.description && (
-            <div className="card space-y-4 p-6 text-body-lg text-slate-text">
-              {service.description.map((p) => (
-                <p key={p}>{p}</p>
-              ))}
-            </div>
-          )}
-          {children}
+      {service.image || children ? (
+        <div className="container-site grid gap-8 py-10 lg:grid-cols-12 lg:py-16">
+          <div className="space-y-8 lg:col-span-7">
+            {service.description && <Description service={service} />}
+            {children}
+          </div>
+          <div className="space-y-6 lg:col-span-5">
+            {service.image && (
+              <Image
+                src={service.image.src}
+                alt={service.image.alt}
+                width={service.image.width}
+                height={service.image.height}
+                sizes="(min-width: 1024px) 30rem, 92vw"
+                preload
+                className="aspect-[4/3] w-full rounded-[var(--radius-card)] border border-concrete-200 object-cover object-left-top lg:aspect-auto"
+              />
+            )}
+            <ContactDetails />
+          </div>
         </div>
-        <div className="space-y-6 lg:col-span-5">
-          {service.image && (
-            <Image
-              src={service.image.src}
-              alt={service.image.alt}
-              width={service.image.width}
-              height={service.image.height}
-              sizes="(min-width: 1024px) 30rem, 92vw"
-              preload
-              className="aspect-[4/3] w-full rounded-[var(--radius-card)] border border-concrete-200 object-cover object-left-top lg:aspect-auto"
-            />
-          )}
-          <ContactDetails />
+      ) : (
+        // Text only: full-width text with the actions, contact card laid out
+        // in columns below, so no column is left with empty space.
+        <div className="container-site space-y-8 py-10 lg:py-16">
+          {service.description && <Description service={service} withActions />}
+          <ContactDetails layout="wide" />
         </div>
-      </div>
+      )}
 
       <section aria-labelledby="outros-servicos" className="bg-surface-low py-14">
         <div className="container-site">
@@ -79,6 +82,26 @@ export function ServicePage({ service, children, wide }: { service: Service; chi
 
       <CtaBand title="Peça seu orçamento" text="Fale pelo WhatsApp, ligue ou monte uma lista com tudo que você precisa." />
     </>
+  );
+}
+
+function Description({ service, withActions = false }: { service: Service; withActions?: boolean }) {
+  return (
+    <div className="card space-y-4 p-6 text-body-lg text-slate-text md:p-8">
+      <div className="max-w-3xl space-y-4">
+        {service.description?.map((p) => (
+          <p key={p}>{p}</p>
+        ))}
+      </div>
+      {withActions && (
+        <div className="flex flex-col gap-3 border-t border-concrete-100 pt-5 sm:flex-row sm:flex-wrap">
+          <WhatsAppButton message={service.whatsappMessage} />
+          <Link href="/contato" className="btn btn-secondary">
+            Enviar mensagem
+          </Link>
+        </div>
+      )}
+    </div>
   );
 }
 

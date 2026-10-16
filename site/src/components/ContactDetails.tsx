@@ -20,12 +20,21 @@ function Row({ icon, label, children }: { icon: ReactNode; label: string; childr
 
 const link = "font-semibold text-navy underline-offset-4 hover:text-blue-accent hover:underline";
 
-export function ContactDetails({ className = "", title = "Atendimento" }: { className?: string; title?: string }) {
+export function ContactDetails({
+  className = "",
+  title = "Atendimento",
+  layout = "stack",
+}: {
+  className?: string;
+  title?: string;
+  /** "wide" lays the rows out in columns for full-width use. */
+  layout?: "stack" | "wide";
+}) {
   const a = company.address;
   return (
     <section aria-label={title} className={`card p-5 ${className}`}>
       <h2 className="border-b border-concrete-100 pb-3 text-title text-navy">{title}</h2>
-      <ul>
+      <ul className={layout === "wide" ? "grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3 [&>li]:border-b-0" : undefined}>
         <Row icon={<PinIcon className="size-5" />} label="Endereço">
           <a href={mapsUrl()} target="_blank" rel="noopener" className={link}>
             {formatAddress()}
