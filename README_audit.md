@@ -21,6 +21,7 @@ Nenhuma credencial, chave de API ou navegador headless. So HTTP GET publico.
 ```bash
 python audit_maqcenter.py
 python audit_maqcenter.py --url https://outro-site.com.br --max-pages 500 --delay 0.2
+python audit_maqcenter.py --probe-ids   # tambem acha categorias, paginas e produtos sem link
 ```
 
 | Flag | Padrao | O que faz |
@@ -30,6 +31,8 @@ python audit_maqcenter.py --url https://outro-site.com.br --max-pages 500 --dela
 | `--delay` | 0.4 | Pausa em segundos entre requisicoes |
 | `--out` | `.` | Pasta de saida |
 | `--skip-images` | desligado | Nao baixa as imagens |
+| `--probe-ids` | desligado | Percorre os ids do OpenCart (categorias 1-200, paginas de informacao 1-50, produtos 1-`--probe-max`, fabricantes 1-50) para achar conteudo sem link. 4 requisicoes em paralelo |
+| `--probe-max` | 400 | Maior id de produto testado |
 
 ## Saidas
 
@@ -58,6 +61,10 @@ Crawler BFS de um unico dominio.
 6. Extrai os `<a href>`: links internos entram na fila, externos viram contagem por dominio.
 7. Extrai o conteudo principal (remove header, footer, menu, breadcrumb, coluna lateral e cookies) e grava em `content/`.
 8. Para quando a fila esvazia ou atinge `--max-pages`. Depois deduplica paginas com mesmo conteudo (OpenCart serve a mesma categoria em varias URLs), gera `redirects.csv`, `inventory.md` e baixa as imagens.
+
+### Conteudo escondido (`--probe-ids`)
+
+O OpenCart responde por id mesmo quando a categoria, pagina ou produto foi tirado do menu. Cada id que devolve uma pagina valida (title sem "nao encontrado") entra na fila pela URL canonica e aparece em `inventory.md` como "Categorias fora do menu" e no `redirects.csv`. No site da Maqcenter isso revelou 12 categorias de venda (furadeiras, brocas, discos etc.) que nao tinham link.
 
 ### Mapeamento de URLs
 
@@ -91,5 +98,6 @@ orphans  # URLs do sitemap/robots sem link interno
 - So valida (baixando) as imagens de catalogo. CSS e JS sao apenas listados.
 - Nao mede Core Web Vitals. `tempo_s` e so o tempo da requisicao HTML.
 - Sequencial, sem paralelismo. Site grande demora.
-- Paginas orfas so sao encontradas se estiverem no `sitemap.xml` ou `robots.txt`.
+- Paginas orfas so sao encontradas se estiverem no `sitemap.xml`, no `robots.txt` ou forem achadas por `--probe-ids`.
+- Widgets carregados por JavaScript (ex. Elfsight) nao sao lidos. O do site antigo apontava para um Instagram que nao existe mais.
 - Seletores de extracao sao do tema OpenCart padrao (`#content`, `#product-product`, `#tab-description` etc.). Outro tema pode exigir ajuste.

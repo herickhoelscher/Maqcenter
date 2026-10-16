@@ -25,6 +25,7 @@ import sys
 import time
 import xml.etree.ElementTree as ET
 from collections import Counter, deque
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urljoin, urlparse, urlunparse
@@ -99,6 +100,19 @@ SLUG_MAP = {
     "termos-condicoes-br": "termos-e-condicoes",
     "politica-entrega-br": "termos-e-condicoes",
     "monte-seu-kit": "locacoes",
+    # Categories hidden from the old menu: product lines for sale.
+    "furadeiras": "venda-de-maquinas",
+    "serra-marmore": "venda-de-maquinas",
+    "esmerilhadeira": "venda-de-maquinas",
+    "serra-circular": "venda-de-maquinas",
+    "parafusadeira": "venda-de-maquinas",
+    "rompedor": "venda-de-maquinas",
+    "broca": "venda-de-maquinas",
+    "disco-diamantado": "venda-de-maquinas",
+    "baterias": "venda-de-maquinas",
+    "escova-de-carvao": "venda-de-maquinas",
+    "serra-copo-diamantada": "venda-de-maquinas",
+    "disco-de-corte-de-madeira": "venda-de-maquinas",
     "obrigado-por-comprar-conosco": "",
     "route:information/contact": "contato",
     "route:information/sitemap": "",
@@ -436,10 +450,57 @@ def extract_contact(soup):
 
 
 # --------------------------------------------------------------------------
+# Hidden OpenCart content
+# --------------------------------------------------------------------------
+
+# OpenCart addresses every record by a numeric id. Categories, information
+# pages and products removed from the menu (or never linked) are still
+# served, so walking the ids finds content the link crawl cannot see.
+PROBE_ROUTES = {
+    "category": ("product/category", "path"),
+    "information": ("information/information", "information_id"),
+    "product": ("product/product", "product_id"),
+    "manufacturer": ("product/manufacturer/info", "manufacturer_id"),
+}
+NOT_FOUND_TITLE = re.compile(r"n[aã]o encontrad|not found", re.I)
+
+
+def probe_ids(start, limits, workers=4):
+    """Return [(kind, id, title, url)] for every id that resolves to a page.
+    url is the canonical SEO URL when the page declares one."""
+    session = make_session()
+
+    def check(job):
+        kind, i = job
+        route, param = PROBE_ROUTES[kind]
+        url = urljoin(start, f"/index.php?route={route}&{param}={i}")
+        try:
+            r, _ = fetch(session, url)
+        except requests.RequestException:
+            return None
+        if r.status_code != 200 or "html" not in r.headers.get("Content-Type", ""):
+            return None
+        soup = BeautifulSoup(r.text, "html.parser")
+        title = clean_text(soup.title)
+        if not title or NOT_FOUND_TITLE.search(title):
+            return None
+        canonical = soup.find("link", rel="canonical")
+        target = canonical["href"] if canonical and canonical.get("href") else url
+        return kind, i, title, target
+
+    jobs = [(kind, i) for kind, n in limits.items() for i in range(1, n + 1)]
+    with ThreadPoolExecutor(workers) as ex:
+        found = [r for r in ex.map(check, jobs) if r]
+    for kind, i, title, _ in found:
+        print(f"  probe {kind} {i}: {title}", file=sys.stderr)
+    return found
+
+
+# --------------------------------------------------------------------------
 # Crawl
 # --------------------------------------------------------------------------
 
-def crawl(start, max_pages=300, delay=0.4):
+def crawl(start, max_pages=300, delay=0.4, probe_limits=None):
     session = make_session()
     start = norm(start)
 
@@ -464,6 +525,10 @@ def crawl(start, max_pages=300, delay=0.4):
         enqueue(u, "robots")
     for u in sitemap_urls:
         enqueue(u, "sitemap")
+
+    probed = probe_ids(start, probe_limits) if probe_limits else []
+    for _, _, _, u in probed:
+        enqueue(u, "probe")
 
     pages, broken, contents = [], [], []
     assets = {"css": set(), "js": set(), "img": set()}
@@ -536,7 +601,9 @@ def crawl(start, max_pages=300, delay=0.4):
         catalog_images |= all_image_urls(soup, html, base)
 
         key = old_key(final)
-        contents.append(extract_content(soup, html, final, key, base))
+        content = extract_content(soup, html, final, key, base)
+        content["origin"] = origin.get(url, "link")
+        contents.append(content)
 
         for a in soup.find_all("a", href=True):
             href = a["href"].strip()
@@ -554,7 +621,7 @@ def crawl(start, max_pages=300, delay=0.4):
         print(f"[{len(pages):>3}] {r.status_code} {url}", file=sys.stderr)
         time.sleep(delay)
 
-    orphans = sorted(u for u, src in origin.items() if src in ("sitemap", "robots") and u not in linked)
+    orphans = sorted(u for u, src in origin.items() if src in ("sitemap", "robots", "probe") and u not in linked)
     return {
         "start": start,
         "crawled_at": datetime.now().isoformat(timespec="seconds"),
@@ -567,6 +634,7 @@ def crawl(start, max_pages=300, delay=0.4):
         "sitemap_urls": sitemap_urls,
         "robots": {"sitemaps": robots_sitemaps, "paths": robots_paths},
         "orphans": orphans,
+        "probed": [{"kind": k, "id": i, "title": t, "url": u} for k, i, t, u in probed],
         "contents": contents,
     }
 
@@ -580,11 +648,16 @@ def dedupe_contents(contents):
     content, but remember every alias for the redirect table."""
     by_sig, aliases = {}, {}
     for c in contents:
-        sig = hashlib.sha1((c["title"] + "|" + c["text"]).encode()).hexdigest()
+        # Aliases of one page share the canonical; different pages can share
+        # title and text (e.g. two empty "Serra Circular" categories).
+        sig = c["canonical"] or hashlib.sha1((c["title"] + "|" + c["text"]).encode()).hexdigest()
         if sig in by_sig:
             keep = by_sig[sig]
-            # Prefer the URL nested under its parent category.
-            if c["old_key"].count("/") > keep["old_key"].count("/"):
+            # Prefer SEO URLs over index.php?route=..., then the URL nested
+            # under its parent category.
+            def rank(x):
+                return (not x["old_key"].startswith("route:"), x["old_key"].count("/"))
+            if rank(c) > rank(keep):
                 by_sig[sig] = c
                 aliases.setdefault(c["url"], []).extend([keep["url"]] + aliases.pop(keep["url"], []))
             else:
@@ -698,7 +771,8 @@ def write_inventory(contents, path, start):
         crumbs = [b for b in c["breadcrumb"] if old_key(b["url"]) not in ("", "route:common/home")]
         return crumbs[-2]["url"] if len(crumbs) >= 2 else None
 
-    tops = [c for c in categories if not parent_of(c)]
+    hidden = [c for c in categories if c.get("origin") == "probe"]
+    tops = [c for c in categories if not parent_of(c) and c not in hidden]
     children = {}
     for c in categories:
         par = parent_of(c)
@@ -714,6 +788,7 @@ def write_inventory(contents, path, start):
         "",
         f"- Categorias de primeiro nivel: {len(tops)}",
         f"- Subcategorias: {sum(len(v) for v in children.values())}",
+        f"- Categorias fora do menu (achadas por --probe-ids): {len(hidden)}",
         f"- Equipamentos/produtos: {len(products)}",
         "",
         "## Categorias e subcategorias",
@@ -725,6 +800,12 @@ def write_inventory(contents, path, start):
         for ch in children.get(t["url"], []):
             st = " (sem produtos)" if ch.get("category", {}).get("empty") else ""
             lines.append(f"  - {ch['title']}{st} `{urlparse(ch['url']).path}` -> `/{ch['new_slug']}`")
+    if hidden:
+        lines += ["", "## Categorias fora do menu", "",
+                  "Existem no OpenCart com URL propria, mas nenhuma pagina linka para elas.", ""]
+        for h in hidden:
+            st = " (sem produtos)" if h.get("category", {}).get("empty") else ""
+            lines.append(f"- {h['title']}{st} `{urlparse(h['url']).path}` -> `/{h['new_slug']}`")
     lines += ["", "## Equipamentos / produtos", ""]
     if products:
         lines += ["| Nome | URL antiga | Slug novo | Preco | Imagens | Specs |", "|---|---|---|---|---|---|"]
@@ -834,12 +915,18 @@ def main():
     ap.add_argument("--delay", type=float, default=0.4)
     ap.add_argument("--out", default=".", help="output directory")
     ap.add_argument("--skip-images", action="store_true", help="do not download images")
+    ap.add_argument("--probe-ids", action="store_true",
+                    help="walk OpenCart ids to find categories, pages and products with no links")
+    ap.add_argument("--probe-max", type=int, default=400, help="highest product id probed (default 400)")
     args = ap.parse_args()
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
 
-    data = crawl(args.url, args.max_pages, args.delay)
+    probe_limits = None
+    if args.probe_ids:
+        probe_limits = {"category": 200, "information": 50, "product": args.probe_max, "manufacturer": 50}
+    data = crawl(args.url, args.max_pages, args.delay, probe_limits)
 
     contents = dedupe_contents(data.pop("contents"))
     write_contents(contents, out / "content")
