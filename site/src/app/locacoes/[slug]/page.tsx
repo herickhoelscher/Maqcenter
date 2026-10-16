@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CallButton, WhatsAppButton } from "@/components/Buttons";
+import { CtaBand } from "@/components/CtaBand";
 import { EquipmentCard } from "@/components/EquipmentCard";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
-import { Plate, PlateRow } from "@/components/Plate";
-import { company, getEquipment, getEquipmentBySlug } from "@/lib/content";
+import { AddToQuoteButton } from "@/components/quote/QuoteControls";
+import { company, formatPrice, getEquipment, getEquipmentBySlug } from "@/lib/content";
 import { pageMetadata, productJsonLd } from "@/lib/seo";
 import { equipmentMessage } from "@/lib/whatsapp";
 
@@ -33,103 +34,156 @@ export default async function EquipmentPage({ params }: PageProps<"/locacoes/[sl
   const item = getEquipmentBySlug(slug);
   if (!item) notFound();
 
-  const others = getEquipment().filter((e) => e.slug !== item.slug);
+  const related = getEquipment()
+    .filter((e) => e.slug !== item.slug)
+    .sort((a, b) => Number(b.category === item.category) - Number(a.category === item.category))
+    .slice(0, 3);
   const [cover, ...gallery] = item.images;
 
   return (
     <>
       <JsonLd data={productJsonLd(item)} />
       <PageHeader
-        eyebrow="Locação"
+        badge={item.category}
+        badgeNote="Locação"
         title={item.name}
         crumbs={[
-          { href: "/locacoes", label: "Locações" },
+          { href: "/locacoes", label: "Locações de Equipamentos" },
           { href: `/locacoes/${item.slug}`, label: item.name },
         ]}
       />
 
-      <div className="container-site grid gap-10 py-12 md:py-16 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
-        <div>
-          <Plate label={item.name}>
-            <div className="mt-1.5 grid aspect-[4/3] place-items-center overflow-hidden rounded-sm bg-white">
-              {cover ? (
-                <Image
-                  src={cover.src}
-                  alt={cover.alt}
-                  width={cover.width}
-                  height={cover.height}
-                  sizes="(min-width: 1024px) 28rem, 90vw"
-                  priority
-                  className={cover.fit === "cover" ? "h-full w-full object-cover" : "h-[75%] w-auto max-w-[85%] object-contain"}
-                />
-              ) : (
-                <span aria-hidden className="font-display px-6 text-center text-5xl text-stamp">
-                  {item.name}
-                </span>
-              )}
-            </div>
-          </Plate>
+      <div className="container-site grid gap-8 py-10 lg:grid-cols-12 lg:py-16">
+        <div className="lg:col-span-6">
+          <div className="card relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-concrete-50">
+            <span className="badge absolute top-3 left-3 z-10 bg-navy text-white">Locação</span>
+            {item.availability && (
+              <span className="badge absolute top-3 right-3 z-10 bg-success-strong text-white">{item.availability}</span>
+            )}
+            {cover ? (
+              <Image
+                src={cover.src}
+                alt={cover.alt}
+                width={cover.width}
+                height={cover.height}
+                sizes="(min-width: 1024px) 36rem, 92vw"
+                priority
+                className={cover.fit === "cover" ? "h-full w-full object-cover" : "h-[70%] w-auto object-contain"}
+              />
+            ) : (
+              <span aria-hidden className="text-headline-m font-bold text-outline">
+                Foto em breve
+              </span>
+            )}
+          </div>
           {gallery.length > 0 && (
-            <ul className="mt-4 grid grid-cols-3 gap-3">
+            <ul className="mt-4 grid grid-cols-4 gap-3">
               {gallery.map((img) => (
-                <li key={img.src} className="grid aspect-square place-items-center border-2 border-ink bg-white">
-                  <Image src={img.src} alt={img.alt} width={img.width} height={img.height} sizes="10rem" className="max-h-[85%] w-auto object-contain" />
+                <li key={img.src} className="card grid aspect-square place-items-center overflow-hidden bg-concrete-50">
+                  <Image src={img.src} alt={img.alt} width={img.width} height={img.height} sizes="8rem" className="max-h-[85%] w-auto object-contain" />
                 </li>
               ))}
             </ul>
           )}
         </div>
 
-        <div className="flex flex-col gap-8">
-          {item.description ? (
-            <div className="space-y-4 text-lg">
-              {item.description.map((p) => (
-                <p key={p}>{p}</p>
-              ))}
-            </div>
-          ) : (
-            <p className="text-lg">
-              Locação de {item.name.toLowerCase()} em {company.address.city}. Fale com a equipe para saber modelo,
-              disponibilidade e valor.
-            </p>
-          )}
-
-          <Plate as="section" label="Ficha técnica" aside={company.name}>
-            <h2 className="sr-only">Ficha técnica</h2>
-            <dl className="mt-1">
-              <PlateRow name="Equipamento">{item.name}</PlateRow>
-              {item.specs.map((s) => (
-                <PlateRow key={s.name} name={s.name}>
-                  {s.value}
-                </PlateRow>
-              ))}
-              {item.specs.length === 0 && <PlateRow name="Especificações">Informadas no orçamento</PlateRow>}
-            </dl>
-          </Plate>
-
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <WhatsAppButton message={equipmentMessage(item.name)} tone="blue">
-              Pedir orçamento deste equipamento
-            </WhatsAppButton>
-            <CallButton />
+        <div className="space-y-6 lg:col-span-6">
+          <div className="flex items-center justify-between gap-3">
+            <span className="text-spec tracking-wider text-outline uppercase">{item.category}</span>
+            {item.brand && <span className="text-badge text-blue-accent uppercase">{item.brand}</span>}
           </div>
-          <p className="text-steel">
-            Prefere escrever?{" "}
-            <Link href="/contato" className="font-semibold text-blue underline underline-offset-4">
-              Use o formulário de contato
-            </Link>
-            .
-          </p>
+
+          <div className="space-y-4 text-body-lg text-slate-text">
+            {item.description ? (
+              item.description.map((p) => <p key={p}>{p}</p>)
+            ) : (
+              <p>
+                Locação de {item.name.toLowerCase()} em {company.address.city}. Fale com a equipe para saber modelo, disponibilidade e valor.
+              </p>
+            )}
+          </div>
+
+          <section aria-labelledby="ficha" className="card overflow-hidden">
+            <h2 id="ficha" className="border-b border-concrete-200 bg-concrete-50 px-5 py-3 text-title text-navy">
+              Ficha técnica
+            </h2>
+            <table className="w-full text-body">
+              <tbody>
+                <tr className="border-b border-concrete-100">
+                  <th scope="row" className="w-2/5 px-5 py-3 text-left text-spec text-outline">
+                    Equipamento
+                  </th>
+                  <td className="px-5 py-3 font-semibold text-charcoal">{item.name}</td>
+                </tr>
+                <tr className="border-b border-concrete-100">
+                  <th scope="row" className="px-5 py-3 text-left text-spec text-outline">
+                    Categoria
+                  </th>
+                  <td className="px-5 py-3 text-charcoal">{item.category}</td>
+                </tr>
+                {item.brand && (
+                  <tr className="border-b border-concrete-100">
+                    <th scope="row" className="px-5 py-3 text-left text-spec text-outline">
+                      Marca
+                    </th>
+                    <td className="px-5 py-3 text-charcoal">{item.brand}</td>
+                  </tr>
+                )}
+                {item.specs.map((s) => (
+                  <tr key={s.name} className="border-b border-concrete-100 last:border-b-0">
+                    <th scope="row" className="px-5 py-3 text-left text-spec text-outline">
+                      {s.name}
+                    </th>
+                    <td className="px-5 py-3 text-charcoal">{s.value}</td>
+                  </tr>
+                ))}
+                {item.specs.length === 0 && (
+                  <tr>
+                    <th scope="row" className="px-5 py-3 text-left text-spec text-outline">
+                      Especificações
+                    </th>
+                    <td className="px-5 py-3 text-charcoal">Informadas no orçamento</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </section>
+
+          <div className="card space-y-4 p-5">
+            {item.priceDaily ? (
+              <div>
+                <span className="text-body-sm text-outline">Diária a partir de</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-headline-m font-extrabold text-navy">{formatPrice(item.priceDaily)}</span>
+                  <span className="text-body text-slate-text">/dia</span>
+                </div>
+              </div>
+            ) : (
+              <p className="text-body text-slate-text">Valor e disponibilidade sob consulta</p>
+            )}
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <WhatsAppButton message={equipmentMessage(item.name)}>Cotar pelo WhatsApp</WhatsAppButton>
+              <AddToQuoteButton slug={item.slug} name={item.name} variant="full" />
+              <CallButton />
+            </div>
+            <p className="text-body-sm text-outline">
+              Precisa de mais de um equipamento?{" "}
+              <Link href="/orcamento" className="font-semibold text-blue-accent underline">
+                Veja sua lista de orçamento
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </div>
 
-      <section aria-labelledby="outros" className="border-t-2 border-ink bg-concrete">
-        <div className="container-site py-14">
-          <h2 id="outros" className="font-display text-4xl">
+      <section aria-labelledby="relacionados" className="bg-surface-low py-14">
+        <div className="container-site">
+          <h2 id="relacionados" className="text-headline-m text-navy">
             Outros equipamentos
           </h2>
-          <ul className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
-            {others.map((e) => (
+          <ul className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {related.map((e) => (
               <li key={e.slug}>
                 <EquipmentCard item={e} />
               </li>
@@ -137,6 +191,8 @@ export default async function EquipmentPage({ params }: PageProps<"/locacoes/[sl
           </ul>
         </div>
       </section>
+
+      <CtaBand title="Vai começar uma obra?" text="Monte sua lista com vários equipamentos e envie o pedido de orçamento de uma vez." />
     </>
   );
 }

@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { BrandGrid } from "@/components/BrandGrid";
 import { CallButton, TextLink, WhatsAppButton } from "@/components/Buttons";
-import { ContactDetails, mapsUrl } from "@/components/ContactDetails";
+import { ContactDetails } from "@/components/ContactDetails";
+import { CtaBand } from "@/components/CtaBand";
 import { EquipmentCard } from "@/components/EquipmentCard";
-import { ArrowIcon, PinIcon } from "@/components/icons";
+import { ArrowIcon, DrillIcon, ListIcon, PinIcon, SearchIcon, VerifiedIcon, WrenchIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
-import { Plate } from "@/components/Plate";
 import { company, getEquipment, getFeaturedEquipment, getServices, getTestimonials, servicePaths } from "@/lib/content";
 import { localBusinessJsonLd, pageMetadata } from "@/lib/seo";
 
@@ -17,6 +18,13 @@ export const metadata = pageMetadata({
   path: "/",
 });
 
+const serviceIcons: Record<string, ReactNode> = {
+  locacoes: <ListIcon className="size-6" />,
+  "assistencia-tecnica": <WrenchIcon className="size-6" />,
+  "venda-de-maquinas": <VerifiedIcon className="size-6" />,
+  "perfuracao-em-concreto": <DrillIcon className="size-6" />,
+};
+
 export default function Home() {
   const equipment = getEquipment();
   const featured = getFeaturedEquipment();
@@ -26,101 +34,106 @@ export default function Home() {
     <>
       <JsonLd data={localBusinessJsonLd()} />
 
-      <section className="on-dark bg-ink text-white">
-        <div className="container-site grid gap-10 pt-10 pb-14 lg:grid-cols-[1.35fr_1fr] lg:items-end lg:gap-16 lg:pt-20 lg:pb-20">
-          <div>
-            <p className="label-mono flex items-center gap-2 text-signal">
-              <PinIcon className="size-4" />
-              {company.address.city} · {company.address.state}
+      <section className="on-dark bg-navy-deep text-white">
+        <div className="container-site grid gap-10 py-12 lg:grid-cols-12 lg:items-center lg:py-20">
+          <div className="space-y-6 lg:col-span-7">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="badge bg-amber text-charcoal">
+                <PinIcon className="size-3.5" />
+                {company.address.city} - {company.address.state}
+              </span>
+              <span className="text-spec text-on-dark">Há mais de 35 anos ao lado de quem constrói</span>
+            </div>
+            <h1 className="text-display-m md:text-display">Locação de máquinas e ferramentas elétricas</h1>
+            <p className="max-w-xl text-body-lg text-on-dark">
+              Locação de equipamentos, assistência técnica, venda de máquinas e perfuração em concreto. Peça seu orçamento pelo WhatsApp.
             </p>
-            <h1 className="font-display mt-4 text-[3.25rem] sm:text-7xl lg:text-[5.5rem]">
-              Locação de máquinas e ferramentas elétricas.
-            </h1>
-            <p className="mt-6 max-w-xl text-lg text-ink-soft">
-              Locação de equipamentos, assistência técnica, venda de máquinas e perfuração em concreto. Peça seu orçamento
-              pelo WhatsApp.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton />
               <CallButton tone="dark" />
             </div>
+            <form action="/locacoes" role="search" className="flex max-w-xl md:hidden">
+              <label htmlFor="busca-home" className="sr-only">
+                Buscar equipamentos
+              </label>
+              <input
+                id="busca-home"
+                name="q"
+                type="search"
+                placeholder="Buscar equipamento"
+                className="w-full rounded-l-[var(--radius-control)] border-0 bg-white px-4 py-3 text-body text-charcoal focus:outline-none"
+              />
+              <button type="submit" className="btn btn-primary rounded-l-none" aria-label="Buscar">
+                <SearchIcon className="size-5" />
+              </button>
+            </form>
           </div>
 
-          <Plate as="aside" label="Equipamentos para locação" aside={`${equipment.length} itens`} className="text-ink">
-            <ul className="mt-1">
+          <aside aria-labelledby="lista-locacao" className="card overflow-hidden text-charcoal lg:col-span-5">
+            <div className="flex items-center justify-between border-b border-concrete-200 bg-concrete-50 px-5 py-3">
+              <h2 id="lista-locacao" className="text-title text-navy">
+                Equipamentos para locação
+              </h2>
+              <span className="rounded-full bg-concrete-200 px-2 py-0.5 text-[11px] font-bold text-outline">{equipment.length}</span>
+            </div>
+            <ul>
               {equipment.map((item) => (
-                <li key={item.slug} className="border-b border-dashed border-line last:border-b-0">
-                  <Link
-                    href={`/locacoes/${item.slug}`}
-                    className="group flex min-h-12 items-center justify-between gap-3 px-3 font-semibold hover:text-blue"
-                  >
-                    {item.name}
-                    <ArrowIcon className="size-4 text-steel transition-transform group-hover:translate-x-1 group-hover:text-blue" />
+                <li key={item.slug} className="border-b border-concrete-100 last:border-b-0">
+                  <Link href={`/locacoes/${item.slug}`} className="group flex min-h-12 items-center justify-between gap-3 px-5 py-2.5 hover:bg-concrete-50">
+                    <span>
+                      <span className="block text-body font-semibold text-navy group-hover:text-blue-accent">{item.name}</span>
+                      <span className="text-body-sm text-outline">{item.category}</span>
+                    </span>
+                    <ArrowIcon className="size-4 text-outline transition-transform group-hover:translate-x-1 group-hover:text-blue-accent" />
                   </Link>
                 </li>
               ))}
             </ul>
-          </Plate>
+          </aside>
         </div>
       </section>
 
-      <section aria-labelledby="servicos" className="container-site py-16 md:py-24">
-        <h2 id="servicos" className="font-display text-4xl md:text-6xl">
-          O que a {company.name} faz
-        </h2>
-        <ul className="mt-10 grid gap-x-10 gap-y-2 md:grid-cols-2">
-          {getServices().map((s) => (
-            <li key={s.slug} className="border-t-4 border-ink">
-              <Link href={servicePaths[s.slug]} className="group flex h-full flex-col gap-3 py-6 pr-2">
-                <span className="font-display flex items-center justify-between gap-4 text-3xl group-hover:text-blue md:text-4xl">
-                  {s.name}
-                  <ArrowIcon className="size-7 shrink-0 transition-transform group-hover:translate-x-1" />
-                </span>
-                <span className="max-w-md text-steel">{s.summary}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <section aria-labelledby="servicos" className="py-16">
+        <div className="container-site">
+          <div className="mx-auto max-w-2xl space-y-3 text-center">
+            <span className="badge bg-blue-accent/10 text-blue-accent">Serviços</span>
+            <h2 id="servicos" className="text-headline-m text-navy md:text-headline">
+              O que a {company.name} faz
+            </h2>
+          </div>
+          <ul className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {getServices().map((s, i) => (
+              <li key={s.slug}>
+                <Link href={servicePaths[s.slug]} className="card group flex h-full flex-col gap-4 p-6 transition-shadow hover:shadow-level2">
+                  <span className={`grid size-12 place-items-center rounded-[var(--radius-card)] ${i % 2 ? "bg-amber text-charcoal" : "bg-navy text-amber"}`}>
+                    {serviceIcons[s.slug]}
+                  </span>
+                  <span className="text-title text-navy group-hover:text-blue-accent">{s.name}</span>
+                  <span className="flex-1 text-body-sm text-slate-text">{s.summary}</span>
+                  <span className="inline-flex items-center gap-1.5 text-btn font-bold text-blue-accent">
+                    Saiba mais
+                    <ArrowIcon className="size-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
-      {company.about && (
-        <section aria-labelledby="sobre" className="on-dark bg-blue text-white">
-          <div className="container-site grid gap-8 py-14 md:py-16 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-14">
-            {company.aboutImage && (
-              <Image
-                src={company.aboutImage.src}
-                alt={company.aboutImage.alt}
-                width={company.aboutImage.width}
-                height={company.aboutImage.height}
-                sizes="(min-width: 1024px) 34rem, 92vw"
-                className="w-full rounded-md border-2 border-white/80"
-              />
-            )}
-            <div>
-              <p className="label-mono text-white">{company.slogan}</p>
-              <h2 id="sobre" className="font-display mt-3 text-4xl md:text-6xl">
-                {company.about[0]}
-              </h2>
-              {company.about[1] && <p className="mt-5 max-w-xl text-lg text-white/90">{company.about[1]}</p>}
-              <Link href="/sobre" className="mt-6 inline-flex items-center gap-2 font-semibold underline underline-offset-4 hover:text-signal">
-                Conheça a {company.name}
-                <ArrowIcon className="size-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-
       {featured.length > 0 && (
-        <section aria-labelledby="destaques" className="border-y-2 border-ink bg-concrete">
-          <div className="container-site py-16 md:py-20">
+        <section aria-labelledby="destaques" className="bg-surface-mid py-16">
+          <div className="container-site">
             <div className="flex flex-wrap items-end justify-between gap-4">
-              <h2 id="destaques" className="font-display text-4xl md:text-6xl">
-                Equipamentos em destaque
-              </h2>
-              <TextLink href="/locacoes">Ver todos os equipamentos</TextLink>
+              <div className="space-y-2">
+                <span className="badge bg-navy text-amber">Locação</span>
+                <h2 id="destaques" className="text-headline-m text-navy md:text-headline">
+                  Equipamentos em destaque
+                </h2>
+              </div>
+              <TextLink href="/locacoes">Ver catálogo completo</TextLink>
             </div>
-            <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+            <ul className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
               {featured.map((item) => (
                 <li key={item.slug}>
                   <EquipmentCard item={item} />
@@ -131,76 +144,82 @@ export default function Home() {
         </section>
       )}
 
-      <section aria-labelledby="marcas" className="container-site py-16 md:py-24">
-        <p className="label-mono text-blue">Marcas</p>
-        <h2 id="marcas" className="font-display mt-3 max-w-3xl text-4xl md:text-6xl">
-          Atendemos as melhores marcas do mercado
-        </h2>
-        <div className="mt-10">
-          <BrandGrid />
-        </div>
-
-        {testimonials.length > 0 && (
-          <ul className="mt-14 grid gap-5 md:grid-cols-2">
-            {testimonials.map((t) => (
-              <li key={t.author}>
-                <figure className="h-full border-l-4 border-blue bg-white p-6">
-                  <blockquote className="text-lg">{t.text}</blockquote>
-                  <figcaption className="label-mono mt-4 text-steel">
-                    {t.author}
-                    {t.source && ` · ${t.source}`}
-                  </figcaption>
-                </figure>
-              </li>
-            ))}
-          </ul>
-        )}
-
-        <div className="mt-12 flex flex-col gap-4 border-2 border-ink bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-lg">
-            Acompanhe a {company.name} no Instagram: <strong>{company.social.instagram.handle}</strong>
-          </p>
-          <a
-            href={company.social.instagram.url}
-            target="_blank"
-            rel="noopener"
-            className="inline-flex min-h-12 items-center justify-center rounded-md border-2 border-ink px-5 font-semibold hover:bg-ink hover:text-white"
-          >
-            Abrir Instagram
-          </a>
-        </div>
-      </section>
-
-      <section aria-labelledby="contato" className="on-dark bg-ink text-white">
-        <div className="container-site grid gap-10 py-16 md:py-20 lg:grid-cols-2 lg:items-center">
-          <div>
-            <h2 id="contato" className="font-display text-4xl md:text-6xl">
-              Peça seu orçamento
-            </h2>
-            <p className="mt-5 max-w-md text-lg text-ink-soft">
-              Fale pelo WhatsApp, ligue ou mande uma mensagem pelo formulário.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <WhatsAppButton />
-              <CallButton tone="dark" />
+      {company.about && (
+        <section aria-labelledby="sobre" className="py-16">
+          <div className="container-site grid gap-8 lg:grid-cols-12 lg:items-center">
+            {company.aboutImage && (
+              <Image
+                src={company.aboutImage.src}
+                alt={company.aboutImage.alt}
+                width={company.aboutImage.width}
+                height={company.aboutImage.height}
+                sizes="(min-width: 1024px) 36rem, 92vw"
+                className="w-full rounded-[var(--radius-card)] border border-concrete-200 shadow-level1 lg:col-span-6"
+              />
+            )}
+            <div className="space-y-4 lg:col-span-6">
+              <span className="badge bg-blue-accent/10 text-blue-accent">{company.slogan}</span>
+              <h2 id="sobre" className="text-headline-m text-navy md:text-headline">
+                {company.about[0]}
+              </h2>
+              {company.about.slice(1).map((p) => (
+                <p key={p} className="text-body-lg text-slate-text">
+                  {p}
+                </p>
+              ))}
+              <TextLink href="/sobre">Conheça a {company.name}</TextLink>
             </div>
-            <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
-              <Link href="/contato" className="font-semibold text-white underline underline-offset-4 hover:text-signal">
-                Enviar pelo formulário
-              </Link>
-              <a
-                href={mapsUrl()}
-                target="_blank"
-                rel="noopener"
-                className="font-semibold text-white underline underline-offset-4 hover:text-signal"
-              >
-                Ver no mapa
-              </a>
-            </p>
           </div>
-          <ContactDetails className="text-ink" />
+        </section>
+      )}
+
+      <section aria-labelledby="marcas" className="bg-white py-16">
+        <div className="container-site space-y-8">
+          <div className="mx-auto max-w-2xl space-y-3 text-center">
+            <span className="badge bg-blue-accent/10 text-blue-accent">Marcas</span>
+            <h2 id="marcas" className="text-headline-m text-navy md:text-headline">
+              Atendemos as melhores marcas do mercado
+            </h2>
+          </div>
+          <BrandGrid />
+          {testimonials.length > 0 && (
+            <ul className="grid gap-6 md:grid-cols-2">
+              {testimonials.map((t) => (
+                <li key={t.author}>
+                  <figure className="card h-full p-6">
+                    <blockquote className="text-body-lg text-slate-text">{t.text}</blockquote>
+                    <figcaption className="mt-4 text-spec text-navy">
+                      {t.author}
+                      {t.source && <span className="text-outline"> · {t.source}</span>}
+                    </figcaption>
+                  </figure>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </section>
+
+      <section aria-labelledby="onde" className="bg-surface-low py-16">
+        <div className="container-site grid gap-8 lg:grid-cols-12 lg:items-start">
+          <div className="space-y-4 lg:col-span-5">
+            <span className="badge bg-navy text-amber">Unidade {company.address.city}</span>
+            <h2 id="onde" className="text-headline-m text-navy md:text-headline">
+              Fale com a equipe
+            </h2>
+            <p className="text-body-lg text-slate-text">WhatsApp, telefone, e-mail ou formulário. Escolha o que for mais prático.</p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <WhatsAppButton tone="whatsapp">WhatsApp</WhatsAppButton>
+              <Link href="/contato" className="btn btn-secondary">
+                Enviar mensagem
+              </Link>
+            </div>
+          </div>
+          <ContactDetails className="lg:col-span-7" />
+        </div>
+      </section>
+
+      <CtaBand title="Vai começar uma obra?" text="Monte sua lista com vários equipamentos e envie o pedido de orçamento de uma vez pelo WhatsApp ou por e-mail." />
     </>
   );
 }

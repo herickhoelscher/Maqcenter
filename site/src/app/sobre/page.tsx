@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Advantages } from "@/components/Advantages";
 import { BrandGrid } from "@/components/BrandGrid";
 import { ContactDetails } from "@/components/ContactDetails";
 import { CtaBand } from "@/components/CtaBand";
+import { ArrowIcon } from "@/components/icons";
 import { PageHeader } from "@/components/PageHeader";
 import { company, getServices, servicePaths } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
@@ -17,62 +19,79 @@ export const metadata = pageMetadata({
 export default function AboutPage() {
   return (
     <>
-      <PageHeader eyebrow="Sobre" title={company.slogan} lead={`${company.tagline}, em ${company.address.city} - ${company.address.state}.`} crumbs={[{ href: "/sobre", label: "Sobre" }]} />
+      <PageHeader
+        badge="Sobre"
+        badgeNote={company.slogan ?? undefined}
+        title={`Sobre a ${company.name}`}
+        lead={`${company.tagline}, em ${company.address.city} - ${company.address.state}.`}
+        crumbs={[{ href: "/sobre", label: "Sobre" }]}
+      />
 
-      <div className="container-site grid gap-12 py-12 md:py-16 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
-        <div className="flex flex-col gap-10">
+      <div className="container-site grid gap-8 py-10 lg:grid-cols-12 lg:py-16">
+        <div className="space-y-8 lg:col-span-7">
           {company.about && (
-            <div className="max-w-2xl space-y-4 text-lg">
-              {company.about.map((p, i) => (
-                <p key={p} className={i === 0 ? "font-display text-3xl md:text-4xl" : undefined}>
-                  {p}
-                </p>
-              ))}
+            <div className="card space-y-4 p-6 md:p-8">
+              {company.about.map((p, i) =>
+                i === 0 ? (
+                  <h2 key={p} className="text-headline-m text-navy">
+                    {p}
+                  </h2>
+                ) : (
+                  <p key={p} className="text-body-lg text-slate-text">
+                    {p}
+                  </p>
+                ),
+              )}
             </div>
           )}
           {company.aboutImage && (
-            <figure>
+            <figure className="card overflow-hidden">
               <Image
                 src={company.aboutImage.src}
                 alt={company.aboutImage.alt}
                 width={company.aboutImage.width}
                 height={company.aboutImage.height}
-                sizes="(min-width: 1024px) 40rem, 92vw"
+                sizes="(min-width: 1024px) 44rem, 92vw"
                 priority
-                className="w-full rounded-md border-2 border-ink"
+                className="w-full"
               />
-              <figcaption className="label-mono mt-3 text-steel">Equipe {company.name}</figcaption>
+              <figcaption className="px-5 py-3 text-body-sm text-outline">Equipe {company.name}</figcaption>
             </figure>
           )}
-          <section aria-labelledby="servicos">
-            <h2 id="servicos" className="font-display text-4xl">
+          <section aria-labelledby="servicos" className="space-y-4">
+            <h2 id="servicos" className="text-headline-m text-navy">
               Serviços
             </h2>
-            <ul className="mt-6">
+            <ul className="grid gap-4 sm:grid-cols-2">
               {getServices().map((s) => (
-                <li key={s.slug} className="border-t-2 border-ink py-4">
-                  <Link href={servicePaths[s.slug]} className="font-display text-2xl hover:text-blue">
-                    {s.name}
+                <li key={s.slug}>
+                  <Link href={servicePaths[s.slug]} className="card group flex h-full flex-col gap-2 p-5 transition-shadow hover:shadow-level2">
+                    <span className="flex items-center justify-between gap-3 text-title text-navy group-hover:text-blue-accent">
+                      {s.name}
+                      <ArrowIcon className="size-5 shrink-0" />
+                    </span>
+                    <span className="text-body-sm text-slate-text">{s.summary}</span>
                   </Link>
-                  <p className="mt-1 text-steel">{s.summary}</p>
                 </li>
               ))}
             </ul>
           </section>
         </div>
-        <ContactDetails className="self-start lg:sticky lg:top-28" />
+        <ContactDetails className="self-start lg:sticky lg:top-40 lg:col-span-5" />
       </div>
 
-      <section aria-labelledby="marcas" className="container-site pb-16">
-        <h2 id="marcas" className="font-display text-4xl">
-          Marcas que atendemos
-        </h2>
-        <div className="mt-6">
+      <Advantages />
+
+      <section aria-labelledby="marcas" className="bg-white py-16">
+        <div className="container-site space-y-6">
+          <h2 id="marcas" className="text-headline-m text-navy">
+            Marcas que atendemos
+          </h2>
           <BrandGrid />
         </div>
       </section>
 
-      <CtaBand title="Fale com a equipe" />
+      <CtaBand title="Fale com a equipe" text="WhatsApp, telefone ou lista de orçamento com vários equipamentos." />
     </>
   );
 }

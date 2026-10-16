@@ -5,8 +5,7 @@ import { HONEYPOT_FIELD, serviceOptions, validateContact, type FieldErrors } fro
 
 type Status = { kind: "idle" } | { kind: "sending" } | { kind: "sent" } | { kind: "error"; message: string };
 
-const inputClass =
-  "mt-1.5 block w-full rounded-md border-2 border-ink bg-white px-3.5 py-3 text-base placeholder:text-steel/70 aria-[invalid=true]:border-red-700";
+const inputClass = "field mt-1.5 placeholder:text-outline";
 
 export function ContactForm({ defaultService }: { defaultService?: string }) {
   const [status, setStatus] = useState<Status>({ kind: "idle" });
@@ -57,18 +56,18 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
 
   const error = (name: keyof FieldErrors) =>
     errors[name] && (
-      <p id={`${id}-${name}-error`} className="mt-1.5 text-sm font-medium text-red-700">
+      <p id={`${id}-${name}-error`} className="mt-1.5 text-body-sm font-semibold text-crimson">
         {errors[name]}
       </p>
     );
 
   return (
     <form onSubmit={onSubmit} noValidate className="grid gap-5" aria-describedby={`${id}-required`}>
-      <p id={`${id}-required`} className="text-sm text-steel">
+      <p id={`${id}-required`} className="text-body-sm text-outline">
         Campos com * são obrigatórios.
       </p>
       <div>
-        <label htmlFor={`${id}-name`} className="font-semibold">
+        <label htmlFor={`${id}-name`} className="text-body font-semibold text-navy">
           Nome *
         </label>
         <input {...field("name")} type="text" autoComplete="name" required className={inputClass} />
@@ -76,14 +75,14 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor={`${id}-phone`} className="font-semibold">
+          <label htmlFor={`${id}-phone`} className="text-body font-semibold text-navy">
             Telefone ou WhatsApp *
           </label>
           <input {...field("phone")} type="tel" autoComplete="tel" inputMode="tel" placeholder="(45) 99999-9999" required className={inputClass} />
           {error("phone")}
         </div>
         <div>
-          <label htmlFor={`${id}-email`} className="font-semibold">
+          <label htmlFor={`${id}-email`} className="text-body font-semibold text-navy">
             E-mail
           </label>
           <input {...field("email")} type="email" autoComplete="email" className={inputClass} />
@@ -91,7 +90,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
         </div>
       </div>
       <div>
-        <label htmlFor={`${id}-service`} className="font-semibold">
+        <label htmlFor={`${id}-service`} className="text-body font-semibold text-navy">
           Assunto *
         </label>
         <select {...field("service")} defaultValue={defaultService ?? ""} required className={inputClass}>
@@ -107,7 +106,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
         {error("service")}
       </div>
       <div>
-        <label htmlFor={`${id}-message`} className="font-semibold">
+        <label htmlFor={`${id}-message`} className="text-body font-semibold text-navy">
           Mensagem *
         </label>
         <textarea
@@ -128,13 +127,13 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
         <button
           type="submit"
           disabled={status.kind === "sending"}
-          className="inline-flex min-h-12 items-center justify-center rounded-md bg-blue px-6 font-semibold text-white hover:bg-blue-deep disabled:opacity-70"
+          className="btn btn-primary px-8 disabled:opacity-70"
         >
           {status.kind === "sending" ? "Enviando..." : "Enviar mensagem"}
         </button>
-        <p role="status" aria-live="polite" className="text-[0.9375rem]">
-          {status.kind === "sent" && <span className="font-semibold text-wa">Mensagem enviada para a MAQCENTER.</span>}
-          {status.kind === "error" && <span className="font-semibold text-red-700">{status.message}</span>}
+        <p role="status" aria-live="polite" className="text-body">
+          {status.kind === "sent" && <span className="font-semibold text-success-strong">Mensagem enviada para a MAQCENTER.</span>}
+          {status.kind === "error" && <span className="font-semibold text-crimson">{status.message}</span>}
         </p>
       </div>
     </form>

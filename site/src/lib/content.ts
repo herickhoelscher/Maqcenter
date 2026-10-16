@@ -20,6 +20,12 @@ export type Spec = { name: string; value: string };
 export type Equipment = {
   slug: string;
   name: string;
+  category: string;
+  brand: string | null;
+  /** Short status shown as a badge, e.g. "Disponível". */
+  availability: string | null;
+  /** Daily rate in BRL. Hidden when null (quote only). */
+  priceDaily: number | null;
   order: number;
   featured: boolean;
   oldUrls: string[];
@@ -72,6 +78,16 @@ export function getEquipmentBySlug(slug: string): Equipment | undefined {
   return equipmentList.find((e) => e.slug === slug);
 }
 
+export function getCategories(): { name: string; count: number }[] {
+  const counts = new Map<string, number>();
+  for (const e of getEquipment()) counts.set(e.category, (counts.get(e.category) ?? 0) + 1);
+  return [...counts].map(([name, count]) => ({ name, count })).sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+}
+
+export function formatPrice(value: number): string {
+  return value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
+}
+
 export function getFeaturedEquipment(): Equipment[] {
   return getEquipment().filter((e) => e.featured);
 }
@@ -109,6 +125,10 @@ export const servicePaths: Record<string, string> = {
 export function formatAddress(): string {
   const a = company.address;
   return `${a.street} - ${a.district}, ${a.city} - ${a.state}`;
+}
+
+export function formatHoursShort(): string {
+  return company.hours.map((h) => `${h.days}: ${h.ranges.map(([from, to]) => `${from}-${to}`).join(" / ")}`).join(" · ");
 }
 
 export function formatHours(): string[] {

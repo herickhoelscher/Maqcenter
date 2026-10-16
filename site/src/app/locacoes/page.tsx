@@ -1,7 +1,12 @@
+import { Suspense } from "react";
+import { Advantages } from "@/components/Advantages";
+import { WhatsAppButton } from "@/components/Buttons";
+import { Catalog } from "@/components/Catalog";
+import { CatalogAside } from "@/components/CatalogAside";
 import { CtaBand } from "@/components/CtaBand";
 import { EquipmentCard } from "@/components/EquipmentCard";
 import { PageHeader } from "@/components/PageHeader";
-import { getEquipment, getService } from "@/lib/content";
+import { getCategories, getEquipment, getService } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 const service = getService("locacoes");
@@ -15,24 +20,37 @@ export const metadata = pageMetadata({
 
 export default function RentalsPage() {
   const equipment = getEquipment();
+  const cards = Object.fromEntries(equipment.map((e) => [e.slug, <EquipmentCard key={e.slug} item={e} headingLevel="h2" />]));
+  const catalogProps = { items: equipment, cards, categories: getCategories(), aside: <CatalogAside /> };
+
   return (
     <>
       <PageHeader
-        eyebrow="Locação"
-        title="Equipamentos para locação"
-        lead={service.description?.[0] ?? "Escolha o equipamento e peça o orçamento pelo WhatsApp."}
-        crumbs={[{ href: "/locacoes", label: "Locações" }]}
-      />
-      <section aria-label="Lista de equipamentos" className="container-site py-12 md:py-16">
-        <ul className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
-          {equipment.map((item) => (
-            <li key={item.slug}>
-              <EquipmentCard item={item} headingLevel="h2" />
-            </li>
-          ))}
-        </ul>
-      </section>
-      <CtaBand title="Precisa de outro equipamento? Pergunte." message={service.whatsappMessage} />
+        badge="Cascavel e região"
+        badgeNote="Orçamento pelo WhatsApp"
+        title="Catálogo de Locação de Equipamentos"
+        lead={service.description?.[0] ?? "Escolha os equipamentos, monte sua lista de orçamento ou cote direto pelo WhatsApp."}
+        crumbs={[{ href: "/locacoes", label: "Locações de Equipamentos" }]}
+        actions={<WhatsAppButton tone="whatsapp" message={service.whatsappMessage}>Falar sobre locação</WhatsAppButton>}
+      >
+        {/* The catalog reads ?q= and ?categoria=, so it renders on the client;
+            the fallback shows every card while that loads. */}
+        <Suspense fallback={<CatalogFallback {...catalogProps} />}>
+          <Catalog {...catalogProps} />
+        </Suspense>
+      </PageHeader>
+      <Advantages title="Por que alugar com a Maqcenter" />
+      <CtaBand title="Vai começar uma obra?" text="Monte sua lista com vários equipamentos e envie o pedido de orçamento de uma vez pelo WhatsApp ou por e-mail." />
     </>
+  );
+}
+
+function CatalogFallback({ items, cards }: { items: ReturnType<typeof getEquipment>; cards: Record<string, React.ReactNode> }) {
+  return (
+    <ul className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {items.map((e) => (
+        <li key={e.slug}>{cards[e.slug]}</li>
+      ))}
+    </ul>
   );
 }
