@@ -43,7 +43,7 @@ const nextConfig: NextConfig = {
   },
   images: {
     formats: ["image/webp"],
-    qualities: [75, 85],
+    qualities: [50, 75, 85],
   },
   env: {
     BUILD_YEAR: String(new Date().getFullYear()),
