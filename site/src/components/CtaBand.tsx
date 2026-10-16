@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { company } from "@/lib/content";
+import { Backdrop } from "./Backdrop";
 import { ListIcon, PhoneIcon } from "./icons";
 
 // Navy banner that closes pages, as in the catalog design.
@@ -13,7 +14,8 @@ export function CtaBand({
   text?: string;
 }) {
   return (
-    <section className="on-dark relative overflow-hidden bg-navy-deep py-14 text-white">
+    <section className="on-dark relative overflow-hidden bg-navy-deep py-14 text-white md:py-20">
+      <Backdrop src="/images/fundos/cta-compactador.webp" position="center 45%" overlay="bg-gradient-to-r from-navy-deep via-navy-deep/92 to-navy-deep/75" />
       <div className="container-site relative z-10 flex flex-col items-center justify-between gap-8 lg:flex-row">
         <div className="max-w-2xl space-y-3">
           <div className="flex flex-wrap items-center gap-2">

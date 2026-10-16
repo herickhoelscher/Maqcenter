@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { company } from "@/lib/content";
+import { Backdrop } from "./Backdrop";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { ClockIcon } from "./icons";
 
@@ -11,6 +12,7 @@ export function PageHeader({
   lead,
   crumbs,
   actions,
+  backgroundImage,
   children,
 }: {
   badge?: string;
@@ -19,8 +21,11 @@ export function PageHeader({
   lead?: string;
   crumbs: Crumb[];
   actions?: ReactNode;
+  /** Photo behind the title block; switches it to the dark variant. */
+  backgroundImage?: string;
   children?: ReactNode;
 }) {
+  const dark = Boolean(backgroundImage);
   const hours = company.hours[0];
   return (
     <>
@@ -41,24 +46,30 @@ export function PageHeader({
           </div>
         </div>
       </section>
-      <section className="bg-white py-8 shadow-sm">
-        <div className="container-site">
+      <section className={dark ? "on-dark relative overflow-hidden bg-navy-deep py-12 text-white md:py-16" : "bg-white py-8 shadow-sm"}>
+        {backgroundImage && <Backdrop src={backgroundImage} priority position="center 40%" overlay="bg-gradient-to-r from-navy-deep via-navy-deep/90 to-navy-deep/60" />}
+        <div className="container-site relative">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-3xl space-y-2">
               {badge && (
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="badge bg-navy text-amber">{badge}</span>
-                  {badgeNote && <span className="text-body-sm text-outline">{badgeNote}</span>}
+                  <span className={`badge ${dark ? "bg-amber text-charcoal" : "bg-navy text-amber"}`}>{badge}</span>
+                  {badgeNote && <span className={`text-body-sm ${dark ? "text-on-dark" : "text-outline"}`}>{badgeNote}</span>}
                 </div>
               )}
-              <h1 className="text-headline-m tracking-tight text-navy md:text-headline">{title}</h1>
-              {lead && <p className="text-body-lg text-slate-text">{lead}</p>}
+              <h1 className={`text-headline-m tracking-tight md:text-headline ${dark ? "text-white" : "text-navy"}`}>{title}</h1>
+              {lead && <p className={`text-body-lg ${dark ? "text-on-dark" : "text-slate-text"}`}>{lead}</p>}
             </div>
             {actions && <div className="flex flex-wrap items-center gap-3">{actions}</div>}
           </div>
-          {children}
+          {!dark && children}
         </div>
       </section>
+      {dark && children && (
+        <section className="bg-white pt-2 pb-2 shadow-sm">
+          <div className="container-site">{children}</div>
+        </section>
+      )}
     </>
   );
 }

@@ -32,6 +32,7 @@ export default function RentalsPage() {
         lead={service.description?.[0] ?? "Escolha os equipamentos, monte sua lista de orçamento ou cote direto pelo WhatsApp."}
         crumbs={[{ href: "/locacoes", label: "Locações de Equipamentos" }]}
         actions={<WhatsAppButton tone="whatsapp" message={service.whatsappMessage}>Falar sobre locação</WhatsAppButton>}
+        backgroundImage="/images/fundos/topo-locacoes.webp"
       >
         {/* The catalog reads ?q= and ?categoria=, so it renders on the client;
             the fallback shows every card while that loads. */}

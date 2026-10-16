@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { Backdrop } from "@/components/Backdrop";
 import { BrandGrid } from "@/components/BrandGrid";
 import { CallButton, TextLink, WhatsAppButton } from "@/components/Buttons";
 import { ContactDetails } from "@/components/ContactDetails";
@@ -34,8 +35,9 @@ export default function Home() {
     <>
       <JsonLd data={localBusinessJsonLd()} />
 
-      <section className="on-dark bg-navy-deep text-white">
-        <div className="container-site grid gap-10 py-12 lg:grid-cols-12 lg:items-center lg:py-20">
+      <section className="on-dark relative overflow-hidden bg-navy-deep text-white">
+        <Backdrop src="/images/fundos/hero-canteiro.webp" priority position="center 60%" overlay="bg-gradient-to-r from-navy-deep via-navy-deep/85 to-navy-deep/40" />
+        <div className="container-site relative grid gap-10 py-12 lg:grid-cols-12 lg:items-center lg:py-24">
           <div className="space-y-6 lg:col-span-7">
             <div className="flex flex-wrap items-center gap-2">
               <span className="badge bg-amber text-charcoal">
