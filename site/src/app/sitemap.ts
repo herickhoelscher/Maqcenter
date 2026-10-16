@@ -2,7 +2,8 @@ import type { MetadataRoute } from "next";
 import { getEquipment, legal } from "@/lib/content";
 import { siteUrl } from "@/lib/seo";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const equipment = await getEquipment();
   const pages = [
     { path: "", priority: 1 },
     { path: "/locacoes", priority: 0.9 },
@@ -15,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/mapa-do-site", priority: 0.2 },
     ...(legal.delivery.sections.length > 0 ? [{ path: "/politica-de-entrega", priority: 0.2 }] : []),
     ...(legal.terms.sections.length > 0 ? [{ path: "/termos-e-condicoes", priority: 0.2 }] : []),
-    ...getEquipment().map((e) => ({ path: `/locacoes/${e.slug}`, priority: 0.7 })),
+    ...equipment.map((e) => ({ path: `/locacoes/${e.slug}`, priority: 0.7 })),
   ];
   return pages.map(({ path, priority }) => ({ url: `${siteUrl}${path}`, priority }));
 }

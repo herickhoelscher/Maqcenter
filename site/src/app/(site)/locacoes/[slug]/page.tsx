@@ -1,23 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { CallButton, WhatsAppButton } from "@/components/Buttons";
 import { CtaBand } from "@/components/CtaBand";
 import { EquipmentCard } from "@/components/EquipmentCard";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
 import { AddToQuoteButton } from "@/components/quote/QuoteControls";
-import { company, formatPrice, getEquipment, getEquipmentBySlug } from "@/lib/content";
+import { findEquipmentByPreviousSlug, formatPrice, getCompany, getEquipment, getEquipmentBySlug } from "@/lib/content";
 import { pageMetadata, productJsonLd } from "@/lib/seo";
 import { equipmentMessage } from "@/lib/whatsapp";
 
-export function generateStaticParams() {
-  return getEquipment().map((e) => ({ slug: e.slug }));
+export async function generateStaticParams() {
+  return (await getEquipment()).map((e) => ({ slug: e.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/locacoes/[slug]">) {
   const { slug } = await params;
-  const item = getEquipmentBySlug(slug);
+  const [item, company] = await Promise.all([getEquipmentBySlug(slug), getCompany()]);
   if (!item) return {};
   return pageMetadata({
     title: `${item.name} para locação em Cascavel`,
@@ -31,10 +31,15 @@ export async function generateMetadata({ params }: PageProps<"/locacoes/[slug]">
 
 export default async function EquipmentPage({ params }: PageProps<"/locacoes/[slug]">) {
   const { slug } = await params;
-  const item = getEquipmentBySlug(slug);
-  if (!item) notFound();
+  const [item, company, all] = await Promise.all([getEquipmentBySlug(slug), getCompany(), getEquipment()]);
+  if (!item) {
+    // Renamed in the admin: send old links to the new address.
+    const renamed = await findEquipmentByPreviousSlug(slug);
+    if (renamed) permanentRedirect(`/locacoes/${renamed.slug}`);
+    notFound();
+  }
 
-  const related = getEquipment()
+  const related = all
     .filter((e) => e.slug !== item.slug)
     .sort((a, b) => Number(b.category === item.category) - Number(a.category === item.category))
     .slice(0, 3);
@@ -42,7 +47,7 @@ export default async function EquipmentPage({ params }: PageProps<"/locacoes/[sl
 
   return (
     <>
-      <JsonLd data={productJsonLd(item)} />
+      <JsonLd data={productJsonLd(item, company)} />
       <PageHeader
         badge={item.category}
         badgeNote="Locação"

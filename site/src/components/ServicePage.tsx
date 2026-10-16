@@ -9,8 +9,8 @@ import { CtaBand } from "./CtaBand";
 import { ArrowIcon } from "./icons";
 import { PageHeader } from "./PageHeader";
 
-export function ServicePage({ service, children, wide }: { service: Service; children?: ReactNode; wide?: ReactNode }) {
-  const others = getServices().filter((s) => s.slug !== service.slug);
+export async function ServicePage({ service, children, wide }: { service: Service; children?: ReactNode; wide?: ReactNode }) {
+  const others = (await getServices()).filter((s) => s.slug !== service.slug);
   return (
     <>
       <PageHeader

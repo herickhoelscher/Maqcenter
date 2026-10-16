@@ -1,10 +1,10 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { company } from "@/lib/content";
+import { getCompany } from "@/lib/content";
 import { whatsappUrl } from "@/lib/whatsapp";
 import { ArrowIcon, PhoneIcon, WhatsAppIcon } from "./icons";
 
-export function WhatsAppButton({
+export async function WhatsAppButton({
   message,
   children = "Pedir orçamento no WhatsApp",
   tone = "primary",
@@ -15,9 +15,10 @@ export function WhatsAppButton({
   tone?: "primary" | "whatsapp";
   className?: string;
 }) {
+  const company = await getCompany();
   return (
     <a
-      href={whatsappUrl(message)}
+      href={whatsappUrl(company.whatsapp, message)}
       target="_blank"
       rel="noopener"
       className={`btn ${tone === "primary" ? "btn-primary" : "btn-whatsapp"} ${className}`}
@@ -29,7 +30,8 @@ export function WhatsAppButton({
   );
 }
 
-export function CallButton({ tone = "light", className = "" }: { tone?: "light" | "dark"; className?: string }) {
+export async function CallButton({ tone = "light", className = "" }: { tone?: "light" | "dark"; className?: string }) {
+  const company = await getCompany();
   return (
     <a href={`tel:${company.phone.e164}`} className={`btn ${tone === "light" ? "btn-secondary" : "btn-ghost-dark"} ${className}`}>
       <PhoneIcon className="size-5" />

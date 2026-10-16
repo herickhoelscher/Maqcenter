@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { getCompany } from "@/lib/content";
 import { whatsappUrl } from "@/lib/whatsapp";
 import { SupportIcon, VerifiedIcon, WhatsAppIcon } from "./icons";
 
-export function CatalogAside() {
+export async function CatalogAside() {
+  const company = await getCompany();
   return (
     <>
       <div className="on-dark relative space-y-4 overflow-hidden rounded-[var(--radius-card)] bg-navy p-5 text-white shadow-sm">
@@ -14,7 +16,7 @@ export function CatalogAside() {
           <p className="mt-1 text-body-sm text-on-dark">Conte o serviço que vai fazer e a equipe indica o equipamento.</p>
         </div>
         <a
-          href={whatsappUrl("Olá! Preciso de ajuda para escolher o equipamento certo para minha obra.")}
+          href={whatsappUrl(company.whatsapp, "Olá! Preciso de ajuda para escolher o equipamento certo para minha obra.")}
           target="_blank"
           rel="noopener"
           className="btn btn-primary w-full"

@@ -2,10 +2,11 @@ import Image from "next/image";
 import { getBrands } from "@/lib/content";
 
 // Grayscale at 60% by default, full color on hover (DESIGN.md).
-export function BrandGrid() {
+export async function BrandGrid() {
+  const brands = await getBrands();
   return (
     <ul data-reveal className="grid grid-cols-2 overflow-hidden rounded-[var(--radius-card)] border border-concrete-200 bg-white sm:grid-cols-3 lg:grid-cols-6">
-      {getBrands().map((b) => (
+      {brands.map((b) => (
         <li key={b.name} className="group grid h-24 place-items-center border-concrete-200 px-6 not-last:border-r not-last:border-b sm:border-b-0">
           <Image
             src={b.logo}

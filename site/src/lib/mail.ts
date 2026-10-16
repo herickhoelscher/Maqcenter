@@ -1,4 +1,4 @@
-import { company } from "./content";
+import { getCompany } from "./content";
 import type { ContactInput } from "./contact";
 
 export class MailNotConfiguredError extends Error {}
@@ -12,7 +12,7 @@ export async function sendContactEmail(input: ContactInput): Promise<void> {
   const from = process.env.CONTACT_FROM_EMAIL;
   if (!apiKey || !from) throw new MailNotConfiguredError("RESEND_API_KEY or CONTACT_FROM_EMAIL is missing");
 
-  const to = process.env.CONTACT_TO_EMAIL || company.email;
+  const to = process.env.CONTACT_TO_EMAIL || (await getCompany()).email;
   const rows: [string, string][] = [
     ["Nome", input.name],
     ["Telefone", input.phone],

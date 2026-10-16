@@ -2,15 +2,17 @@ import { ServicePage } from "@/components/ServicePage";
 import { getService } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
-const service = getService("perfuracao-em-concreto");
-
-export const metadata = pageMetadata({
+export async function generateMetadata() {
+  const service = await getService("perfuracao-em-concreto");
+  return pageMetadata({
   title: "Perfuração em concreto com perfuratriz diamantada em Cascavel",
   description: "Serviço de perfuração em concreto com perfuratriz diamantada em Cascavel - PR. Peça o orçamento pelo WhatsApp.",
   path: "/perfuracao-em-concreto",
   image: service.image?.src,
-});
+  });
+}
 
-export default function ConcreteDrillingPage() {
+export default async function ConcreteDrillingPage() {
+  const service = await getService("perfuracao-em-concreto");
   return <ServicePage service={service} />;
 }

@@ -4,16 +4,20 @@ import { MapEmbed } from "@/components/MapEmbed";
 import { Suspense } from "react";
 import { ContactForm, ContactFormFromParams } from "@/components/ContactForm";
 import { PageHeader } from "@/components/PageHeader";
-import { company, formatAddress } from "@/lib/content";
+import { formatAddress, getCompany } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
+export async function generateMetadata() {
+  const company = await getCompany();
+  return pageMetadata({
   title: "Contato e orçamento",
-  description: `Peça orçamento para a ${company.name}: WhatsApp ${company.phone.display}, e-mail ${company.email}. ${formatAddress()}.`,
+  description: `Peça orçamento para a ${company.name}: WhatsApp ${company.phone.display}, e-mail ${company.email}. ${formatAddress(company)}.`,
   path: "/contato",
-});
+  });
+}
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const company = await getCompany();
   return (
     <>
       <PageHeader
@@ -46,10 +50,10 @@ export default function ContactPage() {
           <ContactDetails />
           <div className="card overflow-hidden">
             <MapEmbed
-              query={`${formatAddress()}, Brasil`}
-              title={`Mapa: ${company.name}, ${formatAddress()}`}
-              address={formatAddress()}
-              mapsUrl={mapsUrl()}
+              query={`${formatAddress(company)}, Brasil`}
+              title={`Mapa: ${company.name}, ${formatAddress(company)}`}
+              address={formatAddress(company)}
+              mapsUrl={mapsUrl(company)}
             />
           </div>
         </div>

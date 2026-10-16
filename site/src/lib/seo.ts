@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { company, formatAddress, type Equipment } from "./content";
+import { formatAddress, type Company, type Equipment } from "./content";
 
-export const siteUrl = company.siteUrl;
+// The domain is configuration, not editable content.
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.maqcentercascavel.com.br").replace(/\/$/, "");
 
 export function pageMetadata({
   title,
@@ -34,7 +35,7 @@ export function pageMetadata({
   };
 }
 
-export function localBusinessJsonLd() {
+export function localBusinessJsonLd(company: Company) {
   const a = company.address;
   return {
     "@context": "https://schema.org",
@@ -46,7 +47,9 @@ export function localBusinessJsonLd() {
     telephone: company.phone.e164,
     contactPoint: [
       { "@type": "ContactPoint", contactType: "customer service", telephone: company.phone.e164, availableLanguage: "pt-BR" },
-      { "@type": "ContactPoint", contactType: "customer service", telephone: company.landline.e164, availableLanguage: "pt-BR" },
+      ...(company.landline
+        ? [{ "@type": "ContactPoint", contactType: "customer service", telephone: company.landline.e164, availableLanguage: "pt-BR" }]
+        : []),
     ],
     slogan: company.slogan,
     email: company.email,
@@ -71,7 +74,7 @@ export function localBusinessJsonLd() {
     ),
     sameAs: [company.social.instagram.url, company.social.facebook.url],
     areaServed: { "@type": "City", name: a.city },
-    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(formatAddress())}`,
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(formatAddress(company))}`,
   };
 }
 
@@ -85,7 +88,7 @@ const dayNames: Record<string, string> = {
   Su: "Sunday",
 };
 
-export function productJsonLd(item: Equipment) {
+export function productJsonLd(item: Equipment, company: Company) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",

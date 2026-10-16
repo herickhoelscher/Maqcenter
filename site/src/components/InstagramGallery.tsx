@@ -1,11 +1,12 @@
 import Image from "next/image";
 import posts from "../../content/instagram.json";
-import { company } from "@/lib/content";
+import { getCompany } from "@/lib/content";
 import { InstagramIcon } from "./icons";
 
 // Posts from the company Instagram. Horizontal snap strip on phones,
 // grid from tablet up.
-export function InstagramGallery({ limit = 10 }: { limit?: number }) {
+export async function InstagramGallery({ limit = 10 }: { limit?: number }) {
+  const company = await getCompany();
   const ig = company.social.instagram;
   return (
     <section aria-labelledby="instagram" className="overflow-hidden bg-white py-16">

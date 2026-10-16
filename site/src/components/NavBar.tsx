@@ -5,8 +5,13 @@ import { usePathname } from "next/navigation";
 import { mainNav } from "./nav";
 
 export function NavBar() {
-  const pathname = usePathname();
-  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`));
+  return <NavLinks pathname={usePathname()} />;
+}
+
+/** Without a pathname (Suspense fallback) nothing is highlighted. */
+export function NavLinks({ pathname }: { pathname?: string }) {
+  const isActive = (href: string) =>
+    pathname ? (href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`)) : false;
   return (
     <nav aria-label="Principal" className="on-dark bg-navy text-white">
       <ul className="container-site flex gap-1 overflow-x-auto whitespace-nowrap [scrollbar-width:none] lg:gap-2">

@@ -1,7 +1,8 @@
-import { company, type LegalPage as LegalContent } from "@/lib/content";
+import { getCompany, type LegalPage as LegalContent } from "@/lib/content";
 import { PageHeader } from "./PageHeader";
 
-export function LegalPage({ content, path }: { content: LegalContent; path: string }) {
+export async function LegalPage({ content, path }: { content: LegalContent; path: string }) {
+  const company = await getCompany();
   const fill = (text: string) => text.replaceAll("{email}", company.email);
   return (
     <>

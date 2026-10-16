@@ -4,22 +4,24 @@ import { InfoList, ServicePage } from "@/components/ServicePage";
 import { getProductGroups, getService } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
-const service = getService("venda-de-maquinas");
-
-export const metadata = pageMetadata({
+export async function generateMetadata() {
+  const service = await getService("venda-de-maquinas");
+  return pageMetadata({
   title: "Venda de máquinas e acessórios em Cascavel",
   description:
     "Serra circular Bosch, furadeiras, parafusadeiras, esmerilhadeiras, serra-mármore, rompedores, brocas, discos, baterias e escovas de carvão em Cascavel - PR.",
   path: "/venda-de-maquinas",
   image: service.image?.src,
-});
+  });
+}
 
 // Brands seen at the store: home page logos plus the Bosch promotion banner
 // of the old site (Dremel, Skil, Freud, SIA).
 const storeBrands = ["Bosch", "DeWalt", "Makita", "Milwaukee", "Black+Decker", "Mirka", "Skil", "Dremel", "Freud", "SIA"];
 
-export default function MachineSalesPage() {
-  const groups = getProductGroups();
+export default async function MachineSalesPage() {
+  const service = await getService("venda-de-maquinas");
+  const groups = await getProductGroups();
   return (
     <ServicePage
       service={service}

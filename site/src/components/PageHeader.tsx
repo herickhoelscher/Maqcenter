@@ -1,11 +1,11 @@
 import type { ReactNode } from "react";
-import { company } from "@/lib/content";
+import { getCompany } from "@/lib/content";
 import { Backdrop } from "./Backdrop";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { ClockIcon } from "./icons";
 
 // Breadcrumb strip + title command bar, as in the catalog design.
-export function PageHeader({
+export async function PageHeader({
   badge,
   badgeNote,
   title,
@@ -26,6 +26,7 @@ export function PageHeader({
   children?: ReactNode;
 }) {
   const dark = Boolean(backgroundImage);
+  const company = await getCompany();
   const hours = company.hours[0];
   return (
     <>

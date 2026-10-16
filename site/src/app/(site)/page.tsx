@@ -10,15 +10,18 @@ import { EquipmentCard } from "@/components/EquipmentCard";
 import { InstagramGallery } from "@/components/InstagramGallery";
 import { ArrowIcon, DrillIcon, ListIcon, PinIcon, SearchIcon, VerifiedIcon, WrenchIcon } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
-import { company, getEquipment, getFeaturedEquipment, getServices, getTestimonials, servicePaths } from "@/lib/content";
+import { getCompany, getEquipment, getServices, getTestimonials, servicePaths } from "@/lib/content";
 import { localBusinessJsonLd, pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
+export async function generateMetadata() {
+  const company = await getCompany();
+  return pageMetadata({
   title: `${company.name} Cascavel | ${company.tagline}`,
   description:
     "Locação de equipamentos para construção, assistência técnica de ferramentas elétricas, venda de máquinas e perfuração em concreto em Cascavel - PR. Orçamento pelo WhatsApp.",
   path: "/",
-});
+  });
+}
 
 const serviceIcons: Record<string, ReactNode> = {
   locacoes: <ListIcon className="size-6" />,
@@ -27,14 +30,13 @@ const serviceIcons: Record<string, ReactNode> = {
   "perfuracao-em-concreto": <DrillIcon className="size-6" />,
 };
 
-export default function Home() {
-  const equipment = getEquipment();
-  const featured = getFeaturedEquipment();
-  const testimonials = getTestimonials();
+export default async function Home() {
+  const [company, equipment, services, testimonials] = await Promise.all([getCompany(), getEquipment(), getServices(), getTestimonials()]);
+  const featured = equipment.filter((e) => e.featured);
 
   return (
     <>
-      <JsonLd data={localBusinessJsonLd()} />
+      <JsonLd data={localBusinessJsonLd(company)} />
 
       <section className="on-dark relative overflow-hidden bg-navy-deep text-white">
         <Backdrop src="/images/fundos/hero-canteiro.webp" priority position="center 60%" overlay="bg-gradient-to-r from-navy-deep via-navy-deep/85 to-navy-deep/40" />
@@ -105,7 +107,7 @@ export default function Home() {
             </h2>
           </div>
           <ul className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {getServices().map((s, i) => (
+            {services.map((s, i) => (
               <li key={s.slug} data-reveal style={{ "--reveal-delay": `${i * 80}ms` } as React.CSSProperties}>
                 <Link href={servicePaths[s.slug]} className="card group flex h-full flex-col gap-4 p-6 transition duration-300 hover:-translate-y-1 hover:shadow-level2">
                   <span className={`grid size-12 place-items-center rounded-[var(--radius-card)] ${i % 2 ? "bg-amber text-charcoal" : "bg-navy text-amber"}`}>

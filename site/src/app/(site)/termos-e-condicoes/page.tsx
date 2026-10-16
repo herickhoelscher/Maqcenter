@@ -1,10 +1,10 @@
 import { LegalPage } from "@/components/LegalPage";
-import { company, legal } from "@/lib/content";
+import { legal } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Termos e condições",
-  description: `Termos e condições de uso do site da ${company.name}.`,
+  description: `Termos e condições de uso do site da MAQCENTER.`,
   path: "/termos-e-condicoes",
   // Hidden from search until the text exists.
   noindex: legal.terms.sections.length === 0,

@@ -1,10 +1,10 @@
 import { LegalPage } from "@/components/LegalPage";
-import { company, legal } from "@/lib/content";
+import { legal } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Política de privacidade",
-  description: `Como o site da ${company.name} trata os dados enviados pelo formulário de contato.`,
+  description: `Como o site da MAQCENTER trata os dados enviados pelo formulário de contato.`,
   path: "/politica-de-privacidade",
 });
 

@@ -1,15 +1,16 @@
 import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
-import { company, getEquipment, getProducts } from "@/lib/content";
+import { getEquipment, getProducts } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Mapa do site",
-  description: `Todas as páginas do site da ${company.name}: locação, venda, assistência técnica, perfuração em concreto e contato.`,
+  description: `Todas as páginas do site da MAQCENTER: locação, venda, assistência técnica, perfuração em concreto e contato.`,
   path: "/mapa-do-site",
 });
 
-export default function SiteMapPage() {
+export default async function SiteMapPage() {
+  const [equipment, products] = await Promise.all([getEquipment(), getProducts()]);
   const sections = [
     {
       title: "Páginas",
@@ -29,8 +30,8 @@ export default function SiteMapPage() {
         { href: "/perfuracao-em-concreto", label: "Perfuração em concreto" },
       ],
     },
-    { title: "Equipamentos para locação", links: getEquipment().map((e) => ({ href: `/locacoes/${e.slug}`, label: e.name })) },
-    { title: "Produtos à venda", links: getProducts().map((p) => ({ href: "/venda-de-maquinas", label: p.name })) },
+    { title: "Equipamentos para locação", links: equipment.map((e) => ({ href: `/locacoes/${e.slug}`, label: e.name })) },
+    { title: "Produtos à venda", links: products.map((p) => ({ href: "/venda-de-maquinas", label: p.name })) },
     {
       title: "Informações",
       links: [

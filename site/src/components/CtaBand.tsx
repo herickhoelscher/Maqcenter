@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { company } from "@/lib/content";
+import { getCompany } from "@/lib/content";
 import { Backdrop } from "./Backdrop";
 import { ListIcon, PhoneIcon } from "./icons";
 
 // Navy banner that closes pages, as in the catalog design.
-export function CtaBand({
+export async function CtaBand({
   badge = "Orçamento sem compromisso",
   title,
   text,
@@ -13,6 +13,7 @@ export function CtaBand({
   title: string;
   text?: string;
 }) {
+  const company = await getCompany();
   return (
     <section className="on-dark relative overflow-hidden bg-navy-deep py-14 text-white md:py-20">
       <Backdrop src="/images/fundos/cta-compactador.webp" position="center 45%" overlay="bg-gradient-to-r from-navy-deep via-navy-deep/92 to-navy-deep/75" />

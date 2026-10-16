@@ -9,7 +9,7 @@ import { useQuote } from "./QuoteProvider";
 
 const formatDate = (iso: string) => (iso ? iso.split("-").reverse().join("/") : "");
 
-export function QuoteBuilder() {
+export function QuoteBuilder({ whatsapp }: { whatsapp: string }) {
   const { items, ready, setQty, remove, clear } = useQuote();
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
@@ -42,7 +42,7 @@ export function QuoteBuilder() {
     const d = datesError();
     setErrors(d ? { dates: d } : {});
     if (d) return;
-    window.open(whatsappUrl(buildMessage()), "_blank", "noopener");
+    window.open(whatsappUrl(whatsapp, buildMessage()), "_blank", "noopener");
   }
 
   async function sendEmail() {

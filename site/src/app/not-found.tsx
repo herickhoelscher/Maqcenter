@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { WhatsAppButton } from "@/components/Buttons";
+import { SiteChrome } from "@/components/SiteChrome";
 
 export default function NotFound() {
   return (
+    <SiteChrome>
     <div className="container-site py-20 md:py-28">
       <div className="card max-w-2xl space-y-4 p-8">
         <span className="badge bg-navy text-amber">Erro 404</span>
@@ -18,5 +20,6 @@ export default function NotFound() {
         </div>
       </div>
     </div>
+    </SiteChrome>
   );
 }

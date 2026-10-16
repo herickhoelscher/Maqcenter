@@ -1,11 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { QuoteProvider } from "@/components/quote/QuoteProvider";
-import { RevealObserver } from "@/components/RevealObserver";
-import { WhatsAppFloat } from "@/components/WhatsAppFloat";
-import { company } from "@/lib/content";
+import { getCompany } from "@/lib/content";
 import { siteUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -15,7 +10,9 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  const company = await getCompany();
+  return {
   metadataBase: new URL(siteUrl),
   title: {
     default: `${company.name} Cascavel | ${company.tagline}`,
@@ -28,7 +25,8 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/images/og.png", width: 1200, height: 630, alt: `${company.name} - ${company.tagline}` }],
   },
-};
+  };
+}
 
 export const viewport: Viewport = {
   themeColor: "#0a1e3b",
@@ -37,23 +35,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR" className={`${montserrat.variable} antialiased`}>
-      <body className="flex min-h-dvh flex-col">
-        <a
-          href="#conteudo"
-          className="sr-only z-[60] rounded-[var(--radius-control)] bg-amber px-4 py-3 font-bold text-charcoal focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
-        >
-          Pular para o conteúdo
-        </a>
-        <QuoteProvider>
-          <Header />
-          <main id="conteudo" className="flex-1">
-            {children}
-          </main>
-          <Footer />
-          <WhatsAppFloat />
-          <RevealObserver />
-        </QuoteProvider>
-      </body>
+      <body className="flex min-h-dvh flex-col">{children}</body>
     </html>
   );
 }

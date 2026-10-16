@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
-import { company, formatAddress, formatHours } from "@/lib/content";
+import { formatAddress, formatHours, getCompany, type Company } from "@/lib/content";
 import { ClockIcon, InstagramIcon, MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "./icons";
 
-export function mapsUrl() {
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${company.name}, ${formatAddress()}`)}`;
+export function mapsUrl(company: Company) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${company.name}, ${formatAddress(company)}`)}`;
 }
 
 function Row({ icon, label, children }: { icon: ReactNode; label: string; children: ReactNode }) {
@@ -20,7 +20,7 @@ function Row({ icon, label, children }: { icon: ReactNode; label: string; childr
 
 const link = "font-semibold text-navy underline-offset-4 hover:text-blue-accent hover:underline";
 
-export function ContactDetails({
+export async function ContactDetails({
   className = "",
   title = "Atendimento",
   layout = "stack",
@@ -30,14 +30,15 @@ export function ContactDetails({
   /** "wide" lays the rows out in columns for full-width use. */
   layout?: "stack" | "wide";
 }) {
+  const company = await getCompany();
   const a = company.address;
   return (
     <section aria-label={title} className={`card p-5 ${className}`}>
       <h2 className="border-b border-concrete-100 pb-3 text-title text-navy">{title}</h2>
       <ul className={layout === "wide" ? "grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3 [&>li]:border-b-0" : undefined}>
         <Row icon={<PinIcon className="size-5" />} label="Endereço">
-          <a href={mapsUrl()} target="_blank" rel="noopener" className={link}>
-            {formatAddress()}
+          <a href={mapsUrl(company)} target="_blank" rel="noopener" className={link}>
+            {formatAddress(company)}
           </a>
           {a.postalCode && <span className="block text-body-sm text-slate-text">CEP {a.postalCode}</span>}
         </Row>
@@ -62,7 +63,7 @@ export function ContactDetails({
           </a>
         </Row>
         <Row icon={<ClockIcon className="size-5" />} label="Horário">
-          {formatHours().map((h) => (
+          {formatHours(company).map((h) => (
             <span key={h} className="block">
               {h}
             </span>

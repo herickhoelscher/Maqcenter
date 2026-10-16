@@ -7,17 +7,21 @@ import { CtaBand } from "@/components/CtaBand";
 import { InstagramGallery } from "@/components/InstagramGallery";
 import { ArrowIcon } from "@/components/icons";
 import { PageHeader } from "@/components/PageHeader";
-import { company, getServices, servicePaths } from "@/lib/content";
+import { getCompany, getServices, servicePaths } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
+export async function generateMetadata() {
+  const company = await getCompany();
+  return pageMetadata({
   title: `Sobre a ${company.name}`,
   description: `Há mais de 35 anos ao lado de quem constrói. ${company.tagline} na Rua Erechim, 745, Centro, Cascavel - PR.`,
   path: "/sobre",
   image: company.aboutImage?.src,
-});
+  });
+}
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const [company, services] = await Promise.all([getCompany(), getServices()]);
   return (
     <>
       <PageHeader
@@ -64,7 +68,7 @@ export default function AboutPage() {
               Serviços
             </h2>
             <ul className="grid gap-4 sm:grid-cols-2">
-              {getServices().map((s) => (
+              {services.map((s) => (
                 <li key={s.slug}>
                   <Link href={servicePaths[s.slug]} className="card group flex h-full flex-col gap-2 p-5 transition-shadow hover:shadow-level2">
                     <span className="flex items-center justify-between gap-3 text-title text-navy group-hover:text-blue-accent">

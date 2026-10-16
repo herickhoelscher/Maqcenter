@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/PageHeader";
 import { QuoteBuilder } from "@/components/quote/QuoteBuilder";
+import { getCompany } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -10,7 +11,8 @@ export const metadata = pageMetadata({
   noindex: true,
 });
 
-export default function QuotePage() {
+export default async function QuotePage() {
+  const company = await getCompany();
   return (
     <>
       <PageHeader
@@ -21,7 +23,7 @@ export default function QuotePage() {
         crumbs={[{ href: "/orcamento", label: "Orçamento Rápido" }]}
       />
       <div className="container-site py-10 lg:py-16">
-        <QuoteBuilder />
+        <QuoteBuilder whatsapp={company.whatsapp} />
       </div>
     </>
   );

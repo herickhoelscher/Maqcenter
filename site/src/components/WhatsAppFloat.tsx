@@ -1,10 +1,12 @@
+import { getCompany } from "@/lib/content";
 import { whatsappUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "./icons";
 
-export function WhatsAppFloat() {
+export async function WhatsAppFloat() {
+  const company = await getCompany();
   return (
     <a
-      href={whatsappUrl()}
+      href={whatsappUrl(company.whatsapp)}
       target="_blank"
       rel="noopener"
       aria-label="Conversar com a MAQCENTER no WhatsApp"

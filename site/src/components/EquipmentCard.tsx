@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { formatPrice, type Equipment } from "@/lib/content";
+import { formatPrice, getCompany, type Equipment } from "@/lib/content";
 import { equipmentMessage, whatsappUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "./icons";
 import { AddToQuoteButton } from "./quote/QuoteControls";
 
-export function EquipmentCard({ item, headingLevel = "h3" }: { item: Equipment; headingLevel?: "h2" | "h3" }) {
+export async function EquipmentCard({ item, headingLevel = "h3" }: { item: Equipment; headingLevel?: "h2" | "h3" }) {
+  const company = await getCompany();
   const Heading = headingLevel;
   const photo = item.images[0];
   const summary = item.description?.[0];
@@ -76,7 +77,7 @@ export function EquipmentCard({ item, headingLevel = "h3" }: { item: Equipment; 
           )}
         </div>
         <div className="grid grid-cols-[1fr_1fr_auto] gap-2">
-          <a href={whatsappUrl(equipmentMessage(item.name))} target="_blank" rel="noopener" className="btn btn-primary px-2">
+          <a href={whatsappUrl(company.whatsapp, equipmentMessage(item.name))} target="_blank" rel="noopener" className="btn btn-primary px-2">
             <WhatsAppIcon className="size-4" />
             Cotar
             <span className="sr-only">{item.name} pelo WhatsApp</span>

@@ -6,10 +6,8 @@ import { CatalogAside } from "@/components/CatalogAside";
 import { CtaBand } from "@/components/CtaBand";
 import { EquipmentCard } from "@/components/EquipmentCard";
 import { PageHeader } from "@/components/PageHeader";
-import { getCategories, getEquipment, getService } from "@/lib/content";
+import { categoriesOf, getEquipment, getService, type Equipment } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
-
-const service = getService("locacoes");
 
 export const metadata = pageMetadata({
   title: "Locação de equipamentos em Cascavel",
@@ -18,10 +16,10 @@ export const metadata = pageMetadata({
   path: "/locacoes",
 });
 
-export default function RentalsPage() {
-  const equipment = getEquipment();
+export default async function RentalsPage() {
+  const [equipment, service] = await Promise.all([getEquipment(), getService("locacoes")]);
   const cards = Object.fromEntries(equipment.map((e) => [e.slug, <EquipmentCard key={e.slug} item={e} headingLevel="h2" />]));
-  const catalogProps = { items: equipment, cards, categories: getCategories(), aside: <CatalogAside /> };
+  const catalogProps = { items: equipment, cards, categories: categoriesOf(equipment), aside: <CatalogAside /> };
 
   return (
     <>
@@ -46,7 +44,7 @@ export default function RentalsPage() {
   );
 }
 
-function CatalogFallback({ items, cards }: { items: ReturnType<typeof getEquipment>; cards: Record<string, React.ReactNode> }) {
+function CatalogFallback({ items, cards }: { items: Equipment[]; cards: Record<string, React.ReactNode> }) {
   return (
     <ul className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
       {items.map((e) => (

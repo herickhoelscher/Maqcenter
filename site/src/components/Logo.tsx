@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { company } from "@/lib/content";
+import { getCompany } from "@/lib/content";
 
-export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
+export async function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
+  const company = await getCompany();
   return (
     <Link href="/" className="flex shrink-0 items-center gap-2.5">
       <Image
