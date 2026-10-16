@@ -15,12 +15,17 @@ function legacyRedirects(): Redirect[] {
     .filter(([from, to]) => from && to && from !== to)
     .map(([from, to]) => {
       const [pathname, query] = from.split("?");
-      const route = query ? new URLSearchParams(query).get("route") : null;
+      // index.php URLs are told apart by their query (route, information_id...).
+      const has = [...new URLSearchParams(query ?? "")].map(([key, value]) => ({
+        type: "query" as const,
+        key,
+        value: value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+      }));
       return {
         source: pathname,
         destination: to,
         statusCode: 301 as const,
-        ...(route && { has: [{ type: "query" as const, key: "route", value: route }] }),
+        ...(has.length > 0 && { has }),
       };
     });
 }
