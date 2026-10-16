@@ -1,48 +1,69 @@
 # Site MAQCENTER
 
-Next.js 16 (App Router) + TypeScript + Tailwind CSS v4. Conteudo em arquivos JSON, sem banco e sem CMS.
+Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + Prisma 7 (SQLite/Turso).
+Site institucional, catálogo de locação, loja com pagamento pelo Mercado Pago e painel administrativo.
 
-## Rodar
+## Rodar no computador
 
 ```bash
-npm install
-npm run dev        # http://localhost:3000
-npm run build && npm start
+npm install                 # também gera o Prisma Client
+cp .env.example .env        # preencha SESSION_SECRET e ADMIN_*
+npx prisma migrate dev      # cria o banco local (prisma/dev.db)
+npm run db:seed             # importa o conteúdo de content/*.json e cria o primeiro admin
+npm run dev                 # http://localhost:3000
 ```
 
-## Conteudo
+## Painel administrativo
 
-Tudo que aparece no site vem de `content/`:
+Endereço: `/admin`. O primeiro usuário vem de `ADMIN_EMAIL` e `ADMIN_PASSWORD` no seed. Os demais são criados em **Usuários**.
 
-| Arquivo | O que e |
+| Seção | O que faz |
 |---|---|
-| `company.json` | Nome, telefone, WhatsApp, e-mail, endereco, horario, redes sociais |
-| `services.json` | Os 4 servicos (texto curto, foto, mensagem pre-preenchida do WhatsApp) |
-| `equipment/*.json` | Um arquivo por equipamento de locacao: fotos, descricao, especificacoes |
-| `brands.json` | Logos das marcas |
-| `testimonials.json` | Depoimentos. A secao so aparece quando a lista tem itens |
-| `legal/*.json` | Politica de privacidade e termos |
-| `redirects.csv` | 301 das URLs do site antigo, gerado por `../audit_maqcenter.py` |
-| `TODO.md` | O que falta a empresa enviar |
+| Pedidos | Compras do site. Marcar como entregue, marcar como pago (recebido fora do site) ou cancelar. Cancelar um pedido pago devolve o estoque |
+| Produtos à venda | Com preço e estoque o produto é vendido online. Sem preço aparece "sob consulta" com orçamento |
+| Equipamentos | Catálogo de locação (orçamento). Renomear o endereço mantém o antigo redirecionando |
+| Serviços | Textos e foto das 4 páginas de serviço |
+| Dados da empresa | Telefones, e-mails, endereço, horário, redes sociais e texto "Sobre" |
+| Marcas, Depoimentos | Logos e depoimentos (só aparecem quando houver algum publicado) |
+| Mensagens | Formulário de contato e lista de orçamento. Ficam salvas mesmo sem e-mail configurado |
+| Clientes | Contas criadas na loja |
 
-Campos `null` nao sao exibidos. O campo `_todo` de cada arquivo lista o que falta e nao e usado pelo site.
+Toda alteração aparece no site na hora (cache por tag `content`).
 
-Novo equipamento: crie `content/equipment/<slug>.json` copiando um existente e registre o import em `src/lib/content.ts`.
+## Loja e Mercado Pago
+
+1. Crie a aplicação em https://www.mercadopago.com.br/developers/panel (produto **Checkout Pro**).
+2. Coloque o **Access Token** em `MERCADOPAGO_ACCESS_TOKEN`. Para testar sem cobrar, use o token de teste (`TEST-...`) e os cartões de teste do Mercado Pago.
+3. Em **Webhooks**, cadastre `https://<dominio>/api/mercadopago/webhook` com o evento **Pagamentos** e copie a assinatura secreta para `MERCADOPAGO_WEBHOOK_SECRET`.
+
+Fluxo: carrinho → login/cadastro do cliente → checkout (retirada na loja ou entrega a combinar) → página do Mercado Pago (PIX, cartão, boleto) → volta para `/conta/pedidos/<id>`. O pedido é confirmado pelo webhook e também ao voltar do pagamento; o valor é sempre conferido na API do Mercado Pago. O estoque é baixado uma única vez, quando o pagamento é aprovado.
+
+Sem `MERCADOPAGO_ACCESS_TOKEN` a loja mostra os produtos mas avisa que o pagamento online não está ativo.
+
+## Conteúdo
+
+O conteúdo vive no banco e é editado no painel. Os arquivos de `content/` são a carga inicial (seed) e a documentação de origem:
+
+- `SOURCES.md`: de onde veio cada informação (site antigo, Instagram) e a validação
+- `TODO.md`: o que ainda falta a empresa enviar
+- `legal/*.json`: textos legais (editados no código)
+- `redirects.csv`: 301 das URLs do site antigo (`next.config.ts`)
 
 ## Imagens
 
-`npm run images` recorta e converte para WebP as imagens extraidas do site antigo (`../assets`) e gera logo, favicon e imagem Open Graph. Fotos novas podem ir direto em `public/images/` (de preferencia WebP) e ser referenciadas no JSON com `src`, `alt`, `width` e `height`.
+- Enviadas pelo painel: convertidas para WebP. Em produção vão para o **Vercel Blob** (`BLOB_READ_WRITE_TOKEN`); no computador ficam em `uploads/` (servidas por `/api/media`).
+- Do site antigo e do Instagram: `npm run images` recorta e converte para `public/images/`.
 
-## Formulario de contato
+## Formulário de contato (Resend)
 
-`POST /api/contact` valida os campos, descarta envios com o honeypot preenchido e envia o e-mail pelo [Resend](https://resend.com). Copie `.env.example` para `.env.local` e preencha:
+`RESEND_API_KEY`, `CONTACT_FROM_EMAIL` (remetente com domínio verificado) e opcionalmente `CONTACT_TO_EMAIL`. Sem eles a mensagem fica só no painel.
 
-- `RESEND_API_KEY`
-- `CONTACT_FROM_EMAIL` remetente com dominio verificado no Resend, ex. `Site MAQCENTER <site@maqcentercascavel.com.br>`
-- `CONTACT_TO_EMAIL` opcional, padrao e o e-mail de `company.json`
+## Deploy (Vercel + Turso)
 
-Sem essas variaveis o formulario responde com erro e orienta o cliente a usar o WhatsApp.
-
-## Deploy
-
-Na Vercel, aponte o Root Directory para `site/` e cadastre as variaveis acima.
+1. Crie o banco no Turso: `turso db create maqcenter` e gere o token: `turso db tokens create maqcenter`.
+2. Aplique as migrações no Turso (uma vez por migração nova), em ordem:
+   ```bash
+   turso db shell maqcenter < prisma/migrations/<pasta>/migration.sql
+   ```
+3. Rode o seed apontando para o Turso: `DATABASE_URL=libsql://... DATABASE_AUTH_TOKEN=... npm run db:seed`.
+4. Na Vercel: Root Directory `site/` e as variáveis do `.env.example` (com `DATABASE_URL` do Turso, `SESSION_SECRET` forte, `NEXT_PUBLIC_SITE_URL`, Mercado Pago, Blob e Resend).

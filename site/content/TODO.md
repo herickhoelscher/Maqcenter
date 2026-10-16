@@ -1,5 +1,7 @@
 # Conteudo pendente
 
+A maior parte destes itens agora se resolve pelo painel (/admin), sem mexer em codigo.
+
 Veja `SOURCES.md` para a origem de tudo que ja esta no site.
 
 O site antigo (OpenCart) nao tinha produtos cadastrados nem texto institucional.
@@ -34,3 +36,8 @@ Tudo abaixo precisa vir da MAQCENTER. Cada arquivo JSON tambem lista as pendenci
 
 ## Identidade
 - Logo em SVG. O logo horizontal do header foi remontado a partir do logo quadrado (avatar.jpg), porque o PNG horizontal antigo tem so 303x39 px de arte
+
+## Loja
+- Preco e estoque dos produtos que serao vendidos online (painel > Produtos). Sem preco o produto fica "sob consulta"
+- Conta no Mercado Pago (Checkout Pro) e credenciais de producao
+- Confirmar a politica "Troca e devolucao gratis" usada no rodape (veio do site antigo)
