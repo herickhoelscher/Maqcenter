@@ -1,21 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { company, formatHours, getEquipment } from "@/lib/content";
 import { whatsappUrl } from "@/lib/whatsapp";
 import { ClockIcon, MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "./icons";
 import { Logo } from "./Logo";
+import { PaymentMethods, TrustSeals } from "./PaymentBadges";
 
-// Payment methods and seals shown on the old site footer.
-const cards = [
-  ["visa", "Visa"],
-  ["mastercard", "Mastercard"],
-  ["hiper", "Hiper"],
-  ["elo", "Elo"],
-  ["diners", "Diners Club"],
-  ["hipercard", "Hipercard"],
-  ["amex", "American Express"],
-  ["boleto", "Boleto"],
-] as const;
 
 export function Footer() {
   const a = company.address;
@@ -101,49 +90,13 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="grid items-center gap-6 border-b border-white/10 py-6 lg:grid-cols-2">
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="w-full text-badge tracking-wider uppercase sm:w-auto">Formas de pagamento</span>
-            <ul className="flex flex-wrap items-center gap-2">
-              {cards.map(([file, label]) => (
-                <li key={file} className="rounded-[var(--radius-control)] bg-white p-0.5">
-                  <Image src={`/images/pagamento/${file}.webp`} alt={label} width={40} height={29} className="h-[29px] w-10" />
-                </li>
-              ))}
-              <li className="rounded-[var(--radius-control)] bg-white px-2 py-1">
-                <Image src="/images/pagamento/pix.webp" alt="PIX" width={197} height={70} className="h-[21px] w-auto" />
-              </li>
-            </ul>
+        <div className="grid items-center gap-6 border-b border-white/10 py-6 lg:grid-cols-[auto_1fr]">
+          <div className="space-y-3">
+            <span className="block text-badge tracking-wider uppercase">Formas de pagamento</span>
+            <PaymentMethods />
           </div>
-          <div className="flex flex-wrap items-center gap-3 lg:justify-end">
-            <a
-              href="https://www.sslshopper.com/ssl-checker.html#hostname=www.maqcentercascavel.com.br"
-              target="_blank"
-              rel="noopener"
-              className="rounded-[var(--radius-control)] bg-white p-1"
-            >
-              <Image src="/images/pagamento/compra-segura.webp" alt="Compra segura, certificado SSL" width={213} height={47} className="h-9 w-auto" />
-            </a>
-            <a
-              href="https://transparencyreport.google.com/safe-browsing/search?url=www.maqcentercascavel.com.br&hl=pt_BR"
-              target="_blank"
-              rel="noopener"
-              className="rounded-[var(--radius-control)] bg-white px-2 py-1"
-            >
-              <Image src="/images/pagamento/google-transparency.webp" alt="Google Transparency Report" width={95} height={40} className="h-8 w-auto" />
-            </a>
-            <span className="flex items-center gap-2 rounded-[var(--radius-control)] bg-white px-2.5 py-1.5 text-body-sm font-bold leading-tight text-charcoal">
-              <Image src="/images/pagamento/site-seguro.webp" alt="" width={32} height={32} className="size-6" />
-              Site seguro,
-              <br />
-              compra garantida
-            </span>
-            <span className="flex items-center gap-2 rounded-[var(--radius-control)] bg-white px-2.5 py-1.5 text-body-sm font-bold leading-tight text-charcoal">
-              <Image src="/images/pagamento/troca-devolucao.webp" alt="" width={32} height={32} className="size-6" />
-              Troca e devolução
-              <br />
-              grátis
-            </span>
+          <div className="lg:justify-self-end">
+            <TrustSeals host={new URL(company.siteUrl).host} />
           </div>
         </div>
 

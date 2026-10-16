@@ -84,27 +84,6 @@ async function main() {
   }
   console.log("instagram gallery");
 
-  // Payment and trust badges from the old site footer, kept at their size.
-  const badges = {
-    "cartoes/cartao-1.png": "visa",
-    "cartoes/cartao-2.png": "mastercard",
-    "cartoes/cartao-3.png": "hiper",
-    "cartoes/cartao-4.png": "elo",
-    "cartoes/cartao-5.png": "diners",
-    "cartoes/cartao-6.png": "hipercard",
-    "cartoes/cartao-7.png": "amex",
-    "cartoes/cartao-8.png": "boleto",
-    "logo-pix.png": "pix",
-    "compra-segura.png": "compra-segura",
-    "google-seguro.png": "google-transparency",
-    "security.png": "site-seguro",
-    "reload.png": "troca-devolucao",
-  };
-  await mkdir(path.join(out, "pagamento"), { recursive: true });
-  for (const [from, to] of Object.entries(badges)) {
-    await sharp(path.join(src, "catalog", from)).webp({ lossless: true }).toFile(path.join(out, "pagamento", `${to}.webp`));
-  }
-  console.log("payment badges");
 
   // Square logo (1080x1080) from the old favicon: icon from the "M" mark,
   // Open Graph image from the full lockup.
