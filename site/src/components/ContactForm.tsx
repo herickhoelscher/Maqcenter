@@ -1,7 +1,8 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import { useId, useState } from "react";
-import { HONEYPOT_FIELD, serviceOptions, validateContact, type FieldErrors } from "@/lib/contact";
+import { HONEYPOT_FIELD, serviceOptions, subjectParams, validateContact, type FieldErrors } from "@/lib/contact";
 
 type Status = { kind: "idle" } | { kind: "sending" } | { kind: "sent" } | { kind: "error"; message: string };
 
@@ -138,4 +139,9 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       </div>
     </form>
   );
+}
+
+export function ContactFormFromParams() {
+  const assunto = useSearchParams().get("assunto") ?? "";
+  return <ContactForm key={assunto} defaultService={subjectParams[assunto]} />;
 }

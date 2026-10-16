@@ -45,8 +45,11 @@ export function ContactDetails({ className = "", title = "Atendimento" }: { clas
           </Row>
         )}
         <Row icon={<MailIcon className="size-5" />} label="E-mail">
-          <a href={`mailto:${company.email}`} className={`${link} break-all`}>
+          <a href={`mailto:${company.email}`} className={`${link} block break-all py-1`}>
             {company.email}
+          </a>
+          <a href={`mailto:${company.emailSite}`} className={`${link} block break-all py-1`}>
+            {company.emailSite}
           </a>
         </Row>
         <Row icon={<ClockIcon className="size-5" />} label="Horário">

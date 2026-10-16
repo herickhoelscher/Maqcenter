@@ -1,6 +1,8 @@
 import { CallButton, WhatsAppButton } from "@/components/Buttons";
-import { ContactDetails } from "@/components/ContactDetails";
-import { ContactForm } from "@/components/ContactForm";
+import { ContactDetails, mapsUrl } from "@/components/ContactDetails";
+import { MapEmbed } from "@/components/MapEmbed";
+import { Suspense } from "react";
+import { ContactForm, ContactFormFromParams } from "@/components/ContactForm";
 import { PageHeader } from "@/components/PageHeader";
 import { company, formatAddress } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
@@ -10,8 +12,6 @@ export const metadata = pageMetadata({
   description: `Peça orçamento para a ${company.name}: WhatsApp ${company.phone.display}, e-mail ${company.email}. ${formatAddress()}.`,
   path: "/contato",
 });
-
-const mapQuery = encodeURIComponent(`${formatAddress()}, Brasil`);
 
 export default function ContactPage() {
   return (
@@ -36,18 +36,20 @@ export default function ContactPage() {
             Formulário de contato
           </h2>
           <div className="mt-6">
-            <ContactForm />
+            {/* Reads ?assunto= to preselect the subject. */}
+            <Suspense fallback={<ContactForm />}>
+              <ContactFormFromParams />
+            </Suspense>
           </div>
         </section>
         <div className="space-y-6 lg:col-span-5">
           <ContactDetails />
           <div className="card overflow-hidden">
-            <iframe
+            <MapEmbed
+              query={`${formatAddress()}, Brasil`}
               title={`Mapa: ${company.name}, ${formatAddress()}`}
-              src={`https://maps.google.com/maps?q=${mapQuery}&z=16&output=embed`}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="aspect-[4/3] w-full"
+              address={formatAddress()}
+              mapsUrl={mapsUrl()}
             />
           </div>
         </div>
