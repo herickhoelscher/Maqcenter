@@ -1,0 +1,38 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/escova-de-carvao",
+  "old_key": "escova-de-carvao",
+  "type": "category",
+  "title": "Escova de carvão",
+  "head_title": "Escova de carvão",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/escova-de-carvao",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Escova de carvão",
+      "url": "https://www.maqcentercascavel.com.br/escova-de-carvao"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Escova de carvão"
+    }
+  ],
+  "text": "Escova de carvão Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "origin": "probe",
+  "aliases": [],
+  "new_slug": "venda-de-maquinas",
+  "file": "content/escova-de-carvao.json"
+}

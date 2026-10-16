@@ -1,0 +1,38 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/esmerilhadeira",
+  "old_key": "esmerilhadeira",
+  "type": "category",
+  "title": "Esmerilhadeira",
+  "head_title": "Esmerilhadeira",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/esmerilhadeira",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Esmerilhadeira",
+      "url": "https://www.maqcentercascavel.com.br/esmerilhadeira"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Esmerilhadeira"
+    }
+  ],
+  "text": "Esmerilhadeira Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "origin": "probe",
+  "aliases": [],
+  "new_slug": "venda-de-maquinas",
+  "file": "content/esmerilhadeira.json"
+}

@@ -1,0 +1,38 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/baterias",
+  "old_key": "baterias",
+  "type": "category",
+  "title": "Baterias",
+  "head_title": "Baterias",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/baterias",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Baterias",
+      "url": "https://www.maqcentercascavel.com.br/baterias"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Baterias"
+    }
+  ],
+  "text": "Baterias Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "origin": "probe",
+  "aliases": [],
+  "new_slug": "venda-de-maquinas",
+  "file": "content/baterias.json"
+}

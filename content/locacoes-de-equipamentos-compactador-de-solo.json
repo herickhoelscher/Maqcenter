@@ -35,7 +35,10 @@
     "empty": true,
     "description": ""
   },
-  "aliases": [],
+  "origin": "sitemap",
+  "aliases": [
+    "https://www.maqcentercascavel.com.br/compactador-de-solo"
+  ],
   "new_slug": "locacoes/compactador-de-solo",
   "file": "content/locacoes-de-equipamentos-compactador-de-solo.json"
 }

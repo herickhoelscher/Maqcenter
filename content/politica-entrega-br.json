@@ -25,7 +25,10 @@
   ],
   "text": "Política de entrega Política de entrega",
   "images": [],
-  "aliases": [],
+  "origin": "sitemap",
+  "aliases": [
+    "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=6"
+  ],
   "new_slug": "termos-e-condicoes",
   "file": "content/politica-entrega-br.json"
 }

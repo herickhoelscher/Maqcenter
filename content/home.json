@@ -138,6 +138,7 @@
       }
     ]
   },
+  "origin": "start",
   "aliases": [],
   "new_slug": "",
   "file": "content/home.json"

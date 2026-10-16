@@ -1,10 +1,11 @@
 # Inventario do site antigo
 
 Fonte: https://www.maqcentercascavel.com.br/  
-Gerado em: 2026-10-15 18:21
+Gerado em: 2026-10-15 22:34
 
 - Categorias de primeiro nivel: 4
 - Subcategorias: 6
+- Categorias fora do menu (achadas por --probe-ids): 12
 - Equipamentos/produtos: 0
 
 ## Categorias e subcategorias
@@ -19,6 +20,23 @@ Gerado em: 2026-10-15 18:21
 - **Assistência Técnica** (sem produtos) `/assistencia-tecnica` -> `/assistencia-tecnica`
 - **Venda de Máquinas e Acessórios** (sem produtos) `/venda-de-maquinas-e-acessorios` -> `/venda-de-maquinas`
 - **Perfuração em concreto** (sem produtos) `/perfuracao-em-concreto` -> `/perfuracao-em-concreto`
+
+## Categorias fora do menu
+
+Existem no OpenCart com URL propria, mas nenhuma pagina linka para elas.
+
+- Furadeiras (sem produtos) `/furadeiras` -> `/venda-de-maquinas`
+- Serra-mármore (sem produtos) `/serra-marmore` -> `/venda-de-maquinas`
+- Esmerilhadeira (sem produtos) `/esmerilhadeira` -> `/venda-de-maquinas`
+- Serra Circular (sem produtos) `/serra-circular` -> `/venda-de-maquinas`
+- Parafusadeira (sem produtos) `/parafusadeira` -> `/venda-de-maquinas`
+- Rompedor (sem produtos) `/rompedor` -> `/venda-de-maquinas`
+- Broca (sem produtos) `/broca` -> `/venda-de-maquinas`
+- Disco diamantado (sem produtos) `/disco-diamantado` -> `/venda-de-maquinas`
+- Baterias (sem produtos) `/baterias` -> `/venda-de-maquinas`
+- Escova de carvão (sem produtos) `/escova-de-carvao` -> `/venda-de-maquinas`
+- Serra-copo diamantada (sem produtos) `/serra-copo-diamantada` -> `/venda-de-maquinas`
+- Disco de corte de madeira (sem produtos) `/disco-de-corte-de-madeira` -> `/venda-de-maquinas`
 
 ## Equipamentos / produtos
 

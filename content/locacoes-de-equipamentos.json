@@ -56,6 +56,7 @@
     "empty": false,
     "description": ""
   },
+  "origin": "sitemap",
   "aliases": [],
   "new_slug": "locacoes",
   "file": "content/locacoes-de-equipamentos.json"

@@ -35,7 +35,10 @@
     "empty": true,
     "description": ""
   },
-  "aliases": [],
+  "origin": "sitemap",
+  "aliases": [
+    "https://www.maqcentercascavel.com.br/lavador-de-pressao"
+  ],
   "new_slug": "locacoes/lavador-de-pressao",
   "file": "content/locacoes-de-equipamentos-lavador-de-pressao.json"
 }

@@ -25,7 +25,10 @@
   ],
   "text": "Termos e condições Termos e condições",
   "images": [],
-  "aliases": [],
+  "origin": "sitemap",
+  "aliases": [
+    "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=5"
+  ],
   "new_slug": "termos-e-condicoes",
   "file": "content/termos-condicoes-br.json"
 }

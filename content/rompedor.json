@@ -1,0 +1,38 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/rompedor",
+  "old_key": "rompedor",
+  "type": "category",
+  "title": "Rompedor",
+  "head_title": "Rompedor",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/rompedor",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Rompedor",
+      "url": "https://www.maqcentercascavel.com.br/rompedor"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Rompedor"
+    }
+  ],
+  "text": "Rompedor Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "origin": "probe",
+  "aliases": [],
+  "new_slug": "venda-de-maquinas",
+  "file": "content/rompedor.json"
+}

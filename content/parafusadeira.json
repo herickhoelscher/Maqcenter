@@ -1,0 +1,38 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/parafusadeira",
+  "old_key": "parafusadeira",
+  "type": "category",
+  "title": "Parafusadeira",
+  "head_title": "Parafusadeira",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/parafusadeira",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Parafusadeira",
+      "url": "https://www.maqcentercascavel.com.br/parafusadeira"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Parafusadeira"
+    }
+  ],
+  "text": "Parafusadeira Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "origin": "probe",
+  "aliases": [],
+  "new_slug": "venda-de-maquinas",
+  "file": "content/parafusadeira.json"
+}

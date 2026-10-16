@@ -35,7 +35,10 @@
     "empty": true,
     "description": ""
   },
-  "aliases": [],
+  "origin": "sitemap",
+  "aliases": [
+    "https://www.maqcentercascavel.com.br/serra-circular1"
+  ],
   "new_slug": "locacoes/serra-circular",
   "file": "content/locacoes-de-equipamentos-serra-circular1.json"
 }

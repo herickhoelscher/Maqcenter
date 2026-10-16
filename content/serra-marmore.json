@@ -1,0 +1,38 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/serra-marmore",
+  "old_key": "serra-marmore",
+  "type": "category",
+  "title": "Serra-mármore",
+  "head_title": "Serra-mármore",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/serra-marmore",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Serra-mármore",
+      "url": "https://www.maqcentercascavel.com.br/serra-marmore"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Serra-mármore"
+    }
+  ],
+  "text": "Serra-mármore Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "origin": "probe",
+  "aliases": [],
+  "new_slug": "venda-de-maquinas",
+  "file": "content/serra-marmore.json"
+}

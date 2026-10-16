@@ -35,7 +35,10 @@
     "empty": true,
     "description": ""
   },
-  "aliases": [],
+  "origin": "sitemap",
+  "aliases": [
+    "https://www.maqcentercascavel.com.br/rompedor-de-concreto"
+  ],
   "new_slug": "locacoes/rompedor-de-concreto",
   "file": "content/locacoes-de-equipamentos-rompedor-de-concreto.json"
 }

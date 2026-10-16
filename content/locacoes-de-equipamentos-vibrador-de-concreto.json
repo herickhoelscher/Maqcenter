@@ -35,7 +35,10 @@
     "empty": true,
     "description": ""
   },
-  "aliases": [],
+  "origin": "sitemap",
+  "aliases": [
+    "https://www.maqcentercascavel.com.br/vibrador-de-concreto"
+  ],
   "new_slug": "locacoes/vibrador-de-concreto",
   "file": "content/locacoes-de-equipamentos-vibrador-de-concreto.json"
 }

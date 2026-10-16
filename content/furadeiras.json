@@ -1,0 +1,38 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/furadeiras",
+  "old_key": "furadeiras",
+  "type": "category",
+  "title": "Furadeiras",
+  "head_title": "Furadeiras",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/furadeiras",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Furadeiras",
+      "url": "https://www.maqcentercascavel.com.br/furadeiras"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Furadeiras"
+    }
+  ],
+  "text": "Furadeiras Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "origin": "probe",
+  "aliases": [],
+  "new_slug": "venda-de-maquinas",
+  "file": "content/furadeiras.json"
+}

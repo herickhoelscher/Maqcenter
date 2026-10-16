@@ -1,6 +1,6 @@
 {
   "start": "https://www.maqcentercascavel.com.br/",
-  "crawled_at": "2026-10-15T18:21:43",
+  "crawled_at": "2026-10-15T22:34:14",
   "pages": [
     {
       "url": "https://www.maqcentercascavel.com.br/",
@@ -53,7 +53,7 @@
         "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
       ],
       "forms": [],
-      "tempo_s": 0.23,
+      "tempo_s": 0.513,
       "peso_kb": 47.1
     },
     {
@@ -177,7 +177,7 @@
           "campos": []
         }
       ],
-      "tempo_s": 0.227,
+      "tempo_s": 0.229,
       "peso_kb": 51.9
     },
     {
@@ -239,7 +239,7 @@
           "campos": []
         }
       ],
-      "tempo_s": 0.267,
+      "tempo_s": 0.219,
       "peso_kb": 51.9
     },
     {
@@ -301,7 +301,7 @@
           "campos": []
         }
       ],
-      "tempo_s": 0.243,
+      "tempo_s": 0.215,
       "peso_kb": 51.9
     },
     {
@@ -363,7 +363,7 @@
           "campos": []
         }
       ],
-      "tempo_s": 0.304,
+      "tempo_s": 0.204,
       "peso_kb": 52.0
     },
     {
@@ -425,7 +425,7 @@
           "campos": []
         }
       ],
-      "tempo_s": 0.232,
+      "tempo_s": 0.292,
       "peso_kb": 51.9
     },
     {
@@ -487,7 +487,7 @@
           "campos": []
         }
       ],
-      "tempo_s": 0.226,
+      "tempo_s": 0.228,
       "peso_kb": 52.0
     },
     {
@@ -549,7 +549,7 @@
           "campos": []
         }
       ],
-      "tempo_s": 0.359,
+      "tempo_s": 0.203,
       "peso_kb": 49.9
     },
     {
@@ -611,7 +611,7 @@
           "campos": []
         }
       ],
-      "tempo_s": 0.219,
+      "tempo_s": 0.35,
       "peso_kb": 50.0
     },
     {
@@ -673,7 +673,7 @@
           "campos": []
         }
       ],
-      "tempo_s": 0.282,
+      "tempo_s": 0.251,
       "peso_kb": 50.0
     },
     {
@@ -729,7 +729,7 @@
         "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
       ],
       "forms": [],
-      "tempo_s": 0.225,
+      "tempo_s": 0.181,
       "peso_kb": 43.4
     },
     {
@@ -785,7 +785,7 @@
         "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
       ],
       "forms": [],
-      "tempo_s": 0.217,
+      "tempo_s": 0.195,
       "peso_kb": 43.6
     },
     {
@@ -841,7 +841,7 @@
         "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
       ],
       "forms": [],
-      "tempo_s": 0.185,
+      "tempo_s": 0.245,
       "peso_kb": 43.4
     },
     {
@@ -897,7 +897,7 @@
         "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
       ],
       "forms": [],
-      "tempo_s": 0.188,
+      "tempo_s": 0.177,
       "peso_kb": 43.4
     },
     {
@@ -953,7 +953,7 @@
         "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
       ],
       "forms": [],
-      "tempo_s": 0.191,
+      "tempo_s": 0.196,
       "peso_kb": 43.4
     },
     {
@@ -1009,7 +1009,1459 @@
         "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
       ],
       "forms": [],
+      "tempo_s": 0.201,
+      "peso_kb": 43.4
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/furadeiras",
+      "final_url": "https://www.maqcentercascavel.com.br/furadeiras",
+      "origem": "probe",
+      "status": 200,
+      "title": "Furadeiras",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/furadeiras",
+      "h1": [],
+      "h2": [
+        "Furadeiras"
+      ],
+      "palavras": 338,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.198,
+      "peso_kb": 50.1
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/serra-marmore",
+      "final_url": "https://www.maqcentercascavel.com.br/serra-marmore",
+      "origem": "probe",
+      "status": 200,
+      "title": "Serra-mármore",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/serra-marmore",
+      "h1": [],
+      "h2": [
+        "Serra-mármore"
+      ],
+      "palavras": 338,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.2,
+      "peso_kb": 50.1
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/esmerilhadeira",
+      "final_url": "https://www.maqcentercascavel.com.br/esmerilhadeira",
+      "origem": "probe",
+      "status": 200,
+      "title": "Esmerilhadeira",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/esmerilhadeira",
+      "h1": [],
+      "h2": [
+        "Esmerilhadeira"
+      ],
+      "palavras": 338,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.2,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/serra-circular",
+      "final_url": "https://www.maqcentercascavel.com.br/serra-circular",
+      "origem": "probe",
+      "status": 200,
+      "title": "Serra Circular",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/serra-circular",
+      "h1": [],
+      "h2": [
+        "Serra Circular"
+      ],
+      "palavras": 340,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.223,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/parafusadeira",
+      "final_url": "https://www.maqcentercascavel.com.br/parafusadeira",
+      "origem": "probe",
+      "status": 200,
+      "title": "Parafusadeira",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/parafusadeira",
+      "h1": [],
+      "h2": [
+        "Parafusadeira"
+      ],
+      "palavras": 338,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.227,
+      "peso_kb": 50.1
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/rompedor",
+      "final_url": "https://www.maqcentercascavel.com.br/rompedor",
+      "origem": "probe",
+      "status": 200,
+      "title": "Rompedor",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/rompedor",
+      "h1": [],
+      "h2": [
+        "Rompedor"
+      ],
+      "palavras": 338,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.214,
+      "peso_kb": 50.1
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/compactador-de-solo",
+      "final_url": "https://www.maqcentercascavel.com.br/compactador-de-solo",
+      "origem": "probe",
+      "status": 200,
+      "title": "Compactador de solo",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/compactador-de-solo",
+      "h1": [],
+      "h2": [
+        "Compactador de solo"
+      ],
+      "palavras": 342,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.216,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/rompedor-de-concreto",
+      "final_url": "https://www.maqcentercascavel.com.br/rompedor-de-concreto",
+      "origem": "probe",
+      "status": 200,
+      "title": "Rompedor de concreto",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/rompedor-de-concreto",
+      "h1": [],
+      "h2": [
+        "Rompedor de concreto"
+      ],
+      "palavras": 342,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.301,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/vibrador-de-concreto",
+      "final_url": "https://www.maqcentercascavel.com.br/vibrador-de-concreto",
+      "origem": "probe",
+      "status": 200,
+      "title": "Vibrador de concreto",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/vibrador-de-concreto",
+      "h1": [],
+      "h2": [
+        "Vibrador de concreto"
+      ],
+      "palavras": 342,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.219,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/cortadeira-de-piso",
+      "final_url": "https://www.maqcentercascavel.com.br/cortadeira-de-piso",
+      "origem": "probe",
+      "status": 200,
+      "title": "Cortadeira de piso",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/cortadeira-de-piso",
+      "h1": [],
+      "h2": [
+        "Cortadeira de piso"
+      ],
+      "palavras": 342,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.245,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/lavador-de-pressao",
+      "final_url": "https://www.maqcentercascavel.com.br/lavador-de-pressao",
+      "origem": "probe",
+      "status": 200,
+      "title": "Lavador de pressão",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/lavador-de-pressao",
+      "h1": [],
+      "h2": [
+        "Lavador de pressão"
+      ],
+      "palavras": 342,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.214,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/broca",
+      "final_url": "https://www.maqcentercascavel.com.br/broca",
+      "origem": "probe",
+      "status": 200,
+      "title": "Broca",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/broca",
+      "h1": [],
+      "h2": [
+        "Broca"
+      ],
+      "palavras": 338,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.276,
+      "peso_kb": 50.1
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/disco-diamantado",
+      "final_url": "https://www.maqcentercascavel.com.br/disco-diamantado",
+      "origem": "probe",
+      "status": 200,
+      "title": "Disco diamantado",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/disco-diamantado",
+      "h1": [],
+      "h2": [
+        "Disco diamantado"
+      ],
+      "palavras": 340,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.246,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/baterias",
+      "final_url": "https://www.maqcentercascavel.com.br/baterias",
+      "origem": "probe",
+      "status": 200,
+      "title": "Baterias",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/baterias",
+      "h1": [],
+      "h2": [
+        "Baterias"
+      ],
+      "palavras": 338,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.296,
+      "peso_kb": 50.1
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/escova-de-carvao",
+      "final_url": "https://www.maqcentercascavel.com.br/escova-de-carvao",
+      "origem": "probe",
+      "status": 200,
+      "title": "Escova de carvão",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/escova-de-carvao",
+      "h1": [],
+      "h2": [
+        "Escova de carvão"
+      ],
+      "palavras": 342,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.29,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/serra-copo-diamantada",
+      "final_url": "https://www.maqcentercascavel.com.br/serra-copo-diamantada",
+      "origem": "probe",
+      "status": 200,
+      "title": "Serra-copo diamantada",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/serra-copo-diamantada",
+      "h1": [],
+      "h2": [
+        "Serra-copo diamantada"
+      ],
+      "palavras": 340,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.246,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/disco-de-corte-de-madeira",
+      "final_url": "https://www.maqcentercascavel.com.br/disco-de-corte-de-madeira",
+      "origem": "probe",
+      "status": 200,
+      "title": "Disco de corte de madeira",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/disco-de-corte-de-madeira",
+      "h1": [],
+      "h2": [
+        "Disco de corte de madeira"
+      ],
+      "palavras": 346,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.196,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/serra-circular1",
+      "final_url": "https://www.maqcentercascavel.com.br/serra-circular1",
+      "origem": "probe",
+      "status": 200,
+      "title": "Serra Circular",
+      "description": "",
+      "canonical": "https://www.maqcentercascavel.com.br/serra-circular1",
+      "h1": [],
+      "h2": [
+        "Serra Circular"
+      ],
+      "palavras": 340,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [
+        {
+          "action": "https://www.maqcentercascavel.com.br/",
+          "method": "get",
+          "campos": []
+        }
+      ],
+      "tempo_s": 0.231,
+      "peso_kb": 50.2
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=3",
+      "final_url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=3",
+      "origem": "probe",
+      "status": 200,
+      "title": "Política de privacidade",
+      "description": "",
+      "canonical": "",
+      "h1": [
+        "Política de privacidade"
+      ],
+      "h2": [],
+      "palavras": 323,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [],
+      "tempo_s": 0.186,
+      "peso_kb": 43.4
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=4",
+      "final_url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=4",
+      "origem": "probe",
+      "status": 200,
+      "title": "Sobre a loja",
+      "description": "",
+      "canonical": "",
+      "h1": [
+        "Sobre a loja"
+      ],
+      "h2": [],
+      "palavras": 323,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [],
+      "tempo_s": 0.217,
+      "peso_kb": 43.4
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=5",
+      "final_url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=5",
+      "origem": "probe",
+      "status": 200,
+      "title": "Termos e condições",
+      "description": "",
+      "canonical": "",
+      "h1": [
+        "Termos e condições"
+      ],
+      "h2": [],
+      "palavras": 323,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [],
+      "tempo_s": 0.223,
+      "peso_kb": 43.4
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=6",
+      "final_url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=6",
+      "origem": "probe",
+      "status": 200,
+      "title": "Política de entrega",
+      "description": "",
+      "canonical": "",
+      "h1": [
+        "Política de entrega"
+      ],
+      "h2": [],
+      "palavras": 323,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [],
       "tempo_s": 0.206,
+      "peso_kb": 43.4
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=7",
+      "final_url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=7",
+      "origem": "probe",
+      "status": 200,
+      "title": "Obrigado por comprar conosco!",
+      "description": "",
+      "canonical": "",
+      "h1": [
+        "Obrigado por comprar conosco!"
+      ],
+      "h2": [],
+      "palavras": 338,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [],
+      "tempo_s": 0.217,
+      "peso_kb": 43.6
+    },
+    {
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=8",
+      "final_url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=8",
+      "origem": "probe",
+      "status": 200,
+      "title": "Monte seu KIT",
+      "description": "",
+      "canonical": "",
+      "h1": [
+        "Monte seu KIT"
+      ],
+      "h2": [],
+      "palavras": 323,
+      "img_sem_alt": [
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-ground-symbol-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-serra-circular-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/pressure-washer.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/icons8-reinforced-concrete-32.svg",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/92039.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/icons/vibrador-de-concreto.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-1.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-2.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-3.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-4.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-5.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-6.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-7.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/cartoes/cartao-8.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/logo-pix.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/compra-segura.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/google-seguro.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/security.png",
+        "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
+      ],
+      "forms": [],
+      "tempo_s": 0.205,
       "peso_kb": 43.4
     },
     {
@@ -1076,7 +2528,7 @@
           ]
         }
       ],
-      "tempo_s": 0.199,
+      "tempo_s": 0.2,
       "peso_kb": 46.0
     },
     {
@@ -1132,7 +2584,7 @@
         "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
       ],
       "forms": [],
-      "tempo_s": 0.178,
+      "tempo_s": 0.246,
       "peso_kb": 47.6
     },
     {
@@ -1188,7 +2640,7 @@
         "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
       ],
       "forms": [],
-      "tempo_s": 0.191,
+      "tempo_s": 0.203,
       "peso_kb": 43.7
     },
     {
@@ -1246,7 +2698,7 @@
         "https://www.maqcentercascavel.com.br/image/catalog/reload.png"
       ],
       "forms": [],
-      "tempo_s": 0.194,
+      "tempo_s": 0.273,
       "peso_kb": 47.1
     }
   ],
@@ -1358,24 +2810,24 @@
     "https://www.maqcentercascavel.com.br/image/catalog/security.png"
   ],
   "external": {
-    "wa.me": 84,
-    "facebook.com": 63,
-    "instagram.com": 63,
-    "sslshopper.com": 21,
-    "transparencyreport.google.com": 21
+    "wa.me": 180,
+    "facebook.com": 135,
+    "instagram.com": 135,
+    "sslshopper.com": 45,
+    "transparencyreport.google.com": 45
   },
   "broken": [],
   "tech": {
-    "OpenCart": 21,
-    "jQuery": 21,
-    "Bootstrap": 21,
-    "Font Awesome": 21,
-    "Owl Carousel": 21,
-    "SweetAlert2": 21,
-    "Elfsight": 21,
-    "Google Fonts": 21,
-    "WhatsApp link": 21,
-    "PagSeguro": 21,
+    "OpenCart": 45,
+    "jQuery": 45,
+    "Bootstrap": 45,
+    "Font Awesome": 45,
+    "Owl Carousel": 45,
+    "SweetAlert2": 45,
+    "Elfsight": 45,
+    "Google Fonts": 45,
+    "WhatsApp link": 45,
+    "PagSeguro": 45,
     "reCAPTCHA": 1
   },
   "sitemap_urls": [
@@ -1400,9 +2852,187 @@
     "sitemaps": [],
     "paths": []
   },
-  "orphans": [],
+  "orphans": [
+    "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=3",
+    "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=4",
+    "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=5",
+    "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=6",
+    "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=7",
+    "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=8"
+  ],
+  "probed": [
+    {
+      "kind": "category",
+      "id": 88,
+      "title": "Locações de Equipamentos",
+      "url": "https://www.maqcentercascavel.com.br/locacoes-de-equipamentos"
+    },
+    {
+      "kind": "category",
+      "id": 90,
+      "title": "Furadeiras",
+      "url": "https://www.maqcentercascavel.com.br/furadeiras"
+    },
+    {
+      "kind": "category",
+      "id": 91,
+      "title": "Serra-mármore",
+      "url": "https://www.maqcentercascavel.com.br/serra-marmore"
+    },
+    {
+      "kind": "category",
+      "id": 92,
+      "title": "Esmerilhadeira",
+      "url": "https://www.maqcentercascavel.com.br/esmerilhadeira"
+    },
+    {
+      "kind": "category",
+      "id": 93,
+      "title": "Serra Circular",
+      "url": "https://www.maqcentercascavel.com.br/serra-circular"
+    },
+    {
+      "kind": "category",
+      "id": 94,
+      "title": "Parafusadeira",
+      "url": "https://www.maqcentercascavel.com.br/parafusadeira"
+    },
+    {
+      "kind": "category",
+      "id": 95,
+      "title": "Rompedor",
+      "url": "https://www.maqcentercascavel.com.br/rompedor"
+    },
+    {
+      "kind": "category",
+      "id": 96,
+      "title": "Compactador de solo",
+      "url": "https://www.maqcentercascavel.com.br/compactador-de-solo"
+    },
+    {
+      "kind": "category",
+      "id": 97,
+      "title": "Rompedor de concreto",
+      "url": "https://www.maqcentercascavel.com.br/rompedor-de-concreto"
+    },
+    {
+      "kind": "category",
+      "id": 98,
+      "title": "Vibrador de concreto",
+      "url": "https://www.maqcentercascavel.com.br/vibrador-de-concreto"
+    },
+    {
+      "kind": "category",
+      "id": 99,
+      "title": "Cortadeira de piso",
+      "url": "https://www.maqcentercascavel.com.br/cortadeira-de-piso"
+    },
+    {
+      "kind": "category",
+      "id": 100,
+      "title": "Lavador de pressão",
+      "url": "https://www.maqcentercascavel.com.br/lavador-de-pressao"
+    },
+    {
+      "kind": "category",
+      "id": 101,
+      "title": "Broca",
+      "url": "https://www.maqcentercascavel.com.br/broca"
+    },
+    {
+      "kind": "category",
+      "id": 102,
+      "title": "Disco diamantado",
+      "url": "https://www.maqcentercascavel.com.br/disco-diamantado"
+    },
+    {
+      "kind": "category",
+      "id": 103,
+      "title": "Baterias",
+      "url": "https://www.maqcentercascavel.com.br/baterias"
+    },
+    {
+      "kind": "category",
+      "id": 104,
+      "title": "Escova de carvão",
+      "url": "https://www.maqcentercascavel.com.br/escova-de-carvao"
+    },
+    {
+      "kind": "category",
+      "id": 105,
+      "title": "Serra-copo diamantada",
+      "url": "https://www.maqcentercascavel.com.br/serra-copo-diamantada"
+    },
+    {
+      "kind": "category",
+      "id": 106,
+      "title": "Disco de corte de madeira",
+      "url": "https://www.maqcentercascavel.com.br/disco-de-corte-de-madeira"
+    },
+    {
+      "kind": "category",
+      "id": 107,
+      "title": "Assistência Técnica",
+      "url": "https://www.maqcentercascavel.com.br/assistencia-tecnica"
+    },
+    {
+      "kind": "category",
+      "id": 108,
+      "title": "Venda de Máquinas e Acessórios",
+      "url": "https://www.maqcentercascavel.com.br/venda-de-maquinas-e-acessorios"
+    },
+    {
+      "kind": "category",
+      "id": 109,
+      "title": "Perfuração em concreto",
+      "url": "https://www.maqcentercascavel.com.br/perfuracao-em-concreto"
+    },
+    {
+      "kind": "category",
+      "id": 110,
+      "title": "Serra Circular",
+      "url": "https://www.maqcentercascavel.com.br/serra-circular1"
+    },
+    {
+      "kind": "information",
+      "id": 3,
+      "title": "Política de privacidade",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=3"
+    },
+    {
+      "kind": "information",
+      "id": 4,
+      "title": "Sobre a loja",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=4"
+    },
+    {
+      "kind": "information",
+      "id": 5,
+      "title": "Termos e condições",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=5"
+    },
+    {
+      "kind": "information",
+      "id": 6,
+      "title": "Política de entrega",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=6"
+    },
+    {
+      "kind": "information",
+      "id": 7,
+      "title": "Obrigado por comprar conosco!",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=7"
+    },
+    {
+      "kind": "information",
+      "id": 8,
+      "title": "Monte seu KIT",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=8"
+    }
+  ],
   "images": {
-    "downloaded": [
+    "downloaded": [],
+    "skipped_existing": [
       "cache/catalog/banner-jana1-1920x650.png",
       "cache/catalog/banners/banner2-1920x650.jpg",
       "cache/catalog/banners/banner3-1920x650.jpg",
@@ -1445,7 +3075,6 @@
       "catalog/reload.png",
       "catalog/security.png"
     ],
-    "skipped_existing": [],
     "duplicates": [
       {
         "file": "catalog/banner-jana1.png",
@@ -1488,6 +3117,18 @@
     "content/politica-entrega-br.json",
     "content/politica-privacidade-br.json",
     "content/termos-condicoes-br.json",
+    "content/furadeiras.json",
+    "content/serra-marmore.json",
+    "content/esmerilhadeira.json",
+    "content/serra-circular.json",
+    "content/parafusadeira.json",
+    "content/rompedor.json",
+    "content/broca.json",
+    "content/disco-diamantado.json",
+    "content/baterias.json",
+    "content/escova-de-carvao.json",
+    "content/serra-copo-diamantada.json",
+    "content/disco-de-corte-de-madeira.json",
     "content/information-contact.json",
     "content/information-sitemap.json",
     "content/product-special.json",

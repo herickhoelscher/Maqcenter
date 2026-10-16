@@ -35,7 +35,10 @@
     "empty": true,
     "description": ""
   },
-  "aliases": [],
+  "origin": "sitemap",
+  "aliases": [
+    "https://www.maqcentercascavel.com.br/cortadeira-de-piso"
+  ],
   "new_slug": "locacoes/cortadeira-de-piso",
   "file": "content/locacoes-de-equipamentos-cortadeira-de-piso.json"
 }

@@ -1,0 +1,38 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/disco-diamantado",
+  "old_key": "disco-diamantado",
+  "type": "category",
+  "title": "Disco diamantado",
+  "head_title": "Disco diamantado",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/disco-diamantado",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Disco diamantado",
+      "url": "https://www.maqcentercascavel.com.br/disco-diamantado"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Disco diamantado"
+    }
+  ],
+  "text": "Disco diamantado Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "origin": "probe",
+  "aliases": [],
+  "new_slug": "venda-de-maquinas",
+  "file": "content/disco-diamantado.json"
+}

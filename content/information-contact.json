@@ -35,6 +35,7 @@
     "phone": "(45) 9 9805-2928",
     "address": "MAQCENTER Rua Erechim 745 - Centro - Cascavel - PR"
   },
+  "origin": "link",
   "aliases": [],
   "new_slug": "contato",
   "file": "content/information-contact.json"

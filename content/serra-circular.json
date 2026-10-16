@@ -1,0 +1,38 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/serra-circular",
+  "old_key": "serra-circular",
+  "type": "category",
+  "title": "Serra Circular",
+  "head_title": "Serra Circular",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/serra-circular",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Serra Circular",
+      "url": "https://www.maqcentercascavel.com.br/serra-circular"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Serra Circular"
+    }
+  ],
+  "text": "Serra Circular Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "origin": "probe",
+  "aliases": [],
+  "new_slug": "venda-de-maquinas",
+  "file": "content/serra-circular.json"
+}

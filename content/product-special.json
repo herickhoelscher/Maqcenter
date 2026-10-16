@@ -25,6 +25,7 @@
   ],
   "text": "Produtos em promoção Não há produtos em promoção.",
   "images": [],
+  "origin": "link",
   "aliases": [],
   "new_slug": "locacoes",
   "file": "content/product-special.json"

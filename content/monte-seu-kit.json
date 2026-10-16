@@ -25,7 +25,10 @@
   ],
   "text": "Monte seu KIT Monte seu KIT",
   "images": [],
-  "aliases": [],
+  "origin": "sitemap",
+  "aliases": [
+    "https://www.maqcentercascavel.com.br/index.php?route=information/information&information_id=8"
+  ],
   "new_slug": "locacoes",
   "file": "content/monte-seu-kit.json"
 }

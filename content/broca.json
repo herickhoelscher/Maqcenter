@@ -1,0 +1,38 @@
+{
+  "url": "https://www.maqcentercascavel.com.br/broca",
+  "old_key": "broca",
+  "type": "category",
+  "title": "Broca",
+  "head_title": "Broca",
+  "meta_description": "",
+  "canonical": "https://www.maqcentercascavel.com.br/broca",
+  "open_graph": {},
+  "breadcrumb": [
+    {
+      "name": "",
+      "url": "https://www.maqcentercascavel.com.br/index.php?route=common/home"
+    },
+    {
+      "name": "Broca",
+      "url": "https://www.maqcentercascavel.com.br/broca"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Broca"
+    }
+  ],
+  "text": "Broca Não há produtos neste departamento",
+  "images": [],
+  "category": {
+    "subcategories": [],
+    "products": [],
+    "empty": true,
+    "description": ""
+  },
+  "origin": "probe",
+  "aliases": [],
+  "new_slug": "venda-de-maquinas",
+  "file": "content/broca.json"
+}
