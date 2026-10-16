@@ -10,8 +10,11 @@ export function pageMetadata({
   path,
   image,
   noindex,
+  absoluteTitle,
 }: {
   title: string;
+  /** Skip the "| MAQCENTER Cascavel" suffix (home page already has it). */
+  absoluteTitle?: boolean;
   description: string;
   path: string;
   image?: string;
@@ -19,7 +22,7 @@ export function pageMetadata({
 }): Metadata {
   const images = image ? [{ url: image }] : undefined;
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: { canonical: path },
     openGraph: {
