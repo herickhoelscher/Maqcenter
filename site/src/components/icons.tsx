@@ -83,3 +83,4 @@ export const CalendarIcon = (p: IconProps) => <Stroke {...p} d={["M3 5h18v16H3z"
 export const MedalIcon = (p: IconProps) => <Stroke {...p} d={["M12 22a7 7 0 1 0 0-14 7 7 0 0 0 0 14z", "M8.2 9.3L5 2h4l3 6", "M15.8 9.3L19 2h-4l-3 6", "M12 12.5l1.2 2.4 2.6.4-1.9 1.8.5 2.6-2.4-1.3-2.4 1.3.5-2.6-1.9-1.8 2.6-.4z"]} />;
 export const InstagramIcon = (p: IconProps) => <Stroke {...p} d={["M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z", "M16 11.4A4 4 0 1 1 12.6 8a4 4 0 0 1 3.4 3.4z", "M17.5 6.5h.01"]} />;
 export const FacebookIcon = (p: IconProps) => <Stroke {...p} d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />;
+export const UserIcon = (p: IconProps) => <Stroke {...p} d={["M20 21a8 8 0 0 0-16 0", "M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"]} />;

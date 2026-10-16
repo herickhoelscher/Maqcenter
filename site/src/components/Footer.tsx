@@ -1,12 +1,13 @@
 import Link from "next/link";
-import { company, formatHours, getEquipment } from "@/lib/content";
+import { formatHours, getCompany, getEquipment } from "@/lib/content";
 import { whatsappUrl } from "@/lib/whatsapp";
 import { ClockIcon, MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "./icons";
 import { Logo } from "./Logo";
 import { PaymentMethods, TrustSeals } from "./PaymentBadges";
 
 
-export function Footer() {
+export async function Footer() {
+  const [company, equipment] = await Promise.all([getCompany(), getEquipment()]);
   const a = company.address;
   return (
     <footer className="on-dark bg-navy-deep pt-16 pb-24 text-on-dark md:pb-6">
@@ -17,13 +18,13 @@ export function Footer() {
             <p className="max-w-sm text-body">
               {company.tagline} em {a.city} - {a.state}. {company.slogan}
             </p>
-            <a href={whatsappUrl()} target="_blank" rel="noopener" className="btn btn-whatsapp">
+            <a href={whatsappUrl(company.whatsapp)} target="_blank" rel="noopener" className="btn btn-whatsapp">
               <WhatsAppIcon className="size-5" />
               WhatsApp Direto
               <span className="sr-only">(abre o WhatsApp)</span>
             </a>
           </div>
-          <FooterList title="Equipamentos" links={getEquipment().map((e) => ({ href: `/locacoes/${e.slug}`, label: e.name }))} />
+          <FooterList title="Equipamentos" links={equipment.map((e) => ({ href: `/locacoes/${e.slug}`, label: e.name }))} />
           <div className="space-y-8">
             <FooterList
               title="Informações"
@@ -40,6 +41,8 @@ export function Footer() {
             links={[
               { href: "/contato", label: "Entre em contato" },
               { href: "/contato?assunto=troca-devolucao", label: "Solicitar devolução" },
+              { href: "/conta", label: "Minha conta" },
+              { href: "/conta/pedidos", label: "Histórico de pedidos" },
               { href: "/orcamento", label: "Lista de orçamento" },
               { href: "/mapa-do-site", label: "Mapa do site" },
             ]}
@@ -80,7 +83,7 @@ export function Footer() {
                   </a>
                 </span>
               </p>
-              {formatHours().map((h) => (
+              {formatHours(company).map((h) => (
                 <p key={h} className="flex items-start gap-2">
                   <ClockIcon className="mt-0.5 size-4 shrink-0 text-amber" />
                   {h}

@@ -1,12 +1,15 @@
 import Link from "next/link";
-import { company, formatAddress } from "@/lib/content";
+import { formatAddress, getCompany } from "@/lib/content";
 import { whatsappUrl } from "@/lib/whatsapp";
-import { InstagramIcon, MailIcon, PhoneIcon, PinIcon, SearchIcon, SupportIcon, WhatsAppIcon } from "./icons";
+import { InstagramIcon, MailIcon, PhoneIcon, PinIcon, SearchIcon, SupportIcon, UserIcon, WhatsAppIcon } from "./icons";
 import { Logo } from "./Logo";
-import { NavBar } from "./NavBar";
+import { Suspense } from "react";
+import { NavBar, NavLinks } from "./NavBar";
+import { CartHeaderLink } from "./cart/CartControls";
 import { QuoteHeaderLink } from "./quote/QuoteControls";
 
-export function Header() {
+export async function Header() {
+  const company = await getCompany();
   return (
     <header className="z-50 shadow-[0_1px_8px_rgba(0,0,0,0.06)] lg:sticky lg:top-0">
       <div className="on-dark bg-navy-deep py-2 text-on-dark">
@@ -28,7 +31,7 @@ export function Header() {
             </a>
             <span className="hidden items-center gap-1.5 text-outline-variant xl:flex">
               <PinIcon className="size-4 text-amber" />
-              {formatAddress()}
+              {formatAddress(company)}
             </span>
           </div>
           <div className="ml-auto flex items-center gap-3">
@@ -41,7 +44,7 @@ export function Header() {
             >
               <InstagramIcon className="size-4" />
             </a>
-            <a href={whatsappUrl()} target="_blank" rel="noopener" className="badge bg-success-strong text-white hover:bg-[#065f46]">
+            <a href={whatsappUrl(company.whatsapp)} target="_blank" rel="noopener" className="badge bg-success-strong text-white hover:bg-[#065f46]">
               <WhatsAppIcon className="size-3.5" />
               WhatsApp
               <span className="sr-only">(abre o WhatsApp)</span>
@@ -69,20 +72,31 @@ export function Header() {
               <span className="hidden lg:inline">Buscar</span>
             </button>
           </form>
-          <div className="flex items-center gap-3 lg:gap-5">
-            <Link href="/contato" className="hidden flex-col items-end text-right sm:flex">
+          <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+            <Link href="/contato" className="hidden flex-col items-end text-right 2xl:flex">
               <span className="text-badge text-outline uppercase">Precisa de ajuda?</span>
               <span className="flex items-center gap-1 text-spec font-bold text-navy">
                 <SupportIcon className="size-4 text-blue-accent" />
                 Atendimento
               </span>
             </Link>
+            <Link href="/conta" className="flex items-center gap-2 text-charcoal hover:text-blue-accent">
+              <UserIcon className="size-6 text-slate-text" />
+              <span className="hidden flex-col xl:flex">
+                <span className="text-badge text-outline">Minha Conta</span>
+                <span className="text-spec font-bold leading-tight text-navy">Entrar / Cadastrar</span>
+              </span>
+              <span className="sr-only xl:hidden">Minha conta</span>
+            </Link>
             <QuoteHeaderLink />
+            <CartHeaderLink />
           </div>
         </div>
       </div>
 
-      <NavBar />
+      <Suspense fallback={<NavLinks />}>
+        <NavBar />
+      </Suspense>
     </header>
   );
 }

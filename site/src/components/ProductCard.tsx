@@ -1,10 +1,12 @@
 import Image from "next/image";
-import type { Product } from "@/lib/content";
+import { formatCents, getCompany, type Product } from "@/lib/content";
 import { productMessage, whatsappUrl } from "@/lib/whatsapp";
 import { VerifiedIcon, WhatsAppIcon, WrenchIcon } from "./icons";
+import { AddToCartButton } from "./cart/CartControls";
 import { AddToQuoteButton } from "./quote/QuoteControls";
 
-export function ProductCard({ item }: { item: Product }) {
+export async function ProductCard({ item }: { item: Product }) {
+  const company = await getCompany();
   const summary = item.description?.[0];
   return (
     <article className="card group relative flex h-full flex-col justify-between overflow-hidden transition hover:-translate-y-1 hover:border-concrete-300 hover:shadow-level2">
@@ -40,9 +42,30 @@ export function ProductCard({ item }: { item: Product }) {
         </div>
       </div>
       <div className="space-y-3 p-5 pt-0">
-        <p className="border-t border-concrete-100 pt-3 text-body-sm text-outline">Valor sob consulta</p>
+        {item.priceCents != null ? (
+          <div className="flex items-baseline justify-between border-t border-concrete-100 pt-3">
+            <span className="text-title font-extrabold text-navy">{formatCents(item.priceCents)}</span>
+            <span className={`text-body-sm font-semibold ${item.stock > 0 ? "text-success-strong" : "text-crimson"}`}>
+              {item.stock > 0 ? `${item.stock} em estoque` : "Sem estoque"}
+            </span>
+          </div>
+        ) : (
+          <p className="border-t border-concrete-100 pt-3 text-body-sm text-outline">Valor sob consulta</p>
+        )}
+        {item.priceCents != null && (
+          <AddToCartButton
+            className="w-full"
+            disabled={item.stock <= 0}
+            product={{ productId: item.id, slug: item.slug, name: item.name, priceCents: item.priceCents, image: item.image?.src }}
+          />
+        )}
         <div className="grid grid-cols-[1fr_auto] gap-2">
-          <a href={whatsappUrl(productMessage(item.name))} target="_blank" rel="noopener" className="btn btn-primary px-2">
+          <a
+            href={whatsappUrl(company.whatsapp, productMessage(item.name))}
+            target="_blank"
+            rel="noopener"
+            className={`btn px-2 ${item.priceCents != null ? "btn-muted" : "btn-primary"}`}
+          >
             <WhatsAppIcon className="size-4" />
             Cotar
             <span className="sr-only">{item.name} pelo WhatsApp</span>
