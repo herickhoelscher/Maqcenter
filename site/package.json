@@ -7,12 +7,24 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "images": "node scripts/build-images.mjs"
+    "images": "node scripts/build-images.mjs",
+    "postinstall": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:seed": "prisma db seed"
   },
   "dependencies": {
+    "@libsql/client": "0.18.0",
+    "@prisma/adapter-libsql": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "@vercel/blob": "2.8.2",
+    "bcryptjs": "3.0.3",
+    "jose": "6.2.12",
     "next": "16.4.2",
+    "prisma": "7.10.1",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "sharp": "0.35.5"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
@@ -22,6 +34,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
+    "tsx": "4.23.15",
     "typescript": "^5"
   }
 }

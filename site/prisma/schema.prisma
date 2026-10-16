@@ -1,0 +1,235 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// Lists and paragraphs are stored as text: paragraphs separated by a blank
+// line, list items one per line. Structured lists use JSON text.
+
+model User {
+  id           String    @id @default(cuid())
+  name         String
+  email        String    @unique
+  passwordHash String
+  createdAt    DateTime  @default(now())
+  lastLoginAt  DateTime?
+}
+
+// Single row (id = 1).
+model Company {
+  id              Int      @id @default(1)
+  name            String
+  tagline         String
+  slogan          String?
+  legalName       String?
+  cnpj            String?
+  siteUrl         String
+  phoneDisplay    String
+  phoneE164       String
+  whatsapp        String
+  emailSite       String?
+  landlineDisplay String?
+  landlineE164    String?
+  email           String
+  street          String
+  district        String
+  city            String
+  state           String
+  postalCode      String?
+  latitude        Float?
+  longitude       Float?
+  /// JSON: [{ days, dayCodes: ["Mo", ...], ranges: [["07:30", "12:00"]] }]
+  hours           String   @default("[]")
+  instagramHandle String?
+  instagramUrl    String?
+  facebookName    String?
+  facebookUrl     String?
+  about           String?
+  aboutImageSrc   String?
+  aboutImageAlt   String?
+  aboutImageW     Int?
+  aboutImageH     Int?
+  updatedAt       DateTime @updatedAt
+}
+
+model Service {
+  slug            String   @id
+  name            String
+  summary         String
+  description     String?
+  imageSrc        String?
+  imageAlt        String?
+  imageW          Int?
+  imageH          Int?
+  whatsappMessage String
+  /// One per line
+  symptoms        String?
+  /// One per line
+  brandsServed    String?
+  /// JSON: [{ name, items: [] }]
+  productLines    String?
+  sortOrder       Int      @default(0)
+  updatedAt       DateTime @updatedAt
+}
+
+model Equipment {
+  id              String           @id @default(cuid())
+  slug            String           @unique
+  name            String
+  category        String           @default("")
+  brand           String?
+  /// Short status badge, e.g. "Disponível"
+  availability    String?
+  /// Daily rate in cents. Null = "sob consulta"
+  priceDailyCents Int?
+  sortOrder     Int              @default(0)
+  featured      Boolean          @default(false)
+  published     Boolean          @default(true)
+  description   String?
+  /// JSON: [{ name, value }]
+  specs         String           @default("[]")
+  /// Slugs this item had before; old links redirect here. One per line
+  previousSlugs String?
+  images        EquipmentImage[]
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+}
+
+model EquipmentImage {
+  id          String    @id @default(cuid())
+  equipment   Equipment @relation(fields: [equipmentId], references: [id], onDelete: Cascade)
+  equipmentId String
+  src         String
+  alt         String
+  width       Int
+  height      Int
+  /// "contain" for product cutouts, "cover" for scene photos
+  fit         String    @default("contain")
+  sortOrder   Int       @default(0)
+
+  @@index([equipmentId])
+}
+
+model Brand {
+  id        String @id @default(cuid())
+  name      String
+  logoSrc   String
+  logoW     Int
+  logoH     Int
+  sortOrder Int    @default(0)
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  author    String
+  text      String
+  source    String?
+  published Boolean  @default(true)
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String?
+  service   String
+  message   String
+  /// new | read | archived
+  status    String   @default("new")
+  emailSent Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([status, createdAt])
+}
+
+model Product {
+  id          String         @id @default(cuid())
+  slug        String         @unique
+  name        String
+  /// "Máquinas" | "Acessórios e peças"
+  group       String
+  brand       String?
+  description String?
+  /// Price in cents. Null = "sob consulta" (quote only, not sold online)
+  priceCents  Int?
+  stock       Int            @default(0)
+  active      Boolean        @default(true)
+  featured    Boolean        @default(false)
+  sortOrder   Int            @default(0)
+  images      ProductImage[]
+  orderItems  OrderItem[]
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model ProductImage {
+  id        String  @id @default(cuid())
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String
+  src       String
+  alt       String
+  width     Int
+  height    Int
+  fit       String  @default("cover")
+  sortOrder Int     @default(0)
+
+  @@index([productId])
+}
+
+model Customer {
+  id           String    @id @default(cuid())
+  name         String
+  email        String    @unique
+  passwordHash String
+  phone        String
+  /// CPF or CNPJ, digits only
+  document     String
+  orders       Order[]
+  createdAt    DateTime  @default(now())
+  lastLoginAt  DateTime?
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  number          Int         @unique
+  customer        Customer    @relation(fields: [customerId], references: [id])
+  customerId      String
+  /// pending | paid | canceled | fulfilled
+  status          String      @default("pending")
+  /// Raw Mercado Pago payment status (approved, pending, rejected...)
+  paymentStatus   String?
+  paymentMethod   String?
+  mpPreferenceId  String?
+  mpPaymentId     String?
+  /// retirada | entrega
+  deliveryMethod  String
+  deliveryAddress String?
+  notes           String?
+  totalCents      Int
+  stockApplied    Boolean     @default(false)
+  items           OrderItem[]
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  @@index([customerId, createdAt])
+  @@index([status, createdAt])
+}
+
+model OrderItem {
+  id         String   @id @default(cuid())
+  order      Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId    String
+  product    Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  productId  String?
+  name       String
+  unitCents  Int
+  qty        Int
+
+  @@index([orderId])
+}
