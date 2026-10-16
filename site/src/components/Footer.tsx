@@ -9,6 +9,7 @@ export function Footer() {
         <div>
           <p className="font-display text-4xl text-white">MAQCENTER</p>
           <p className="mt-2 max-w-xs">{company.tagline}.</p>
+          <p className="mt-1 max-w-xs text-white">{company.slogan}</p>
           <ul className="mt-6 flex gap-4 text-sm">
             <li>
               <a href={company.social.instagram.url} target="_blank" rel="noopener" className="text-white underline-offset-4 hover:underline">
@@ -41,6 +42,11 @@ export function Footer() {
             <p>
               <a href={`tel:${company.phone.e164}`} className="text-white underline-offset-4 hover:underline">
                 {company.phone.display}
+              </a>
+            </p>
+            <p>
+              <a href={`tel:${company.landline.e164}`} className="text-white underline-offset-4 hover:underline">
+                {company.landline.display}
               </a>
             </p>
             <p>

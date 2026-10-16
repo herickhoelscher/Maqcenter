@@ -17,7 +17,7 @@ export function EquipmentCard({ item, headingLevel = "h3" }: { item: Equipment; 
             width={photo.width}
             height={photo.height}
             sizes="(min-width: 1024px) 16rem, 45vw"
-            className="h-[85%] w-auto object-contain"
+            className={photo.fit === "cover" ? "h-full w-full object-cover" : "h-[85%] w-auto object-contain"}
           />
         ) : (
           // No photo yet: the name stamped large, like an unlabelled plate.

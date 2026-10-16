@@ -4,6 +4,7 @@ import brandsData from "../../content/brands.json";
 import testimonialsData from "../../content/testimonials.json";
 import privacyData from "../../content/legal/politica-de-privacidade.json";
 import termsData from "../../content/legal/termos-e-condicoes.json";
+import betoneira from "../../content/equipment/betoneira.json";
 import compactador from "../../content/equipment/compactador-de-solo.json";
 import cortadeira from "../../content/equipment/cortadeira-de-piso.json";
 import lavador from "../../content/equipment/lavador-de-pressao.json";
@@ -11,7 +12,8 @@ import rompedor from "../../content/equipment/rompedor-de-concreto.json";
 import serra from "../../content/equipment/serra-circular.json";
 import vibrador from "../../content/equipment/vibrador-de-concreto.json";
 
-export type Image = { src: string; alt: string; width: number; height: number };
+// fit "cover" is for scene photos; product cutouts default to "contain".
+export type Image = { src: string; alt: string; width: number; height: number; fit?: "contain" | "cover" };
 
 export type Spec = { name: string; value: string };
 
@@ -22,7 +24,7 @@ export type Equipment = {
   featured: boolean;
   oldUrls: string[];
   images: Image[];
-  description: string | null;
+  description: string[] | null;
   specs: Spec[];
 };
 
@@ -31,8 +33,10 @@ export type Service = {
   name: string;
   summary: string;
   image: Image | null;
-  description: string | null;
+  description: string[] | null;
   brands?: string[];
+  symptoms?: string[];
+  productLines?: { name: string; items: string[] }[];
   whatsappMessage: string;
 };
 
@@ -46,10 +50,11 @@ export type LegalPage = {
   sections: { heading: string; paragraphs: string[] }[];
 };
 
-export type Company = Omit<typeof companyData, "legalName" | "cnpj" | "geo" | "about" | "address"> & {
+export type Company = Omit<typeof companyData, "legalName" | "cnpj" | "geo" | "about" | "aboutImage" | "address"> & {
   legalName: string | null;
   cnpj: string | null;
-  about: string | null;
+  about: string[] | null;
+  aboutImage: Image | null;
   geo: { latitude: number; longitude: number } | null;
   address: Omit<typeof companyData.address, "postalCode"> & { postalCode: string | null };
 };
@@ -57,7 +62,7 @@ export type Company = Omit<typeof companyData, "legalName" | "cnpj" | "geo" | "a
 export const company = companyData as Company;
 
 // New equipment files must be imported above and added here.
-const equipmentList = [compactador, cortadeira, lavador, rompedor, serra, vibrador] as Equipment[];
+const equipmentList = [betoneira, compactador, cortadeira, lavador, rompedor, serra, vibrador] as Equipment[];
 
 export function getEquipment(): Equipment[] {
   return [...equipmentList].sort((a, b) => a.order - b.order);

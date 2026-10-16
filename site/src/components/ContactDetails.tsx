@@ -14,11 +14,16 @@ export function ContactDetails({ className = "" }: { className?: string }) {
             {formatAddress()}
           </a>
         </PlateRow>
-        <PlateRow name="Telefone">
+        <PlateRow name="WhatsApp">
           <a href={`tel:${company.phone.e164}`} className="underline underline-offset-4 hover:text-blue">
             {company.phone.display}
           </a>{" "}
-          <span className="text-steel">(também WhatsApp)</span>
+          <span className="text-steel">(também ligação)</span>
+        </PlateRow>
+        <PlateRow name="Telefone fixo">
+          <a href={`tel:${company.landline.e164}`} className="underline underline-offset-4 hover:text-blue">
+            {company.landline.display}
+          </a>
         </PlateRow>
         <PlateRow name="E-mail">
           <a href={`mailto:${company.email}`} className="break-all underline underline-offset-4 hover:text-blue">

@@ -12,9 +12,14 @@ export function Header() {
       <div className="hidden bg-ink text-ink-soft lg:block">
         <div className="container-site label-mono flex h-8 items-center justify-between text-[0.6875rem]">
           <span>{formatAddress()}</span>
-          <a href={`tel:${company.phone.e164}`} className="text-white hover:text-signal">
-            {company.phone.display}
-          </a>
+          <span className="flex gap-5">
+            <a href={`tel:${company.landline.e164}`} className="text-white hover:text-signal">
+              {company.landline.display}
+            </a>
+            <a href={`tel:${company.phone.e164}`} className="text-white hover:text-signal">
+              WhatsApp {company.phone.display}
+            </a>
+          </span>
         </div>
       </div>
       <div className="container-site flex h-16 items-center justify-between gap-4 lg:h-[4.5rem]">

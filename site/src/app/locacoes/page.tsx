@@ -9,7 +9,7 @@ const service = getService("locacoes");
 export const metadata = pageMetadata({
   title: "Locação de equipamentos em Cascavel",
   description:
-    "Locação de compactador de solo, cortadeira de piso, lavador de pressão, rompedor de concreto, serra circular e vibrador de concreto em Cascavel - PR.",
+    "Locação de betoneira, compactador de solo, cortadeira de piso, lavador de pressão, rompedor de concreto, serra circular e vibrador de concreto em Cascavel - PR.",
   path: "/locacoes",
 });
 
@@ -20,7 +20,7 @@ export default function RentalsPage() {
       <PageHeader
         eyebrow="Locação"
         title="Equipamentos para locação"
-        lead={service.description ?? "Escolha o equipamento e peça o orçamento pelo WhatsApp."}
+        lead={service.description?.[0] ?? "Escolha o equipamento e peça o orçamento pelo WhatsApp."}
         crumbs={[{ href: "/locacoes", label: "Locações" }]}
       />
       <section aria-label="Lista de equipamentos" className="container-site py-12 md:py-16">

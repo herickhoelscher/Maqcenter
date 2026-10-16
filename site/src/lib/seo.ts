@@ -44,6 +44,11 @@ export function localBusinessJsonLd() {
     description: company.tagline,
     url: siteUrl,
     telephone: company.phone.e164,
+    contactPoint: [
+      { "@type": "ContactPoint", contactType: "customer service", telephone: company.phone.e164, availableLanguage: "pt-BR" },
+      { "@type": "ContactPoint", contactType: "customer service", telephone: company.landline.e164, availableLanguage: "pt-BR" },
+    ],
+    slogan: company.slogan,
     email: company.email,
     image: `${siteUrl}/images/og.png`,
     logo: `${siteUrl}/images/logo-maqcenter.webp`,
@@ -87,7 +92,7 @@ export function productJsonLd(item: Equipment) {
     name: item.name,
     url: `${siteUrl}/locacoes/${item.slug}`,
     category: "Locação de equipamentos",
-    description: item.description ?? `${item.name} para locação em ${company.address.city} - ${company.address.state}.`,
+    description: item.description?.join(" ") ?? `${item.name} para locação em ${company.address.city} - ${company.address.state}.`,
     ...(item.images.length > 0 && { image: item.images.map((i) => `${siteUrl}${i.src}`) }),
     ...(item.specs.length > 0 && {
       additionalProperty: item.specs.map((s) => ({ "@type": "PropertyValue", name: s.name, value: s.value })),

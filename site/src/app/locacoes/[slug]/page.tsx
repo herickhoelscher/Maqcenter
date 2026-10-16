@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageProps<"/locacoes/[slug]">
   return pageMetadata({
     title: `${item.name} para locação em Cascavel`,
     description:
-      item.description?.slice(0, 155) ??
+      item.description?.join(" ").slice(0, 155) ??
       `Locação de ${item.name.toLowerCase()} em ${company.address.city} - ${company.address.state}. Peça o orçamento pelo WhatsApp.`,
     path: `/locacoes/${item.slug}`,
     image: item.images[0]?.src,
@@ -51,7 +51,7 @@ export default async function EquipmentPage({ params }: PageProps<"/locacoes/[sl
       <div className="container-site grid gap-10 py-12 md:py-16 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
         <div>
           <Plate label={item.name}>
-            <div className="mt-1.5 grid aspect-[4/3] place-items-center rounded-sm bg-white">
+            <div className="mt-1.5 grid aspect-[4/3] place-items-center overflow-hidden rounded-sm bg-white">
               {cover ? (
                 <Image
                   src={cover.src}
@@ -60,7 +60,7 @@ export default async function EquipmentPage({ params }: PageProps<"/locacoes/[sl
                   height={cover.height}
                   sizes="(min-width: 1024px) 28rem, 90vw"
                   priority
-                  className="h-[75%] w-auto max-w-[85%] object-contain"
+                  className={cover.fit === "cover" ? "h-full w-full object-cover" : "h-[75%] w-auto max-w-[85%] object-contain"}
                 />
               ) : (
                 <span aria-hidden className="font-display px-6 text-center text-5xl text-stamp">
@@ -82,7 +82,11 @@ export default async function EquipmentPage({ params }: PageProps<"/locacoes/[sl
 
         <div className="flex flex-col gap-8">
           {item.description ? (
-            <p className="text-lg">{item.description}</p>
+            <div className="space-y-4 text-lg">
+              {item.description.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
           ) : (
             <p className="text-lg">
               Locação de {item.name.toLowerCase()} em {company.address.city}. Fale com a equipe para saber modelo,
@@ -124,7 +128,7 @@ export default async function EquipmentPage({ params }: PageProps<"/locacoes/[sl
           <h2 id="outros" className="font-display text-4xl">
             Outros equipamentos
           </h2>
-          <ul className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-5">
+          <ul className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
             {others.map((e) => (
               <li key={e.slug}>
                 <EquipmentCard item={e} />

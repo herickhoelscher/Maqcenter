@@ -22,7 +22,13 @@ export function ServicePage({ service, children }: { service: Service; children?
 
       <div className="container-site grid gap-10 py-12 md:py-16 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
         <div className="flex flex-col gap-10">
-          {service.description && <p className="max-w-2xl text-lg">{service.description}</p>}
+          {service.description && (
+            <div className="max-w-2xl space-y-4 text-lg">
+              {service.description.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
+          )}
           {children}
           <ContactDetails />
         </div>
@@ -35,7 +41,7 @@ export function ServicePage({ service, children }: { service: Service; children?
               height={service.image.height}
               sizes="(min-width: 1024px) 26rem, 90vw"
               priority
-              className="aspect-[4/3] w-full object-cover lg:aspect-[4/5]"
+              className="aspect-[4/3] w-full object-cover object-left-top lg:aspect-auto"
             />
           </div>
         )}

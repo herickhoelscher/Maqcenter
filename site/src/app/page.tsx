@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BrandGrid } from "@/components/BrandGrid";
 import { CallButton, TextLink, WhatsAppButton } from "@/components/Buttons";
@@ -82,6 +83,34 @@ export default function Home() {
         </ul>
       </section>
 
+      {company.about && (
+        <section aria-labelledby="sobre" className="on-dark bg-blue text-white">
+          <div className="container-site grid gap-8 py-14 md:py-16 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-14">
+            {company.aboutImage && (
+              <Image
+                src={company.aboutImage.src}
+                alt={company.aboutImage.alt}
+                width={company.aboutImage.width}
+                height={company.aboutImage.height}
+                sizes="(min-width: 1024px) 34rem, 92vw"
+                className="w-full rounded-md border-2 border-white/80"
+              />
+            )}
+            <div>
+              <p className="label-mono text-white">{company.slogan}</p>
+              <h2 id="sobre" className="font-display mt-3 text-4xl md:text-6xl">
+                {company.about[0]}
+              </h2>
+              {company.about[1] && <p className="mt-5 max-w-xl text-lg text-white/90">{company.about[1]}</p>}
+              <Link href="/sobre" className="mt-6 inline-flex items-center gap-2 font-semibold underline underline-offset-4 hover:text-signal">
+                Conheça a {company.name}
+                <ArrowIcon className="size-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {featured.length > 0 && (
         <section aria-labelledby="destaques" className="border-y-2 border-ink bg-concrete">
           <div className="container-site py-16 md:py-20">
@@ -91,7 +120,7 @@ export default function Home() {
               </h2>
               <TextLink href="/locacoes">Ver todos os equipamentos</TextLink>
             </div>
-            <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
+            <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
               {featured.map((item) => (
                 <li key={item.slug}>
                   <EquipmentCard item={item} />
