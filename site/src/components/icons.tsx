@@ -50,3 +50,36 @@ export function PinIcon({ className = "size-5" }: IconProps) {
     </svg>
   );
 }
+
+type StrokeIconProps = IconProps & { d: string | string[] };
+
+function Stroke({ className = "size-5", d }: StrokeIconProps) {
+  const paths = Array.isArray(d) ? d : [d];
+  return (
+    <svg {...base} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      {paths.map((p) => (
+        <path key={p} d={p} />
+      ))}
+    </svg>
+  );
+}
+
+export const SearchIcon = (p: IconProps) => <Stroke {...p} d={["M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14z", "M21 21l-4.35-4.35"]} />;
+export const MailIcon = (p: IconProps) => <Stroke {...p} d={["M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z", "M22 6l-10 7L2 6"]} />;
+export const ClockIcon = (p: IconProps) => <Stroke {...p} d={["M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z", "M12 6v6l4 2"]} />;
+export const HomeIcon = (p: IconProps) => <Stroke {...p} d={["M3 10.5L12 3l9 7.5", "M5 9.5V21h14V9.5"]} />;
+export const ChevronRightIcon = (p: IconProps) => <Stroke {...p} d="M9 6l6 6-6 6" />;
+export const ListIcon = (p: IconProps) => <Stroke {...p} d={["M9 6h12", "M9 12h12", "M9 18h12", "M4 6h.01", "M4 12h.01", "M4 18h.01"]} />;
+export const PlusIcon = (p: IconProps) => <Stroke {...p} d={["M12 5v14", "M5 12h14"]} />;
+export const MinusIcon = (p: IconProps) => <Stroke {...p} d="M5 12h14" />;
+export const CheckIcon = (p: IconProps) => <Stroke {...p} d="M5 13l4 4L19 7" />;
+export const TrashIcon = (p: IconProps) => <Stroke {...p} d={["M3 6h18", "M8 6V4h8v2", "M19 6l-1 14H6L5 6"]} />;
+export const TuneIcon = (p: IconProps) => <Stroke {...p} d={["M4 6h10", "M18 6h2", "M16 4v4", "M4 12h4", "M12 12h8", "M10 10v4", "M4 18h12", "M20 18h0", "M18 16v4"]} />;
+export const SupportIcon = (p: IconProps) => <Stroke {...p} d={["M3 13v-1a9 9 0 0 1 18 0v1", "M21 14v2a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2z", "M3 14v2a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 2z", "M18 18c0 2-2 3-6 3"]} />;
+export const VerifiedIcon = (p: IconProps) => <Stroke {...p} d={["M12 2l2.4 1.8 3-.2.9 2.9 2.5 1.7-.9 2.8.9 2.8-2.5 1.7-.9 2.9-3-.2L12 22l-2.4-1.8-3 .2-.9-2.9-2.5-1.7.9-2.8-.9-2.8 2.5-1.7.9-2.9 3 .2z", "M8.5 12l2.5 2.5 4.5-5"]} />;
+export const WrenchIcon = (p: IconProps) => <Stroke {...p} d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z" />;
+export const DrillIcon = (p: IconProps) => <Stroke {...p} d={["M3 8h11v6H3z", "M14 10h4", "M18 9v4", "M18 11h3", "M6 14v6h4l1-6"]} />;
+export const CalendarIcon = (p: IconProps) => <Stroke {...p} d={["M3 5h18v16H3z", "M16 3v4", "M8 3v4", "M3 10h18"]} />;
+export const MedalIcon = (p: IconProps) => <Stroke {...p} d={["M12 22a7 7 0 1 0 0-14 7 7 0 0 0 0 14z", "M8.2 9.3L5 2h4l3 6", "M15.8 9.3L19 2h-4l-3 6", "M12 12.5l1.2 2.4 2.6.4-1.9 1.8.5 2.6-2.4-1.3-2.4 1.3.5-2.6-1.9-1.8 2.6-.4z"]} />;
+export const InstagramIcon = (p: IconProps) => <Stroke {...p} d={["M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z", "M16 11.4A4 4 0 1 1 12.6 8a4 4 0 0 1 3.4 3.4z", "M17.5 6.5h.01"]} />;
+export const FacebookIcon = (p: IconProps) => <Stroke {...p} d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />;

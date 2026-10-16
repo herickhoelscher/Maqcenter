@@ -1,45 +1,109 @@
 @import "tailwindcss";
 
-/* MAQCENTER tokens. Navy and blue come from the logo and the old banners;
-   the signal yellow is the jobsite high-visibility color, used only for the
-   primary call to action and the nameplate details. */
+/* Maqcenter Industrial Performance (design/stitch/DESIGN.md).
+   Deviation for WCAG AA: filled emerald surfaces with white text use
+   emerald-700 (#047857); the design's #10B981 is kept for icons only. */
 @theme {
-  --color-ink: #12173b;
-  --color-ink-soft: #b8bed6;
-  --color-blue: #1c58a8;
-  --color-blue-deep: #15457f;
-  --color-concrete: #e8e9e7;
-  --color-paper: #f6f6f4;
-  --color-line: #c9ccd2;
-  --color-stamp: #80859a;
-  --color-steel: #545a69;
-  --color-signal: #ffc21a;
-  --color-signal-deep: #e6a800;
-  --color-wa: #14804a;
+  --color-navy-deep: #0a1e3b;
+  --color-navy: #002b49;
+  --color-blue-accent: #005088;
+  --color-amber: #f59e0b;
+  --color-amber-hover: #d97706;
+  --color-charcoal: #1e2329;
+  --color-slate-text: #334155;
+  --color-outline: #64686f;
+  --color-outline-variant: #c3c7ce;
+  --color-concrete-50: #f8fafc;
+  --color-concrete-100: #f1f5f9;
+  --color-concrete-200: #e2e8f0;
+  --color-concrete-300: #cbd5e1;
+  --color-surface: #f7f9ff;
+  --color-surface-low: #f0f4fc;
+  --color-surface-mid: #eaeef6;
+  --color-on-dark: #dee3eb;
+  --color-success: #10b981;
+  --color-success-strong: #047857;
+  --color-crimson: #dc2626;
 
-  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 0.5rem;
+  --radius-control: 0.25rem;
+
+  --shadow-level1: 0 2px 4px rgb(10 30 59 / 0.04);
+  --shadow-level2: 0 8px 16px -2px rgb(10 30 59 / 0.08);
+  --shadow-level3: 0 16px 32px -4px rgb(10 30 59 / 0.16);
+
+  /* Type scale */
+  --text-display: 3rem;
+  --text-display--line-height: 3.5rem;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 800;
+  --text-display-m: 2rem;
+  --text-display-m--line-height: 2.5rem;
+  --text-display-m--letter-spacing: -0.01em;
+  --text-display-m--font-weight: 800;
+  --text-headline: 2rem;
+  --text-headline--line-height: 2.5rem;
+  --text-headline--letter-spacing: -0.01em;
+  --text-headline--font-weight: 700;
+  --text-headline-m: 1.5rem;
+  --text-headline-m--line-height: 2rem;
+  --text-headline-m--font-weight: 700;
+  --text-headline-sm: 1.25rem;
+  --text-headline-sm--line-height: 1.75rem;
+  --text-headline-sm--font-weight: 600;
+  --text-title: 1.125rem;
+  --text-title--line-height: 1.5rem;
+  --text-title--font-weight: 700;
+  --text-body-lg: 1rem;
+  --text-body-lg--line-height: 1.625rem;
+  --text-body: 0.875rem;
+  --text-body--line-height: 1.375rem;
+  --text-body-sm: 0.75rem;
+  --text-body-sm--line-height: 1.125rem;
+  --text-body-sm--font-weight: 500;
+  --text-spec: 0.8125rem;
+  --text-spec--line-height: 1.125rem;
+  --text-spec--letter-spacing: 0.02em;
+  --text-spec--font-weight: 600;
+  --text-btn: 0.875rem;
+  --text-btn--line-height: 1.25rem;
+  --text-btn--letter-spacing: 0.03em;
+  --text-btn--font-weight: 700;
+  --text-badge: 0.6875rem;
+  --text-badge--line-height: 0.875rem;
+  --text-badge--letter-spacing: 0.06em;
+  --text-badge--font-weight: 800;
 }
 
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
-    scroll-padding-top: 7.5rem;
+    scroll-padding-top: 1rem;
+  }
+
+  @media (width >= 64rem) {
+    html {
+      scroll-padding-top: 9.5rem;
+    }
   }
 
   body {
-    background: var(--color-paper);
-    color: var(--color-ink);
+    background: var(--color-surface);
+    color: var(--color-charcoal);
     font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
   }
 
   :focus-visible {
-    outline: 3px solid var(--color-blue);
-    outline-offset: 3px;
+    outline: 2px solid var(--color-blue-accent);
+    outline-offset: 2px;
   }
 
   .on-dark :focus-visible {
-    outline-color: var(--color-signal);
+    outline-color: var(--color-amber);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -53,43 +117,134 @@
   }
 }
 
-@utility font-display {
-  font-family: var(--font-sans);
-  font-stretch: 68%;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  /* text-* utilities read --tw-leading, so this survives text-2xl etc. */
-  --tw-leading: 0.95;
-  line-height: 0.95;
-}
-
-@utility label-mono {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 @utility container-site {
   width: 100%;
-  max-width: 76rem;
+  max-width: 80rem;
   margin-inline: auto;
   padding-inline: 1rem;
 
   @media (width >= 48rem) {
-    padding-inline: 2rem;
+    padding-inline: 1.5rem;
   }
 }
 
-/* Nameplate: the riveted ID plate found on every machine. Used for
-   equipment cards and spec sheets. */
-@utility plate {
-  position: relative;
-  background: var(--color-paper);
-  border: 2px solid var(--color-ink);
-  border-radius: 0.375rem;
-  box-shadow:
-    inset 0 0 0 4px var(--color-paper),
-    inset 0 0 0 5px var(--color-line);
+/* Level 1 card: white, hairline border, ambient shadow. */
+@utility card {
+  background: #fff;
+  border: 1px solid var(--color-concrete-200);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-level1);
+}
+
+@utility badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: var(--radius-control);
+  padding: 0.25rem 0.5rem;
+  font-size: var(--text-badge);
+  line-height: var(--text-badge--line-height);
+  letter-spacing: var(--text-badge--letter-spacing);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+@utility chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-control);
+  background: var(--color-concrete-100);
+  color: var(--color-slate-text);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  border-radius: var(--radius-control);
+  padding: 0.625rem 1.25rem;
+  font-size: var(--text-btn);
+  line-height: var(--text-btn--line-height);
+  letter-spacing: var(--text-btn--letter-spacing);
+  font-weight: 700;
+  transition:
+    background-color 150ms,
+    color 150ms,
+    transform 150ms,
+    border-color 150ms;
+}
+
+@utility btn-primary {
+  background: var(--color-amber);
+  color: var(--color-charcoal);
+
+  &:hover {
+    background: var(--color-amber-hover);
+    transform: translateY(-1px);
+  }
+}
+
+@utility btn-secondary {
+  border: 1.5px solid var(--color-navy);
+  color: var(--color-navy);
+
+  &:hover {
+    background: var(--color-navy);
+    color: #fff;
+  }
+}
+
+@utility btn-muted {
+  background: var(--color-concrete-100);
+  color: var(--color-navy);
+
+  &:hover {
+    background: var(--color-concrete-200);
+  }
+}
+
+@utility btn-whatsapp {
+  background: var(--color-success-strong);
+  color: #fff;
+
+  &:hover {
+    background: #065f46;
+  }
+}
+
+@utility btn-ghost-dark {
+  background: rgb(255 255 255 / 0.1);
+  color: #fff;
+
+  &:hover {
+    background: rgb(255 255 255 / 0.2);
+  }
+}
+
+@utility field {
+  display: block;
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--color-concrete-300);
+  border-radius: var(--radius-control);
+  padding: 0.625rem 0.875rem;
+  font-size: 1rem;
+  color: var(--color-charcoal);
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-blue-accent);
+    box-shadow: 0 0 0 2px var(--color-blue-accent);
+  }
+
+  &[aria-invalid="true"] {
+    border-color: var(--color-crimson);
+  }
 }

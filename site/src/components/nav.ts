@@ -1,8 +1,9 @@
 export const mainNav = [
-  { href: "/locacoes", label: "Locações" },
-  { href: "/assistencia-tecnica", label: "Assistência técnica" },
-  { href: "/venda-de-maquinas", label: "Venda de máquinas" },
-  { href: "/perfuracao-em-concreto", label: "Perfuração em concreto" },
-  { href: "/sobre", label: "Sobre" },
-  { href: "/contato", label: "Contato" },
+  { href: "/", label: "Início" },
+  { href: "/locacoes", label: "Locações de Equipamentos" },
+  { href: "/venda-de-maquinas", label: "Venda de Máquinas & Acessórios" },
+  { href: "/perfuracao-em-concreto", label: "Perfuração em Concreto" },
+  { href: "/assistencia-tecnica", label: "Assistência Técnica" },
+  { href: "/orcamento", label: "Orçamento Rápido" },
+  { href: "/contato", label: "Fale Conosco" },
 ];

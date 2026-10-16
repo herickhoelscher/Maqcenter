@@ -1,23 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo, IBM_Plex_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { QuoteProvider } from "@/components/quote/QuoteProvider";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { company } from "@/lib/content";
 import { siteUrl } from "@/lib/seo";
 import "./globals.css";
 
-const archivo = Archivo({
-  variable: "--font-archivo",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-  axes: ["wdth"],
-  display: "swap",
-});
-
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
-  subsets: ["latin"],
-  weight: ["500"],
   display: "swap",
 });
 
@@ -37,25 +30,27 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#12173b",
+  themeColor: "#0a1e3b",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="pt-BR" className={`${archivo.variable} ${plexMono.variable} antialiased`}>
+    <html lang="pt-BR" className={`${montserrat.variable} antialiased`}>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#conteudo"
-          className="sr-only z-50 rounded-md bg-signal px-4 py-3 font-semibold text-ink focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+          className="sr-only z-[60] rounded-[var(--radius-control)] bg-amber px-4 py-3 font-bold text-charcoal focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
         >
           Pular para o conteúdo
         </a>
-        <Header />
-        <main id="conteudo" className="flex-1">
-          {children}
-        </main>
-        <Footer />
-        <WhatsAppFloat />
+        <QuoteProvider>
+          <Header />
+          <main id="conteudo" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+          <WhatsAppFloat />
+        </QuoteProvider>
       </body>
     </html>
   );
