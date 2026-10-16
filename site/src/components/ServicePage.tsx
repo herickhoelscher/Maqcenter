@@ -9,7 +9,7 @@ import { CtaBand } from "./CtaBand";
 import { ArrowIcon } from "./icons";
 import { PageHeader } from "./PageHeader";
 
-export function ServicePage({ service, children }: { service: Service; children?: ReactNode }) {
+export function ServicePage({ service, children, wide }: { service: Service; children?: ReactNode; wide?: ReactNode }) {
   const others = getServices().filter((s) => s.slug !== service.slug);
   return (
     <>
@@ -26,6 +26,8 @@ export function ServicePage({ service, children }: { service: Service; children?
           </>
         }
       />
+
+      {wide}
 
       <div className="container-site grid gap-8 py-10 lg:grid-cols-12 lg:py-16">
         <div className="space-y-8 lg:col-span-7">
@@ -46,7 +48,7 @@ export function ServicePage({ service, children }: { service: Service; children?
               width={service.image.width}
               height={service.image.height}
               sizes="(min-width: 1024px) 30rem, 92vw"
-              priority
+              preload
               className="aspect-[4/3] w-full rounded-[var(--radius-card)] border border-concrete-200 object-cover object-left-top lg:aspect-auto"
             />
           )}
@@ -60,9 +62,9 @@ export function ServicePage({ service, children }: { service: Service; children?
             Outros serviços
           </h2>
           <ul className="mt-6 grid gap-6 md:grid-cols-3">
-            {others.map((s) => (
-              <li key={s.slug}>
-                <Link href={servicePaths[s.slug]} className="card group flex h-full flex-col gap-2 p-5 transition-shadow hover:shadow-level2">
+            {others.map((s, i) => (
+              <li key={s.slug} data-reveal style={{ "--reveal-delay": `${i * 80}ms` } as React.CSSProperties}>
+                <Link href={servicePaths[s.slug]} className="card group flex h-full flex-col gap-2 p-5 transition duration-300 hover:-translate-y-1 hover:shadow-level2">
                   <span className="flex items-center justify-between gap-3 text-title text-navy group-hover:text-blue-accent">
                     {s.name}
                     <ArrowIcon className="size-5 shrink-0 transition-transform group-hover:translate-x-1" />

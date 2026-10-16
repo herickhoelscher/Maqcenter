@@ -21,9 +21,14 @@ export function QuoteBuilder() {
   const [status, setStatus] = useState<{ kind: "idle" | "sending" | "sent" | "error"; message?: string }>({ kind: "idle" });
   const id = useId();
 
+  const rentals = items.filter((i) => i.kind === "locacao");
+  const sales = items.filter((i) => i.kind === "venda");
+
   function buildMessage(): string {
-    const lines = ["Olá! Quero um orçamento de locação:", ...items.map((i) => `- ${i.qty}x ${i.name}`)];
-    if (start || end) lines.push("", `Período: ${formatDate(start) || "?"} a ${formatDate(end) || "?"}`);
+    const lines = ["Olá! Quero um orçamento:"];
+    if (rentals.length) lines.push("", "Locação:", ...rentals.map((i) => `- ${i.qty}x ${i.name}`));
+    if (sales.length) lines.push("", "Compra:", ...sales.map((i) => `- ${i.qty}x ${i.name}`));
+    if (rentals.length && (start || end)) lines.push("", `Período da locação: ${formatDate(start) || "?"} a ${formatDate(end) || "?"}`);
     if (name) lines.push(`Nome: ${name}`);
     if (notes.trim()) lines.push("", notes.trim());
     return lines.join("\n");
@@ -41,7 +46,8 @@ export function QuoteBuilder() {
   }
 
   async function sendEmail() {
-    const payload = { name, phone, email, service: "Locação de equipamentos", message: buildMessage(), website: "" };
+    const service = sales.length === 0 ? "Locação de equipamentos" : rentals.length === 0 ? "Venda de máquinas e acessórios" : "Outro assunto";
+    const payload = { name, phone, email, service, message: buildMessage(), website: "" };
     const { errors: found } = validateContact(payload);
     const d = datesError();
     const all = { ...found, ...(d && { dates: d }) };
@@ -114,9 +120,15 @@ export function QuoteBuilder() {
         <ul>
           {items.map((i) => (
             <li key={i.slug} className="flex flex-wrap items-center justify-between gap-3 border-b border-concrete-100 px-5 py-4 last:border-b-0">
-              <Link href={`/locacoes/${i.slug}`} className="text-body-lg font-semibold text-navy hover:text-blue-accent">
-                {i.name}
-              </Link>
+              <span>
+                <Link
+                  href={i.kind === "venda" ? "/venda-de-maquinas" : `/locacoes/${i.slug}`}
+                  className="block text-body-lg font-semibold text-navy hover:text-blue-accent"
+                >
+                  {i.name}
+                </Link>
+                <span className="text-body-sm text-outline">{i.kind === "venda" ? "Compra" : "Locação"}</span>
+              </span>
               <div className="flex items-center gap-2">
                 <div className="flex items-center rounded-[var(--radius-control)] border border-concrete-300">
                   <button type="button" onClick={() => setQty(i.slug, i.qty - 1)} className="grid size-10 place-items-center hover:bg-concrete-100" aria-label={`Diminuir quantidade de ${i.name}`}>
@@ -147,7 +159,7 @@ export function QuoteBuilder() {
         <h2 id={`${id}-dados`} className="text-title text-navy">
           Período e contato
         </h2>
-        <fieldset>
+        <fieldset hidden={rentals.length === 0}>
           <legend className={`${label} mb-1.5 flex items-center gap-2`}>
             <CalendarIcon className="size-4 text-blue-accent" />
             Período da locação

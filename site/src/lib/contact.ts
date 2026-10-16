@@ -7,6 +7,7 @@ export const serviceOptions = [
   "Assistência técnica",
   "Venda de máquinas e acessórios",
   "Perfuração em concreto",
+  "Troca ou devolução",
   "Outro assunto",
 ] as const;
 
@@ -39,3 +40,12 @@ export function validateContact(raw: Record<string, unknown>): { data: ContactIn
   if (data.message.length < 5) errors.message = "Escreva o que você precisa.";
   return { data, errors };
 }
+
+// ?assunto= values used by links (e.g. "Solicitar devolução" in the footer).
+export const subjectParams: Record<string, (typeof serviceOptions)[number]> = {
+  locacao: "Locação de equipamentos",
+  assistencia: "Assistência técnica",
+  venda: "Venda de máquinas e acessórios",
+  perfuracao: "Perfuração em concreto",
+  "troca-devolucao": "Troca ou devolução",
+};

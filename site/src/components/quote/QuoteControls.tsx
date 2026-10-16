@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { CheckIcon, ListIcon, PlusIcon } from "../icons";
-import { useQuote } from "./QuoteProvider";
+import { useQuote, type QuoteKind } from "./QuoteProvider";
 
 export function QuoteHeaderLink() {
   const { count, ready } = useQuote();
@@ -15,8 +15,9 @@ export function QuoteHeaderLink() {
       <span className="relative">
         <ListIcon className="size-6 text-navy" />
         <span
+          key={shown}
           aria-hidden
-          className="absolute -top-1.5 -right-2 grid size-4 place-items-center rounded-full bg-amber text-[10px] font-bold text-charcoal"
+          className={`absolute -top-1.5 -right-2 grid size-4 place-items-center rounded-full bg-amber text-[10px] font-bold text-charcoal ${shown > 0 ? "anim-bump" : ""}`}
         >
           {shown}
         </span>
@@ -33,10 +34,12 @@ export function QuoteHeaderLink() {
 export function AddToQuoteButton({
   slug,
   name,
+  kind = "locacao",
   variant = "icon",
 }: {
   slug: string;
   name: string;
+  kind?: QuoteKind;
   variant?: "icon" | "full";
 }) {
   const { add, has, ready } = useQuote();
@@ -45,7 +48,7 @@ export function AddToQuoteButton({
 
   if (variant === "full") {
     return (
-      <button type="button" onClick={() => add({ slug, name })} className="btn btn-secondary w-full sm:w-auto">
+      <button type="button" onClick={() => add({ slug, name, kind })} className="btn btn-secondary w-full sm:w-auto">
         {added ? <CheckIcon className="size-5" /> : <PlusIcon className="size-5" />}
         {added ? "Adicionado (adicionar mais 1)" : "Adicionar ao orçamento"}
       </button>
@@ -54,7 +57,7 @@ export function AddToQuoteButton({
   return (
     <button
       type="button"
-      onClick={() => add({ slug, name })}
+      onClick={() => add({ slug, name, kind })}
       aria-label={`${label}: ${name}`}
       title={label}
       className={`btn px-3 ${added ? "bg-navy text-white hover:bg-navy-deep" : "btn-muted"}`}

@@ -1,9 +1,11 @@
 import companyData from "../../content/company.json";
 import servicesData from "../../content/services.json";
 import brandsData from "../../content/brands.json";
+import productsData from "../../content/products.json";
 import testimonialsData from "../../content/testimonials.json";
 import privacyData from "../../content/legal/politica-de-privacidade.json";
 import termsData from "../../content/legal/termos-e-condicoes.json";
+import deliveryData from "../../content/legal/politica-de-entrega.json";
 import betoneira from "../../content/equipment/betoneira.json";
 import compactador from "../../content/equipment/compactador-de-solo.json";
 import cortadeira from "../../content/equipment/cortadeira-de-piso.json";
@@ -42,11 +44,30 @@ export type Service = {
   description: string[] | null;
   brands?: string[];
   symptoms?: string[];
-  productLines?: { name: string; items: string[] }[];
   whatsappMessage: string;
 };
 
 export type Brand = { name: string; logo: string };
+
+export type Product = {
+  slug: string;
+  name: string;
+  group: string;
+  brand: string | null;
+  featured: boolean;
+  image: Image | null;
+  description: string[] | null;
+};
+
+export function getProducts(): Product[] {
+  return productsData.items as Product[];
+}
+
+export function getProductGroups(): { name: string; items: Product[] }[] {
+  const groups = new Map<string, Product[]>();
+  for (const p of getProducts()) groups.set(p.group, [...(groups.get(p.group) ?? []), p]);
+  return [...groups].map(([name, items]) => ({ name, items }));
+}
 
 export type Testimonial = { author: string; text: string; source?: string };
 
@@ -113,6 +134,7 @@ export function getTestimonials(): Testimonial[] {
 export const legal = {
   privacy: privacyData as LegalPage,
   terms: termsData as LegalPage,
+  delivery: deliveryData as LegalPage,
 };
 
 export const servicePaths: Record<string, string> = {

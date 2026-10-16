@@ -5,13 +5,14 @@ import { createContext, use, useCallback, useEffect, useMemo, useState, type Rea
 // Quote list ("lista de orçamento"): equipment the visitor wants priced
 // together. Kept in localStorage; it is never a purchase.
 
-export type QuoteItem = { slug: string; name: string; qty: number };
+export type QuoteKind = "locacao" | "venda";
+export type QuoteItem = { slug: string; name: string; qty: number; kind: QuoteKind };
 
 type QuoteContextValue = {
   items: QuoteItem[];
   count: number;
   ready: boolean;
-  add: (item: { slug: string; name: string }) => void;
+  add: (item: { slug: string; name: string; kind: QuoteKind }) => void;
   setQty: (slug: string, qty: number) => void;
   remove: (slug: string) => void;
   clear: () => void;
@@ -25,7 +26,9 @@ function read(): QuoteItem[] {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     const parsed = raw ? JSON.parse(raw) : [];
-    return Array.isArray(parsed) ? parsed.filter((i) => i && typeof i.slug === "string") : [];
+    return Array.isArray(parsed)
+      ? parsed.filter((i) => i && typeof i.slug === "string").map((i) => ({ ...i, kind: i.kind === "venda" ? "venda" : "locacao" }))
+      : [];
   } catch {
     return [];
   }
@@ -59,9 +62,9 @@ export function QuoteProvider({ children }: { children: ReactNode }) {
       items,
       ready,
       count: items.reduce((n, i) => n + i.qty, 0),
-      add: ({ slug, name }) => {
+      add: ({ slug, name, kind }) => {
         const found = items.find((i) => i.slug === slug);
-        persist(found ? items.map((i) => (i.slug === slug ? { ...i, qty: i.qty + 1 } : i)) : [...items, { slug, name, qty: 1 }]);
+        persist(found ? items.map((i) => (i.slug === slug ? { ...i, qty: i.qty + 1 } : i)) : [...items, { slug, name, kind, qty: 1 }]);
       },
       setQty: (slug, qty) => persist(items.map((i) => (i.slug === slug ? { ...i, qty: Math.max(1, Math.min(99, qty)) } : i))),
       remove: (slug) => persist(items.filter((i) => i.slug !== slug)),

@@ -10,7 +10,7 @@ export function EquipmentCard({ item, headingLevel = "h3" }: { item: Equipment; 
   const photo = item.images[0];
   const summary = item.description?.[0];
   return (
-    <article className="card group relative flex h-full flex-col justify-between overflow-hidden transition-shadow hover:border-concrete-300 hover:shadow-level2">
+    <article className="card group relative flex h-full flex-col justify-between overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-concrete-300 hover:shadow-level2">
       <div>
         <div className="relative flex h-52 items-center justify-center overflow-hidden bg-concrete-50">
           <span className="badge absolute top-3 left-3 z-10 bg-navy text-white">Locação</span>
@@ -85,7 +85,7 @@ export function EquipmentCard({ item, headingLevel = "h3" }: { item: Equipment; 
             Detalhes
             <span className="sr-only">de {item.name}</span>
           </Link>
-          <AddToQuoteButton slug={item.slug} name={item.name} />
+          <AddToQuoteButton slug={item.slug} name={item.name} kind="locacao" />
         </div>
       </div>
     </article>

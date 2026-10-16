@@ -9,3 +9,7 @@ export function whatsappUrl(message: string = DEFAULT_WHATSAPP_MESSAGE): string 
 export function equipmentMessage(name: string): string {
   return `Olá! Quero um orçamento de locação: ${name}.`;
 }
+
+export function productMessage(name: string): string {
+  return `Olá! Quero um orçamento de compra: ${name}.`;
+}
