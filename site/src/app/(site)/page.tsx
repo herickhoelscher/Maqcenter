@@ -16,10 +16,11 @@ import { localBusinessJsonLd, pageMetadata } from "@/lib/seo";
 export async function generateMetadata() {
   const company = await getCompany();
   return pageMetadata({
-  title: `${company.name} Cascavel | ${company.tagline}`,
-  description:
-    "Locação de equipamentos para construção, assistência técnica de ferramentas elétricas, venda de máquinas e perfuração em concreto em Cascavel - PR. Orçamento pelo WhatsApp.",
-  path: "/",
+    title: `${company.name} Cascavel | ${company.tagline}`,
+    description:
+      "Locação de equipamentos para construção, assistência técnica de ferramentas elétricas, venda de máquinas e perfuração em concreto em Cascavel - PR. Orçamento pelo WhatsApp.",
+    path: "/",
+    absoluteTitle: true,
   });
 }
 
