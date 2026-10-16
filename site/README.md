@@ -58,12 +58,20 @@ O conteúdo vive no banco e é editado no painel. Os arquivos de `content/` são
 
 `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` (remetente com domínio verificado) e opcionalmente `CONTACT_TO_EMAIL`. Sem eles a mensagem fica só no painel.
 
-## Deploy (Vercel + Turso)
+## Publicar (Vercel + Turso)
 
-1. Crie o banco no Turso: `turso db create maqcenter` e gere o token: `turso db tokens create maqcenter`.
-2. Aplique as migrações no Turso (uma vez por migração nova), em ordem:
+1. Em https://vercel.com, entre com o GitHub e importe o repositório `Maqcenter`. **Root Directory: `site`**.
+2. No projeto, aba **Storage**: crie um banco **Turso** e um **Blob** e conecte ao projeto. Isso cria `TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN` e `BLOB_READ_WRITE_TOKEN` (o código aceita esses nomes).
+3. Em **Settings > Environment Variables**, adicione `SESSION_SECRET` (32+ caracteres aleatórios) e `NEXT_PUBLIC_SITE_URL` (o endereço do site). Mercado Pago e Resend quando tiver.
+4. Prepare o banco online (uma vez, e de novo a cada migração nova), com as credenciais do Turso:
    ```bash
-   turso db shell maqcenter < prisma/migrations/<pasta>/migration.sql
+   DATABASE_URL=libsql://... DATABASE_AUTH_TOKEN=... npm run db:deploy:remote   # cria as tabelas
+   DATABASE_URL=libsql://... DATABASE_AUTH_TOKEN=... ADMIN_EMAIL=... ADMIN_PASSWORD=... npm run db:seed   # conteúdo + 1o admin
    ```
-3. Rode o seed apontando para o Turso: `DATABASE_URL=libsql://... DATABASE_AUTH_TOKEN=... npm run db:seed`.
-4. Na Vercel: Root Directory `site/` e as variáveis do `.env.example` (com `DATABASE_URL` do Turso, `SESSION_SECRET` forte, `NEXT_PUBLIC_SITE_URL`, Mercado Pago, Blob e Resend).
+5. Faça **Redeploy** na Vercel.
+
+Logins da equipe: pelo painel (**Usuários**) ou pelo terminal:
+```bash
+DATABASE_URL=libsql://... DATABASE_AUTH_TOKEN=... npm run user:create -- "Nome" email@exemplo.com
+```
+Sem senha no comando, uma senha inicial forte é gerada e mostrada uma vez.

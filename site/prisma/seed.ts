@@ -12,7 +12,10 @@ try {
 } catch {}
 
 const db = new PrismaClient({
-  adapter: new PrismaLibSql({ url: process.env.DATABASE_URL!, authToken: process.env.DATABASE_AUTH_TOKEN || undefined }),
+  adapter: new PrismaLibSql({
+    url: (process.env.DATABASE_URL || process.env.TURSO_DATABASE_URL)!,
+    authToken: process.env.DATABASE_AUTH_TOKEN || process.env.TURSO_AUTH_TOKEN || undefined,
+  }),
 });
 
 const content = (file: string) => JSON.parse(readFileSync(path.join("content", file), "utf8"));

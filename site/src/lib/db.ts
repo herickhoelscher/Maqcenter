@@ -5,9 +5,11 @@ import { PrismaClient } from "@/generated/prisma/client";
 const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
 
 function createClient() {
-  const url = process.env.DATABASE_URL;
+  // TURSO_* is what the Turso integration on Vercel creates.
+  const url = process.env.DATABASE_URL || process.env.TURSO_DATABASE_URL;
   if (!url) throw new Error("DATABASE_URL is not set");
-  const adapter = new PrismaLibSql({ url, authToken: process.env.DATABASE_AUTH_TOKEN || undefined });
+  const authToken = process.env.DATABASE_AUTH_TOKEN || process.env.TURSO_AUTH_TOKEN || undefined;
+  const adapter = new PrismaLibSql({ url, authToken });
   return new PrismaClient({ adapter });
 }
 
