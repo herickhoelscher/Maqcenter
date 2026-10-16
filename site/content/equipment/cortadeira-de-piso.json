@@ -1,6 +1,10 @@
 {
   "slug": "cortadeira-de-piso",
   "name": "Cortadeira de piso",
+  "category": "Corte e acabamento",
+  "brand": null,
+  "availability": null,
+  "priceDaily": null,
   "order": 3,
   "featured": false,
   "oldUrls": [
@@ -13,6 +17,7 @@
   "_todo": [
     "images: nenhuma foto no site antigo",
     "description: descricao do equipamento",
-    "specs: modelo, potencia, peso, tensao etc."
+    "specs: modelo, potencia, peso, tensao etc.",
+    "brand, priceDaily (diaria em reais) e availability (ex. Disponivel) aparecem no card quando preenchidos"
   ]
 }

@@ -58,6 +58,7 @@ async function main() {
     .png()
     .toFile(path.join(appDir, "icon.png"));
   await sharp(avatar).extract({ left: 400, top: 312, width: 285, height: 285 }).resize(180, 180).png().toFile(path.join(appDir, "apple-icon.png"));
+  await sharp(avatar).extract({ left: 400, top: 312, width: 285, height: 285 }).resize(160, 160).webp({ quality: 90 }).toFile(path.join(out, "logo-mark.webp"));
   const lockup = await sharp(avatar).extract({ left: 200, top: 320, width: 680, height: 440 }).resize({ height: 440 }).toBuffer();
   await sharp({ create: { width: 1200, height: 630, channels: 3, background: "#ffffff" } })
     .composite([

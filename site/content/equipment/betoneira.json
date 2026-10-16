@@ -1,6 +1,10 @@
 {
   "slug": "betoneira",
   "name": "Betoneira",
+  "category": "Concretagem",
+  "brand": null,
+  "availability": null,
+  "priceDaily": null,
   "order": 1,
   "featured": true,
   "oldUrls": [],
@@ -20,6 +24,7 @@
   "specs": [],
   "_todo": [
     "specs: capacidade (litros), motor, tensao",
-    "foto: a atual e de um post do Instagram com recorte; confirmar se e a betoneira alugada"
+    "foto: a atual e de um post do Instagram com recorte; confirmar se e a betoneira alugada",
+    "brand, priceDaily (diaria em reais) e availability (ex. Disponivel) aparecem no card quando preenchidos"
   ]
 }

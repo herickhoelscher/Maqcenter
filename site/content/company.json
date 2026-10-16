@@ -20,7 +20,7 @@
     "district": "Centro",
     "city": "Cascavel",
     "state": "PR",
-    "postalCode": null,
+    "postalCode": "85812-260",
     "country": "BR"
   },
   "geo": null,
@@ -63,7 +63,6 @@
   ],
   "_todo": [
     "legalName e cnpj: razao social e CNPJ (usados no rodape e na politica de privacidade)",
-    "address.postalCode: CEP",
     "geo: latitude e longitude para o JSON-LD"
   ],
   "aboutImage": {

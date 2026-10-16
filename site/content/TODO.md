@@ -7,7 +7,7 @@ Tudo abaixo precisa vir da MAQCENTER. Cada arquivo JSON tambem lista as pendenci
 
 ## Empresa (`company.json`)
 - Razao social e CNPJ
-- CEP
+
 - Latitude e longitude (JSON-LD)
 
 ## Servicos (`services.json`)
@@ -18,7 +18,8 @@ Tudo abaixo precisa vir da MAQCENTER. Cada arquivo JSON tambem lista as pendenci
 
 ## Equipamentos (`equipment/*.json`)
 - Descricao de compactador, cortadeira, lavador, rompedor e serra circular (betoneira e vibrador ja tem, vindas do Instagram)
-- Especificacoes de todos os equipamentos
+- Especificacoes de todos os equipamentos (aparecem como chips no card e na ficha tecnica)
+- Campos do novo design, vazios ate a empresa informar: `brand` (marca), `priceDaily` (diaria em reais), `availability` (ex. "Disponivel"). Sem eles o card mostra "Valor sob consulta" e nenhum selo
 - Fotos: cortadeira de piso, lavador de pressao e serra circular nao tem nenhuma
 - Compactador, rompedor e vibrador usam recortes de 152px do banner antigo. Trocar por fotos reais e confirmar os modelos
 - O banner antigo tambem mostrava furadeira de impacto, gerador e perfurador de solo para locacao. Confirmar se entram no catalogo

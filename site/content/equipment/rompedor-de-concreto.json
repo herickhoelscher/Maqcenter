@@ -1,6 +1,10 @@
 {
   "slug": "rompedor-de-concreto",
   "name": "Rompedor de concreto",
+  "category": "Demolição",
+  "brand": null,
+  "availability": null,
+  "priceDaily": null,
   "order": 5,
   "featured": true,
   "oldUrls": [
@@ -20,6 +24,7 @@
   "_todo": [
     "images: foto melhor (a atual e um recorte de 152px do banner antigo; confirmar que e o equipamento alugado)",
     "description: descricao do equipamento",
-    "specs: modelo, potencia, peso, tensao etc."
+    "specs: modelo, potencia, peso, tensao etc.",
+    "brand, priceDaily (diaria em reais) e availability (ex. Disponivel) aparecem no card quando preenchidos"
   ]
 }
