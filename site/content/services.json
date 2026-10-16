@@ -17,8 +17,8 @@
     "image": {
       "src": "/images/servicos/assistencia-tecnica.webp",
       "alt": "Técnico da MAQCENTER na oficina, com painel de ferramentas ao fundo",
-      "width": 640,
-      "height": 640
+      "width": 1080,
+      "height": 560
     },
     "description": [
       "Na Maqcenter, você conta com uma assistência técnica que une agilidade, diagnóstico preciso e manutenção feita por profissionais especializados.",
@@ -51,36 +51,17 @@
     "slug": "venda-de-maquinas",
     "name": "Venda de máquinas e acessórios",
     "summary": "Furadeiras, serras, esmerilhadeiras, parafusadeiras, rompedores e acessórios das marcas Milwaukee, Mirka, DeWalt, Bosch, Black+Decker e Makita.",
-    "image": null,
-    "description": null,
-    "whatsappMessage": "Olá! Quero um orçamento de máquina ou acessório.",
-    "_todo": [
-      "foto da loja (o Instagram tem um video da parede de ferramentas, mas com texto por cima)"
+    "image": {
+      "src": "/images/servicos/venda-de-maquinas.webp",
+      "alt": "Parede da loja MAQCENTER com brocas, discos e acessórios expostos",
+      "width": 780,
+      "height": 740
+    },
+    "description": [
+      "Máquinas, acessórios e peças para quem trabalha com obra: furadeiras, parafusadeiras, esmerilhadeiras, serras, rompedores, brocas, discos, baterias e escovas de carvão."
     ],
-    "productLines": [
-      {
-        "name": "Máquinas",
-        "items": [
-          "Furadeiras",
-          "Parafusadeiras",
-          "Esmerilhadeiras",
-          "Serra-mármore",
-          "Serra circular",
-          "Rompedores"
-        ]
-      },
-      {
-        "name": "Acessórios e peças",
-        "items": [
-          "Brocas",
-          "Discos diamantados",
-          "Discos de corte de madeira",
-          "Serra-copo diamantada",
-          "Baterias",
-          "Escovas de carvão"
-        ]
-      }
-    ]
+    "whatsappMessage": "Olá! Quero um orçamento de máquina ou acessório.",
+    "_todo": []
   },
   {
     "slug": "perfuracao-em-concreto",

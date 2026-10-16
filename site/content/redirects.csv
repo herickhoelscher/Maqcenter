@@ -13,7 +13,7 @@ url_antiga,slug_novo
 /index.php?route=information/information&information_id=3,/politica-de-privacidade
 /index.php?route=information/information&information_id=4,/sobre
 /index.php?route=information/information&information_id=5,/termos-e-condicoes
-/index.php?route=information/information&information_id=6,/termos-e-condicoes
+/index.php?route=information/information&information_id=6,/politica-de-entrega
 /index.php?route=information/information&information_id=7,/
 /index.php?route=information/information&information_id=8,/locacoes
 /index.php?route=information/sitemap,/
@@ -31,7 +31,7 @@ url_antiga,slug_novo
 /obrigado-por-comprar-conosco,/
 /parafusadeira,/venda-de-maquinas
 /perfuracao-em-concreto,/perfuracao-em-concreto
-/politica-entrega-br,/termos-e-condicoes
+/politica-entrega-br,/politica-de-entrega
 /politica-privacidade-br,/politica-de-privacidade
 /rompedor,/venda-de-maquinas
 /rompedor-de-concreto,/locacoes/rompedor-de-concreto

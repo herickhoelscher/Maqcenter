@@ -13,6 +13,13 @@
   ],
   "images": [
     {
+      "src": "/images/equipamentos/vibrador-de-concreto-obra.webp",
+      "alt": "Operador usando vibrador de concreto em uma laje em obra",
+      "width": 1080,
+      "height": 820,
+      "fit": "cover"
+    },
+    {
       "src": "/images/equipamentos/vibrador-de-concreto.webp",
       "alt": "Motor de vibrador de concreto azul com cabo e chave liga-desliga",
       "width": 152,

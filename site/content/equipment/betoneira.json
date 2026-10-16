@@ -12,8 +12,8 @@
     {
       "src": "/images/equipamentos/betoneira.webp",
       "alt": "Betoneira amarela com massa de concreto em uma obra",
-      "width": 400,
-      "height": 300,
+      "width": 660,
+      "height": 500,
       "fit": "cover"
     }
   ],
@@ -24,7 +24,6 @@
   "specs": [],
   "_todo": [
     "specs: capacidade (litros), motor, tensao",
-    "foto: a atual e de um post do Instagram com recorte; confirmar se e a betoneira alugada",
     "brand, priceDaily (diaria em reais) e availability (ex. Disponivel) aparecem no card quando preenchidos"
   ]
 }

@@ -1,0 +1,146 @@
+{
+  "_todo": [
+    "Modelos, marcas, fotos e precos de cada linha. O site antigo tinha so as categorias, sem produtos.",
+    "Confirmar se as linhas de produto continuam sendo vendidas"
+  ],
+  "items": [
+    {
+      "slug": "serra-circular-bosch",
+      "name": "Serra circular Bosch",
+      "group": "Máquinas",
+      "brand": "Bosch",
+      "featured": true,
+      "image": {
+        "src": "/images/produtos/serra-circular-bosch.webp",
+        "alt": "Mão ajustando a base de uma serra circular Bosch",
+        "width": 1080,
+        "height": 1000,
+        "fit": "cover"
+      },
+      "description": [
+        "A serra circular Bosch é ideal para serviços de corte, oferecendo mais firmeza durante o uso, boa performance e mais controle na execução."
+      ],
+      "source": "Instagram @maqcentercascavel, reel DdcLWyeD2SA"
+    },
+    {
+      "slug": "furadeiras",
+      "name": "Furadeiras",
+      "group": "Máquinas",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    },
+    {
+      "slug": "parafusadeiras",
+      "name": "Parafusadeiras",
+      "group": "Máquinas",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    },
+    {
+      "slug": "esmerilhadeiras",
+      "name": "Esmerilhadeiras",
+      "group": "Máquinas",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    },
+    {
+      "slug": "serra-marmore",
+      "name": "Serra-mármore",
+      "group": "Máquinas",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    },
+    {
+      "slug": "serras-circulares",
+      "name": "Serras circulares",
+      "group": "Máquinas",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    },
+    {
+      "slug": "rompedores",
+      "name": "Rompedores",
+      "group": "Máquinas",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    },
+    {
+      "slug": "brocas",
+      "name": "Brocas",
+      "group": "Acessórios e peças",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    },
+    {
+      "slug": "discos-diamantados",
+      "name": "Discos diamantados",
+      "group": "Acessórios e peças",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    },
+    {
+      "slug": "discos-de-corte-de-madeira",
+      "name": "Discos de corte de madeira",
+      "group": "Acessórios e peças",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    },
+    {
+      "slug": "serra-copo-diamantada",
+      "name": "Serra-copo diamantada",
+      "group": "Acessórios e peças",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    },
+    {
+      "slug": "baterias",
+      "name": "Baterias",
+      "group": "Acessórios e peças",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    },
+    {
+      "slug": "escovas-de-carvao",
+      "name": "Escovas de carvão",
+      "group": "Acessórios e peças",
+      "brand": null,
+      "featured": false,
+      "image": null,
+      "description": null,
+      "source": "Categoria do site antigo (OpenCart), sem produtos cadastrados"
+    }
+  ]
+}
