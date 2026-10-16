@@ -62,13 +62,8 @@ O conteúdo vive no banco e é editado no painel. Os arquivos de `content/` são
 
 1. Em https://vercel.com, entre com o GitHub e importe o repositório `Maqcenter`. **Root Directory: `site`**.
 2. No projeto, aba **Storage**: crie um banco **Turso** e um **Blob** e conecte ao projeto. Isso cria `TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN` e `BLOB_READ_WRITE_TOKEN` (o código aceita esses nomes).
-3. Em **Settings > Environment Variables**, adicione `SESSION_SECRET` (32+ caracteres aleatórios) e `NEXT_PUBLIC_SITE_URL` (o endereço do site). Mercado Pago e Resend quando tiver.
-4. Prepare o banco online (uma vez, e de novo a cada migração nova), com as credenciais do Turso:
-   ```bash
-   DATABASE_URL=libsql://... DATABASE_AUTH_TOKEN=... npm run db:deploy:remote   # cria as tabelas
-   DATABASE_URL=libsql://... DATABASE_AUTH_TOKEN=... ADMIN_EMAIL=... ADMIN_PASSWORD=... npm run db:seed   # conteúdo + 1o admin
-   ```
-5. Faça **Redeploy** na Vercel.
+3. Em **Settings > Environment Variables**, adicione `SESSION_SECRET` (32+ caracteres aleatórios), `NEXT_PUBLIC_SITE_URL` (o endereço do site) e o primeiro login do painel: `ADMIN_NAME`, `ADMIN_EMAIL`, `ADMIN_PASSWORD`. Mercado Pago e Resend quando tiver.
+4. Faça **Redeploy**. O build (`npm run build`) prepara o banco sozinho: aplica as migrações que faltam, carrega o conteúdo inicial se o banco estiver vazio (nunca sobrescreve o que foi editado no painel) e cria o admin de `ADMIN_EMAIL` se ele ainda não existir.
 
 Logins da equipe: pelo painel (**Usuários**) ou pelo terminal:
 ```bash
