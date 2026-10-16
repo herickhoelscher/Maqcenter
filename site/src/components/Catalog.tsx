@@ -164,8 +164,10 @@ export function Catalog({
           )}
           {visible.length > 0 ? (
             <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {visible.map((e) => (
-                <li key={e.slug}>{cards[e.slug]}</li>
+              {visible.map((e, i) => (
+                <li key={e.slug} data-reveal style={{ "--reveal-delay": `${(i % 3) * 80}ms` } as React.CSSProperties}>
+                  {cards[e.slug]}
+                </li>
               ))}
             </ul>
           ) : (

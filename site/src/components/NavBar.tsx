@@ -17,8 +17,8 @@ export function NavBar() {
               <Link
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`block border-b-2 px-3 py-3 text-body font-semibold transition-colors ${
-                  active ? "border-amber bg-navy-deep text-amber" : "border-transparent text-white/85 hover:text-white"
+                className={`nav-link block px-3 py-3 text-body font-semibold transition-colors ${
+                  active ? "bg-navy-deep text-amber" : "text-white/85 hover:text-white"
                 }`}
               >
                 {item.label}

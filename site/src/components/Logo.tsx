@@ -10,7 +10,7 @@ export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
         alt=""
         width={80}
         height={80}
-        priority={tone === "light"}
+        loading={tone === "light" ? "eager" : "lazy"}
         className="size-10 rounded-[var(--radius-control)]"
       />
       <span className="flex flex-col">

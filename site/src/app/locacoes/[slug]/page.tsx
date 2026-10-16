@@ -67,7 +67,7 @@ export default async function EquipmentPage({ params }: PageProps<"/locacoes/[sl
                 width={cover.width}
                 height={cover.height}
                 sizes="(min-width: 1024px) 36rem, 92vw"
-                priority
+                preload
                 className={cover.fit === "cover" ? "h-full w-full object-cover" : "h-[70%] w-auto object-contain"}
               />
             ) : (

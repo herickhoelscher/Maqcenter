@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { QuoteProvider } from "@/components/quote/QuoteProvider";
+import { RevealObserver } from "@/components/RevealObserver";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { company } from "@/lib/content";
 import { siteUrl } from "@/lib/seo";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </main>
           <Footer />
           <WhatsAppFloat />
+          <RevealObserver />
         </QuoteProvider>
       </body>
     </html>

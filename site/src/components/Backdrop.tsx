@@ -15,7 +15,19 @@ export function Backdrop({
 }) {
   return (
     <>
-      <Image src={src} alt="" fill priority={priority} sizes="100vw" className="object-cover" style={{ objectPosition: position }} />
+      <Image
+        src={src}
+        alt=""
+        fill
+        preload={priority}
+        fetchPriority={priority ? "high" : "auto"}
+        loading={priority ? "eager" : "lazy"}
+        // Under a dark overlay, so a lower quality is not visible.
+        quality={50}
+        sizes="100vw"
+        className={priority ? "object-cover" : "anim-settle object-cover"}
+        style={{ objectPosition: position }}
+      />
       <div aria-hidden className={`absolute inset-0 ${overlay}`} />
     </>
   );
