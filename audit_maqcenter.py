@@ -98,7 +98,7 @@ SLUG_MAP = {
     "sobre-br": "sobre",
     "politica-privacidade-br": "politica-de-privacidade",
     "termos-condicoes-br": "termos-e-condicoes",
-    "politica-entrega-br": "termos-e-condicoes",
+    "politica-entrega-br": "politica-de-entrega",
     "monte-seu-kit": "locacoes",
     # Categories hidden from the old menu: product lines for sale.
     "furadeiras": "venda-de-maquinas",
