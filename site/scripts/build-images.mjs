@@ -10,6 +10,8 @@ const src = path.join(root, "..", "assets");
 const out = path.join(root, "public", "images");
 
 const banner = (name) => path.join(src, "cache", "catalog", "banners", name);
+// Post images from the company Instagram (@maqcentercascavel), 640px wide.
+const instagram = (code) => path.join(src, "instagram", `${code}.jpg`);
 
 // Crops of the old home banners. Coordinates are on the 1920x650 originals.
 // The banners have text baked in, so only photo areas are reused.
@@ -19,7 +21,11 @@ const crops = [
   { file: banner("bannersite1-1920x650.jpg"), out: "equipamentos/rompedor-de-concreto.webp", box: [874, 141, 152, 154] },
   { file: banner("bannersite1-1920x650.jpg"), out: "equipamentos/vibrador-de-concreto.webp", box: [1106, 141, 152, 154] },
   // Photos behind the service banners.
-  { file: banner("banner2-1920x650.jpg"), out: "servicos/assistencia-tecnica.webp", box: [610, 0, 470, 650] },
+  // Workshop photo; the team photo is cropped below the yellow post graphic;
+  // the concrete mixer is cropped right of the logo overlaid on the post.
+  { file: instagram("Dd9oyL9jBiO"), out: "servicos/assistencia-tecnica.webp", box: [0, 0, 640, 640] },
+  { file: instagram("DdrnOjADHXQ"), out: "sobre/equipe.webp", box: [0, 184, 640, 436] },
+  { file: instagram("DeRYQLeFwOr"), out: "equipamentos/betoneira.webp", box: [240, 15, 400, 300] },
   { file: banner("banner3-1920x650.jpg"), out: "servicos/perfuracao-em-concreto.webp", box: [930, 0, 410, 650] },
 ];
 
