@@ -48,6 +48,22 @@ async function main() {
   }
   console.log("logo");
 
+  // Background photos supplied by the client for hero and banners. They sit
+  // under a navy overlay, so a lower quality is not noticeable.
+  const backgrounds = [
+    ["canteiro-maquinas.png", "hero-canteiro.webp", 1600],
+    ["compactador-de-placa.png", "cta-compactador.webp", 1600],
+    ["martelete.png", "topo-locacoes.webp", 1600],
+  ];
+  await mkdir(path.join(out, "fundos"), { recursive: true });
+  for (const [from, to, width] of backgrounds) {
+    await sharp(path.join(src, "fundos", from))
+      .resize({ width, withoutEnlargement: true })
+      .webp({ quality: 62 })
+      .toFile(path.join(out, "fundos", to));
+  }
+  console.log("backgrounds");
+
   // Square logo (1080x1080) from the old favicon: icon from the "M" mark,
   // Open Graph image from the full lockup.
   const avatar = path.join(src, "catalog", "avatar.jpg");
